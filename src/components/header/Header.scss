@@ -1,0 +1,30 @@
+@import '../abstract/variables';
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-grey, 0.8), rgba($color-black, 0.8)),
+    url(../assets//IMG_5801.JPG);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  
+
+  &__logo_box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text_box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
