@@ -34,8 +34,6 @@ export const getUserSignup = (emailString, passwordString, firstNameString, time
             img: dogImageString
           }
         ]
-        passwordHash: password
-
       })
     }
   ).then(res => {
