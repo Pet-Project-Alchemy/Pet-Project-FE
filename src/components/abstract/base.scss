@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //1rem is = 10px; 10px/16px =  62.5%  (phone becomes 
+}
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+}

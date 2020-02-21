@@ -1,6 +1,8 @@
 import React from 'react';
+import Signup from './signup/Signup';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <Signup />;
 }
-  
+
+
