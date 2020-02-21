@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './Header.scss';
+import  './Header.scss';
 import logo from '../assets/dogLogo.png';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.header__logo_box}>
-        <img className={styles.header__logo} src={logo} alt='dog-log' />
+    <header className='header'>
+      <div className= 'header__logo-box'>
+        <img className='header__logo' src={logo} alt='dog-log0' />
       </div>
-      <div className={styles.header__text_box}>
-        <h1 className={styles.heading__primary}>
-          <span className={styles.heading__primary_main}> Dog Out</span>
-          <span className={styles.heading__primary_sub}>outside</span>
+      <div className='header__text-box'>
+        <h1 className='heading__primary'>
+          <span className='heading__primary-main'> Dog Out</span>
+          <span className='heading__primary-sub'>outside</span>
         </h1>
       </div>
     </header>
