@@ -1,10 +1,12 @@
 @import '../abstract/variables';
 @import '../abstract/base.scss';
+@import '../abstract//typography.scss';
+@import '../abstract/animate.scss';
 
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba($color-primary-grey, 0.8), rgba($color-black, 0.8)),
-    url('../assets/hero.jpeg');
+    url('../assets/doghero.jpeg');
   background-size: cover;
   background-position: top;
   position: relative;
@@ -12,13 +14,19 @@
   
 
   &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    color: white;
+    justify-content: start;
+    align-items: flex-start;
+    background: $color-black;
   }
 
   &__logo {
     height: 3.5rem;
+    color: $color-black;
+
   }
 
   &__text-box {
@@ -28,4 +36,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
+}
+.background {
+  background-color: 
+  $color-black;
 }
