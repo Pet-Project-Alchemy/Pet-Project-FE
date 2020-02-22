@@ -17,29 +17,29 @@ const Nav = () => {
         <nav className='navigation__nav'>
           <ul className='navigation__list'>
             <li className='navigation__item'>
-              <a href='#' className='navigation__link'>
-                About
-              </a>
+              <NavLink to='/' className='navigation__link'>
+                Discover
+              </NavLink>
             </li>
             <li className='navigation__item'>
-              <a href='#' className='navigation__link'>
-                Your benefits
-              </a>
+              <NavLink to='/' className='navigation__link'>
+                Sign Up
+              </NavLink>
             </li>
             <li className='navigation__item'>
-              <a href='#' className='navigation__link'>
-                Popular tours
-              </a>
+              <NavLink to='/' className='navigation__link'>
+               Profile
+              </NavLink>
             </li>
             <li className='navigation__item'>
-              <a href='#' className='navigation__link'>
-                Stories
-              </a>
+              <NavLink to='/' className='navigation__link'>
+                Search
+              </NavLink>
             </li>
             <li className='navigation__item'>
-              <a href='#' className='navigation__link'>
-                Book now
-              </a>
+              <NavLink to='/' className='navigation__link'>
+                Home
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -49,3 +49,4 @@ const Nav = () => {
 };
 
 export default Nav;
+
