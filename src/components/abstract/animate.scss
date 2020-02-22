@@ -2,7 +2,7 @@
   0% {
     opacity: 0;
     color: $color-primary;
-    transform: translateX(-10rem);
+    transform: translateX(-20rem);
   }
   80% {
     opacity: 0.5;
@@ -17,7 +17,7 @@
 @keyframes moveInLeftFirst {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
+    transform: translateX(-20rem);
   }
   80% {
     opacity: 0.5;
@@ -31,7 +31,7 @@
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
+    transform: translateX(20rem);
   }
   40% {
     opacity: 0.2;
