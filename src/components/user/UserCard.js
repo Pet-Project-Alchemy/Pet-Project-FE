@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './UserCard.scss';
 import defaultUserImg from '../assets/dogLogo.png';
 import defaultDogImg from '../assets/dogLogo.png';
 
-const User = ({
+const UserCard = ({
   firstName,
   dogName,
   img,
@@ -43,7 +44,7 @@ const User = ({
   </div>
 );
 
-User.propTypes = {
+UserCard.propTypes = {
   firstName: PropTypes.string.isRequired,
   dogName: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
@@ -54,4 +55,4 @@ User.propTypes = {
   bio: PropTypes.string.isRequired,
   dogBio: PropTypes.string.isRequired
 };
-export default User;
+export default UserCard;
