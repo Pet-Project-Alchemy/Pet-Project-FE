@@ -1,5 +1,6 @@
 import React from 'react';
-import './Header.scss';
+import './Home.scss';
+// import Nav from '../nav/Nav';
 
 const Header = () => {
   return (
