@@ -9,11 +9,11 @@
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   
   &__text-box {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -28,11 +28,7 @@
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 4rem;
-  &__last {
-    color: $color-primary-white;
-    font-size: 4rem;
-    font-weight: 400;
-  }
+  
   &__sub--main {
     color: $color-primary-white;
     display: block;

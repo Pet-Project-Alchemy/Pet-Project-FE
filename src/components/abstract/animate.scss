@@ -1,10 +1,27 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
+    color: $color-primary;
     transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(1rem);
+    opacity: 0.5;
+    color: $color-primary;
+    transform: translateX(1.2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInLeftFirst {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    opacity: 0.5;
+    transform: translateX(1.2rem);
   }
   100% {
     opacity: 1;
@@ -16,8 +33,12 @@
     opacity: 0;
     transform: translateX(10rem);
   }
+  40% {
+    opacity: 0.2;
+  }
   80% {
-    transform: translateX(-1rem);
+    opacity: 0.5;
+    transform: translateX(-1.2rem);
   }
   100% {
     opacity: 1;
