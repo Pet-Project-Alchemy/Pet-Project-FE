@@ -1,8 +1,8 @@
 import React from 'react';
-import Signup from './signup/Signup';
+import Testimonials from './testimonials/Testimonials';
 
 export default function App() {
-  return <Signup />;
+  return <Testimonials />;
 }
 
 
