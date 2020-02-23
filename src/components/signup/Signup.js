@@ -69,301 +69,341 @@ export default function UserSignup() {
   };
   return (
     <>
-      <form onSubmit={handleSubmit} className='form'>
-        <div className='title'>
-          <h2 className='heading'>Sign up for you new pet pal</h2>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={email}
-            name='email'
-            onChange={handleChange}
-            placeholder='you@you.com'
-          />
-          <label htmlFor='email' className='form__label'>
-            Email
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={password}
-            name='password'
-            onChange={handleChange}
-            placeholder='******'
-          />
-          <label htmlFor='password' className='form__label'>
-            Password
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={firstName}
-            name='firstName'
-            onChange={handleChange}
-            placeholder='Name'
-          />
-          <label htmlFor='firstName' className='form__label'>
-            First Name
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={lastName}
-            name='lastName'
-            onChange={handleChange}
-            placeholder='Last Name'
-          />
-          <label htmlFor='lastName' className='form__label'>
-            Last Name
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={street}
-            name='street'
-            onChange={handleChange}
-            placeholder='55 Spot way'
-          />
-          <label htmlFor='street' className='form__label'>
-            Street Address
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={city}
-            name='city'
-            onChange={handleChange}
-            placeholder='RoverCity'
-          />
-          <label htmlFor='city' className='form__label'>
-            City
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={state}
-            name='state'
-            onChange={handleChange}
-            placeholder='Oregon'
-          />
-          <label htmlFor='state' className='form__label'>
-            State
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={zipcode}
-            name='zipcode'
-            onChange={handleChange}
-            placeholder='55555'
-          />
-          <label htmlFor='zipcode' className='form__label'>
-            Zipcode
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={dogName}
-            name='dogName'
-            onChange={handleChange}
-            placeholder='spot'
-          />
-          <label htmlFor='dogName' className='form__label'>
-            Dogs name
-          </label>
-        </div>
-        <div className='form__group'>
-          <input
-            className='form__input'
-            value={breed}
-            name='breed'
-            onChange={handleChange}
-            placeholder='Dog Breed'
-          />
-          <label htmlFor='breed' className='form__label'>
-            Dog Breed
-          </label>
-        </div>
+      <section className='section-signup'>
+        <div className='grid'>
+          <div className='signup'>
+            <div className='signup__form'>
+              <form onSubmit={handleSubmit} className='form'>
+                <div className='title'>
+                  <h2 className='heading'>Sign up!</h2>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={email}
+                    name='email'
+                    onChange={handleChange}
+                    placeholder='you@you.com'
+                  />
+                  <label htmlFor='email' className='form__label'>
+                    Email
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={password}
+                    name='password'
+                    onChange={handleChange}
+                    placeholder='******'
+                  />
+                  <label htmlFor='password' className='form__label'>
+                    Password
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={firstName}
+                    name='firstName'
+                    onChange={handleChange}
+                    placeholder='Name'
+                  />
+                  <label htmlFor='firstName' className='form__label'>
+                    First Name
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={lastName}
+                    name='lastName'
+                    onChange={handleChange}
+                    placeholder='Last Name'
+                  />
+                  <label htmlFor='lastName' className='form__label'>
+                    Last Name
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={street}
+                    name='street'
+                    onChange={handleChange}
+                    placeholder='55 Spot way'
+                  />
+                  <label htmlFor='street' className='form__label'>
+                    Street Address
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={city}
+                    name='city'
+                    onChange={handleChange}
+                    placeholder='RoverCity'
+                  />
+                  <label htmlFor='city' className='form__label'>
+                    City
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={state}
+                    name='state'
+                    onChange={handleChange}
+                    placeholder='Oregon'
+                  />
+                  <label htmlFor='state' className='form__label'>
+                    State
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={zipcode}
+                    name='zipcode'
+                    onChange={handleChange}
+                    placeholder='55555'
+                  />
+                  <label htmlFor='zipcode' className='form__label'>
+                    Zipcode
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={dogName}
+                    name='dogName'
+                    onChange={handleChange}
+                    placeholder='spot'
+                  />
+                  <label htmlFor='dogName' className='form__label'>
+                    Dogs name
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={breed}
+                    name='breed'
+                    onChange={handleChange}
+                    placeholder='Dog Breed'
+                  />
+                  <label htmlFor='breed' className='form__label'>
+                    Dog Breed
+                  </label>
+                </div>
 
-        <div className='form__group'>
-          <h4 className='time'>What time do you need your pup out?</h4>
-          <div className='form__radio-group'>
-            <input
-              className='radio'
-              type='radio'
-              name='timeNeeded'
-              value='6 till noon'
-              onChange={handleChange}
-            />
-            <label htmlFor='6 till noon' className='form__radio-label'>
-              <span className='form__radio-button'></span> 6am till Noon{' '}
-            </label>
-          </div>
-          <div className='form__radio-group'>
-            <input
-              className='radio'
-              type='radio'
-              name='timeNeeded'
-              value='noon till 6'
-              onChange={handleChange}
-            />
-            <label htmlFor='noon till 6' className='form__radio-label'>
-              <span className='form__radio-button'></span>Noon until 6pm
-            </label>
-          </div>
-          <div className='form__radio-group'>
-            <input
-              className='radio'
-              type='radio'
-              name='timeNeeded'
-              value='6 till midnight'
-              onChange={handleChange}
-            />
-            <label htmlFor='6 till midnight'>
-              <span className='form__radio-group'></span>6pm till Midnight
-            </label>
-          </div>
+                <div className='form__group bottom'>
+                  <div className='form__radio-group'>
+                    <h4 className='time'>
+                      What time do you need your pup out?
+                    </h4>
+                    <input
+                      className='form__radio-input'
+                      type='radio'
+                      name='timeNeeded'
+                      value='6 till noon'
+                      onChange={handleChange}
+                    />
+                    <label htmlFor='6 till noon' className='form__radio-label'>
+                      <span className='form__radio-button'></span> 6am till Noon
+                    </label>
+                  </div>
+                  <div className='form__radio-group'>
+                    <input
+                      className='form__radio-input'
+                      type='radio'
+                      name='timeNeeded'
+                      value='noon till 6'
+                      onChange={handleChange}
+                    />
+                    <label htmlFor='noon till 6' className='form__radio-label'>
+                      <span className='form__radio-button'></span>Noon until 6pm
+                    </label>
+                  </div>
+                  <div className='form__radio-group'>
+                    <input
+                      className='form__radio-input'
+                      type='radio'
+                      name='timeNeeded'
+                      value='6 till midnight'
+                      onChange={handleChange}
+                    />
+                    <label
+                      htmlFor='6 till midnight'
+                      className='form__radio-label'
+                    >
+                      <span className='form__radio-button'></span>6pm till
+                      Midnight
+                    </label>
+                  </div>
+                </div>
 
-          <div className='form__radio-group'>
-            <h4 className='time'>What time are you available for a pup?</h4>
-            <input
-              className='radio'
-              type='radio'
-              name='timeAvailable'
-              value='6 till noon'
-              onChange={handleChange}
-            />
-            <label htmlFor='6 till noon' className='form__radio-label'>
-              <span className='form__radio-button'></span> 6am till Noon{' '}
-            </label>
-          </div>
-          <div className='form__radio-group'>
-            <input
-              className='radio'
-              type='radio'
-              name='timeAvailable'
-              value='noon till 6'
-              onChange={handleChange}
-            />
-            <label htmlFor='noon till 6' className='form__radio-label'>
-              <span className='form__radio-button'></span>Noon until 6pm
-            </label>
-          </div>
-          <div className='form__radio-group'>
-            <input
-              className='radio'
-              type='radio'
-              name='timeAvailable'
-              value='6 till midnight'
-              onChange={handleChange}
-            />
-            <label htmlFor='6 till midnight'>
-              <span className='form__radio-group'></span>6pm till Midnight
-            </label>
-          </div>
+                <div className='form__radio-group'>
+                  <h4 className='time'>
+                    What time are you available for a pup?
+                  </h4>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='timeAvailable'
+                    value='6 till noon'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='6 till noon' className='form__radio-label'>
+                    <span className='form__radio-button'></span> 6am till Noon{' '}
+                  </label>
+                </div>
+                <div className='form__radio-group'>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='timeAvailable'
+                    value='noon till 6'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='noon till 6' className='form__radio-label'>
+                    <span className='form__radio-button'></span>Noon until 6pm
+                  </label>
+                </div>
+                <div className='form__radio-group'>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='timeAvailable'
+                    value='6 till midnight'
+                    onChange={handleChange}
+                  />
+                  <label
+                    htmlFor='6 till midnight'
+                    className='form__radio-label'
+                  >
+                    <span className='form__radio-button'></span>6pm till
+                    Midnight
+                  </label>
+                </div>
 
-          <div className='form__radio-group'>
-            <h4 className='time'>What size is your dog?</h4>
-            <div className='form__radio-group'>
-              <input
-                className='radio'
-                type='radio'
-                name='size'
-                value='XS'
-                onChange={handleChange}
-              />
-              <label htmlFor='XS' className='form__radio-label'>
-                <span className='form__radio-button'></span> XS
-              </label>
+                <div className='form__radio-group'>
+                  <h4 className='time'>What size is your dog?</h4>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='size'
+                    value='XS'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='XS' className='form__radio-label'>
+                    <span className='form__radio-button'></span> XS
+                  </label>
+                </div>
+                <div className='form__radio-group'>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='size'
+                    value='S'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='S' className='form__radio-label'>
+                    <span className='form__radio-button'>S</span>
+                  </label>
+                </div>
+                <div className='form__radio-group'>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='size'
+                    value='M'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='M' className='form__radio-label'>
+                    <span className='form__radio-button'>M</span>
+                  </label>
+                </div>
+                <div className='form__radio-group'>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='size'
+                    value='L'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='L' className='form__radio-label'>
+                    <span className='form__radio-button'>L</span>
+                  </label>
+                </div>
+                <div className='form__radio-group'>
+                  <input
+                    className='form__radio-input'
+                    type='radio'
+                    name='size'
+                    value='XL'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='XL' className='form__radio-label'>
+                    <span className='form__radio-button'>XL</span>
+                  </label>
+                </div>
+
+                <div className='form__group'>
+                  <textarea
+                    className='form__input'
+                    name='userBio'
+                    value={userBio}
+                    onChange={handleChange}
+                    placeholder='Tell us about you'
+                  />
+                  <label htmlFor='userBio' className='form__label'>
+                    Tell us about yourself
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <textarea
+                    className='form__input'
+                    name='dogBio'
+                    value={dogBio}
+                    onChange={handleChange}
+                    placeholder='Tell us about your best friend'
+                  />
+                  <label htmlFor='dogBio' className='form__label'>
+                    Tell us about yourself
+                  </label>
+                </div>
+
+                <div className='form__group'>
+                  <input
+                    type='file'
+                    className='form__input'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='userImage' className='form__label'>
+                    Your Photo
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    type='file'
+                    className='form__input'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='dogImage' className='form__label'>
+                    Dog Photo
+                  </label>
+                </div>
+
+                <div className='form__group'>
+                  <button>Submit</button>
+                </div>
+              </form>
             </div>
-            <div className='form__radio-group'>
-              <input
-                className='radio'
-                type='radio'
-                name='size'
-                value='S'
-                onChange={handleChange}
-              />
-              <label htmlFor='S' className='form__radio-label'>
-                <span className='form__radio-button'>S</span>
-              </label>
-            </div>
-            <div className='form__radio-group'>
-              <input
-                className='radio'
-                type='radio'
-                name='size'
-                value='M'
-                onChange={handleChange}
-              />
-              <label htmlFor='M' className='form__radio-label'>
-                <span className='form__radio-button'>M</span>
-              </label>
-            </div>
-            <div className='form__radio-group'>
-              <input
-                className='radio'
-                type='radio'
-                name='size'
-                value='L'
-                onChange={handleChange}
-              />
-              <label htmlFor='L' className='form__radio-label'>
-                <span className='form__radio-button'>L</span>
-              </label>
-            </div>
-            <div className='form__radio-group'>
-              <input
-                className='radio'
-                type='radio'
-                name='size'
-                value='XL'
-                onChange={handleChange}
-              />
-              <label htmlFor='XL' className='form__radio-label'>
-                <span className='form__radio-button'>XL</span>
-              </label>
-            </div>
           </div>
-
-          <label htmlFor='userBio'>
-            Tell us about yourself
-            <textarea
-              name='userBio'
-              value={userBio}
-              onChange={handleChange}
-              placeholder='Tell us about you'
-            />
-          </label>
-          <label htmlFor='userImage'>
-            <input type='file' onChange={handleChange} />
-          </label>
-
-          <label>
-            Tell us about yourself
-            <textarea
-              name='dogBio'
-              value={dogBio}
-              onChange={handleChange}
-              placeholder='Tell us about your best friend'
-            />
-          </label>
-          <label htmlFor='dogImage'>
-            <input type='file' onChange={handleChange} />
-          </label>
-
-          <button>Submit</button>
         </div>
-      </form>
+      </section>
     </>
   );
 }
