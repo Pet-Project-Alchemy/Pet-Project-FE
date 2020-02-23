@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.scss';
+import mp4 from '../assets/Dogs_Park.mp4';
+import webm from '../assets/Dogs_Park.webm';
 // import Nav from '../nav/Nav';
 
 const Header = () => {
@@ -7,10 +9,16 @@ const Header = () => {
     <>
       <div className='background'>
         <header className='header'>
+          <div className='bg-video'>
+            <video className='bg-video__content' autoPlay muted loop>
+              <source src={webm} type='video/webm' />
+              <source src={mp4} type='video/mp4' />
+              your browser not supported
+            </video>
+          </div>
           <div className='header__text-box'>
             <h1 className='heading__primary'>
               <span className='heading-primary__sub--main'>Pet Pals</span>
-              {/* <span className='heading-primary__last'>Pals</span> */}
               <span className='heading-primary__sub'>lets go outside</span>
             </h1>
           </div>
@@ -26,12 +34,7 @@ const Header = () => {
               expedita, facilis nobis ea possimus voluptatem ducimus tempora
               nemo dolorum sunt. Quam tenetur perspiciatis illo ea inventore
               beatae sapiente exercitationem repellat corrupti magni nesciunt
-              necessitatibus debitis, rerum consequatur accusamus? Neque atque
-              eum error laudantium minima ipsam animi saepe. Ullam, excepturi
-              minima! Voluptatibus, eaque nemo reprehenderit deserunt facere
-              porro tenetur at? Sit vel eum ipsa illo voluptatum! Totam, iure,
-              voluptatum dignissimos sunt id molestias illum in deserunt
-              
+              necessitatibus debitis, rerum consequatur accusamus? 
             </p>
           </div>
         </section>

@@ -23,7 +23,7 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className='navigation__item'>
-              <NavLink to='/' className='navigation__link'>
+              <NavLink to='/signup' className='navigation__link'>
                 Sign Up
               </NavLink>
             </li>
