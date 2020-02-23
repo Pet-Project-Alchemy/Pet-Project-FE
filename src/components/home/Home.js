@@ -1,8 +1,7 @@
 import React from 'react';
 import './Home.scss';
-import mp4 from '../assets/Dogs_Park.mp4';
-import webm from '../assets/Dogs_Park.webm';
-// import Nav from '../nav/Nav';
+import mp4 from '../assets/its-clark.mp4';
+import webm from '../assets/its-clark.webm';
 
 const Header = () => {
   return (
@@ -11,8 +10,8 @@ const Header = () => {
         <header className='header'>
           <div className='bg-video'>
             <video className='bg-video__content' autoPlay muted loop>
-              <source src={webm} type='video/webm' />
-              <source src={mp4} type='video/mp4' />
+              <source src={webm} type='video/webm' alt='dog park video' />
+              <source src={mp4} type='video/mp4' alt='dog park video' />
               your browser not supported
             </video>
           </div>
@@ -34,7 +33,7 @@ const Header = () => {
               expedita, facilis nobis ea possimus voluptatem ducimus tempora
               nemo dolorum sunt. Quam tenetur perspiciatis illo ea inventore
               beatae sapiente exercitationem repellat corrupti magni nesciunt
-              necessitatibus debitis, rerum consequatur accusamus? 
+              necessitatibus debitis, rerum consequatur accusamus?
             </p>
           </div>
         </section>

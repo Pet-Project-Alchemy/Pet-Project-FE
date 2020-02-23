@@ -11,7 +11,7 @@
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .50;
+  opacity: .30;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   
   &__content {
@@ -23,7 +23,7 @@ object-fit: cover;
   
   &__text-box {
     position: absolute;
-    top: 20%;
+    top: 13%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
