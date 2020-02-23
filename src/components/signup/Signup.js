@@ -122,6 +122,79 @@ export default function UserSignup() {
           </label>
         </div>
         <div className='form__group'>
+          <input
+            className='form__input'
+            value={street}
+            name='street'
+            onChange={handleChange}
+            placeholder='55 Spot way'
+          />
+          <label htmlFor='street' className='form__label'>
+            Street Address
+          </label>
+        </div>
+        <div className='form__group'>
+          <input
+            className='form__input'
+            value={city}
+            name='city'
+            onChange={handleChange}
+            placeholder='RoverCity'
+          />
+          <label htmlFor='city' className='form__label'>
+            City
+          </label>
+        </div>
+        <div className='form__group'>
+          <input
+            className='form__input'
+            value={state}
+            name='state'
+            onChange={handleChange}
+            placeholder='Oregon'
+          />
+          <label htmlFor='state' className='form__label'>
+            State
+          </label>
+        </div>
+        <div className='form__group'>
+          <input
+            className='form__input'
+            value={zipcode}
+            name='zipcode'
+            onChange={handleChange}
+            placeholder='55555'
+          />
+          <label htmlFor='zipcode' className='form__label'>
+            Zipcode
+          </label>
+        </div>
+        <div className='form__group'>
+          <input
+            className='form__input'
+            value={dogName}
+            name='dogName'
+            onChange={handleChange}
+            placeholder='spot'
+          />
+          <label htmlFor='dogName' className='form__label'>
+            Dogs name
+          </label>
+        </div>
+        <div className='form__group'>
+          <input
+            className='form__input'
+            value={breed}
+            name='breed'
+            onChange={handleChange}
+            placeholder='Dog Breed'
+          />
+          <label htmlFor='breed' className='form__label'>
+            Dog Breed
+          </label>
+        </div>
+
+        <div className='form__group'>
           <h4 className='time'>What time do you need your pup out?</h4>
           <div className='form__radio-group'>
             <input
@@ -198,6 +271,70 @@ export default function UserSignup() {
             </label>
           </div>
 
+          <div className='form__radio-group'>
+            <h4 className='time'>What size is your dog?</h4>
+            <div className='form__radio-group'>
+              <input
+                className='radio'
+                type='radio'
+                name='size'
+                value='XS'
+                onChange={handleChange}
+              />
+              <label htmlFor='XS' className='form__radio-label'>
+                <span className='form__radio-button'></span> XS
+              </label>
+            </div>
+            <div className='form__radio-group'>
+              <input
+                className='radio'
+                type='radio'
+                name='size'
+                value='S'
+                onChange={handleChange}
+              />
+              <label htmlFor='S' className='form__radio-label'>
+                <span className='form__radio-button'>S</span>
+              </label>
+            </div>
+            <div className='form__radio-group'>
+              <input
+                className='radio'
+                type='radio'
+                name='size'
+                value='M'
+                onChange={handleChange}
+              />
+              <label htmlFor='M' className='form__radio-label'>
+                <span className='form__radio-button'>M</span>
+              </label>
+            </div>
+            <div className='form__radio-group'>
+              <input
+                className='radio'
+                type='radio'
+                name='size'
+                value='L'
+                onChange={handleChange}
+              />
+              <label htmlFor='L' className='form__radio-label'>
+                <span className='form__radio-button'>L</span>
+              </label>
+            </div>
+            <div className='form__radio-group'>
+              <input
+                className='radio'
+                type='radio'
+                name='size'
+                value='XL'
+                onChange={handleChange}
+              />
+              <label htmlFor='XL' className='form__radio-label'>
+                <span className='form__radio-button'>XL</span>
+              </label>
+            </div>
+          </div>
+
           <label htmlFor='userBio'>
             Tell us about yourself
             <textarea
@@ -210,47 +347,7 @@ export default function UserSignup() {
           <label htmlFor='userImage'>
             <input type='file' onChange={handleChange} />
           </label>
-          <label htmlFor='dogName'>
-            What is your pups name
-            <input
-              value={dogName}
-              name='dogName'
-              onChange={handleChange}
-              placeholder='spot'
-            />
-          </label>
-          <div className='radioDogSize'>
-            <label>How big is your dog </label>
-            <label htmlFor='XS'>XS</label>
-            <input
-              type='radio'
-              name='size'
-              value='XS'
-              onChange={handleChange}
-            />
-            <label htmlFor='S'>S</label>
-            <input type='radio' name='size' value='S' onChange={handleChange} />
-            <label htmlFor='M'>M</label>
-            <input type='radio' name='size' value='M' onChange={handleChange} />
-            <label htmlFor='L'>L</label>
-            <input type='radio' name='size' value='L' onChange={handleChange} />
-            <label htmlFor='XL'>XL</label>
-            <input
-              type='radio'
-              name='size'
-              value='XL'
-              onChange={handleChange}
-            />
-          </div>
-          <label htmlFor='breed'>
-            Dog Breed{' '}
-            <input
-              value={breed}
-              name='breed'
-              onChange={handleChange}
-              placeholder='Dog Breed'
-            />
-          </label>
+
           <label>
             Tell us about yourself
             <textarea
@@ -263,42 +360,7 @@ export default function UserSignup() {
           <label htmlFor='dogImage'>
             <input type='file' onChange={handleChange} />
           </label>
-          <label htmlFor='street'>
-            Street Address
-            <input
-              value={street}
-              name='street'
-              onChange={handleChange}
-              placeholder='55 Spot way'
-            />
-          </label>
-          <label htmlFor='city'>
-            City
-            <input
-              value={city}
-              name='city'
-              onChange={handleChange}
-              placeholder='RoverCity'
-            />
-          </label>
-          <label htmlFor='state'>
-            State
-            <input
-              value={state}
-              name='state'
-              onChange={handleChange}
-              placeholder='Oregon'
-            />
-          </label>
-          <label htmlFor='zipcode'>
-            Zipcode
-            <input
-              value={zipcode}
-              name='zipcode'
-              onChange={handleChange}
-              placeholder='55555'
-            />
-          </label>
+
           <button>Submit</button>
         </div>
       </form>
