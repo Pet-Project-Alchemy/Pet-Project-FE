@@ -8,10 +8,11 @@ $color-primary-light2: rgb(45,130,106);
 $color-primary-grey: #777;
 $color-primary-white: #fff;
 $color-black: rgb(0, 0, 0);
+$color-red: rgb(210, 73, 9);
 $color-black-med: rgba(0, 0, 0, 0.418);
 $color-grey-light-1: #f7f7f7;
 $color-grey-med: #eee;
-$color-darkgrey: #999;
+$color-darkgrey: rgb(206, 200, 200);
 $color-darkgrey-2: #333;
 $color-newGreen: rgb(32,133,96);
 .bottom {
@@ -76,40 +77,41 @@ $color-newGreen: rgb(32,133,96);
 .section-signup{
   padding: 1rem 0;
 
-  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-darkgrey, 0.8));
+  background-image: linear-gradient(to right bottom, ($color-black, 0.8), rgba($color-darkgrey, 0.8));
 }
 .signup{
-  background-image: linear-gradient(
-      105deg,
-      rgba($color-primary-white, 0.7) 0%,
-      rgba($color-primary-white, 0.7) 50%,
-      transparent 50%
+ background-image: linear-gradient(
+      99deg,
+      rgba($color-darkgrey, 0.5) 0%,
+      rgba($color-darkgrey, 0.5) 50%,
+      transparent 40%
     ),
-    url(../assets/isla.png);
+    url(../assets/islaphoto.png);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black-med, 0.2);
-  height: 70rem;
+  height: 125rem;
 
   &__form {
-    width: 50%;
-    padding: 1em;
+    width: 60%;
+    padding: 1.3em;
   }
 }
 // form
 .form {
+  margin-left: 15rem;
   &__group:not(:last-child) {
-    margin-bottom: .5rem;
+    margin-bottom: .7rem;
   }
   &__input {
     font-size: 1rem;
-    
     padding: 1rem 2rem;
     border-radius: 2px;
-    background: rgba($color-primary-white, 0.5);
-    border: none;
+    background: transparent;
+    background: rgba($color-primary-white, 0.3);
+    border: 2px solid black;
     border-bottom: 3px solid transparent;
-    width: 50%;
+    width: 65%;
     display: block;
     transition: all .3s;
 
@@ -120,10 +122,10 @@ $color-newGreen: rgb(32,133,96);
     }
 
     &:focus:invalid {
-        border-bottom: 3px solid $color-darkgrey;
+        border-bottom: 3px solid $color-red;
     }
     &::-webkit-input-placeholder {
-      color: $color-darkgrey;
+      color: $color-black;
     }
   }
 
@@ -132,6 +134,7 @@ $color-newGreen: rgb(32,133,96);
     font-weight: 700;
     margin-left: 2rem;
     margin-top: .7rem;
+    color: $color-black;
     display: block;
     transition: all .3s;
   }
@@ -141,46 +144,56 @@ $color-newGreen: rgb(32,133,96);
     transform: translateY(-4rem);
     
   } 
-  // &__radio-input {
-  //   display: none;
-  // }
-  // &__radio-group {
-  //   width: 49%;
-  //   display: inline-block;
-  // }
-  // &__radio-label {
-  // font-size: 1.4rem;
-  // cursor: pointer;
-  // position: relative;
-  // padding-left: 4.5rem;
-  // }
-  // &__radio-button {
-  //   height: 3rem;
-  //   width: 3rem;
-  //   border: 5px solid $color-primary;
-  //   border-radius: 50%;
-  //   display: inline-block;
-  //   position: absolute;
-  //   left: 0;
-  //   top: -.4rem;
-
-  //   &::after {
-  //     content: "";
-  //     display: block;
-  //     height: 1.3rem;
-  //     width: 1.3rem;
-  //     border-radius: 50%;
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //     background: $color-primary;
-  //     opacity: 0;
-  //     transition: opacity .2s;
-  //   }
-  // }
-  // &__radio-input:checked ~ &__radio-label &__radio-button::after {
-  //   opacity: 1;
-  // }
+  .select {
+	display: block;
+	font-size: 1rem;
+	font-family: sans-serif;
+	font-weight: 700;
+  color: $color-black;
+	line-height: 1.3;
+	padding: .3em .8em .2em .4em;
+  width: 65%;
+  height: 4rem;
+  max-width: 100%;
+  border: 2px, 2px, 0, 2px $color-black;
+	box-sizing: border-box;
+	margin-bottom: 2.5rem;
+	border: .3 solid black;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .2em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: $color-black-clear;
+	/* inline SVG */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+	
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: 1.5em auto, 100%;
+}
+.select::-ms-expand {
+	display: none;
+}
+.select:hover {
+	border-color: #888;
+}
+.select:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+.select option {
+	font-weight:normal;
+}
+.submit{
+  background: $color-black-clear;
+  font-size: 2rem;
+  box-shadow: 1px 1px 5px 1px $color-black-med;
+  padding: .5rem;
+}
+  
 }
 

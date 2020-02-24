@@ -79,6 +79,9 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <input
+                    type='email'
+                    aria-label='email'
+                    aria-required='true'
                     className='form__input'
                     value={email}
                     name='email'
@@ -91,6 +94,8 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <input
+                    aria-label='password'
+                    aria-required='true'
                     className='form__input'
                     value={password}
                     name='password'
@@ -197,159 +202,48 @@ export default function UserSignup() {
                     Dog Breed
                   </label>
                 </div>
-
-                <div className='form__group bottom'>
-                  <div className='form__radio-group'>
-                    <h4 className='time'>
-                      What time do you need your pup out?
-                    </h4>
-                    <input
-                      className='form__radio-input'
-                      type='radio'
-                      name='timeNeeded'
-                      value='6 till noon'
-                      onChange={handleChange}
-                    />
-                    <label htmlFor='6 till noon' className='form__radio-label'>
-                      <span className='form__radio-button'></span> 6am till Noon
-                    </label>
-                  </div>
-                  <div className='form__radio-group'>
-                    <input
-                      className='form__radio-input'
-                      type='radio'
-                      name='timeNeeded'
-                      value='noon till 6'
-                      onChange={handleChange}
-                    />
-                    <label htmlFor='noon till 6' className='form__radio-label'>
-                      <span className='form__radio-button'></span>Noon until 6pm
-                    </label>
-                  </div>
-                  <div className='form__radio-group'>
-                    <input
-                      className='form__radio-input'
-                      type='radio'
-                      name='timeNeeded'
-                      value='6 till midnight'
-                      onChange={handleChange}
-                    />
-                    <label
-                      htmlFor='6 till midnight'
-                      className='form__radio-label'
-                    >
-                      <span className='form__radio-button'></span>6pm till
-                      Midnight
-                    </label>
-                  </div>
-                </div>
-
-                <div className='form__radio-group'>
-                  <h4 className='time'>
-                    What time are you available for a pup?
-                  </h4>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='timeAvailable'
-                    value='6 till noon'
+                <div className='form__group'>
+                  <label htmlFor="timeNeeded"></label>
+                  <select
+                    className='select'
+                    name='timeNeeded'
                     onChange={handleChange}
-                  />
-                  <label htmlFor='6 till noon' className='form__radio-label'>
-                    <span className='form__radio-button'></span> 6am till Noon{' '}
-                  </label>
-                </div>
-                <div className='form__radio-group'>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='timeAvailable'
-                    value='noon till 6'
-                    onChange={handleChange}
-                  />
-                  <label htmlFor='noon till 6' className='form__radio-label'>
-                    <span className='form__radio-button'></span>Noon until 6pm
-                  </label>
-                </div>
-                <div className='form__radio-group'>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='timeAvailable'
-                    value='6 till midnight'
-                    onChange={handleChange}
-                  />
-                  <label
-                    htmlFor='6 till midnight'
-                    className='form__radio-label'
+                    placeholder='Pick time'
                   >
-                    <span className='form__radio-button'></span>6pm till
-                    Midnight
-                  </label>
+                    <option value='6am till noon'>6am till noon</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                  </select>
+                </div>
+                <div className='form__group'>
+                  <label htmlFor="timeAvailable"></label>
+                  <select
+                    className='select'
+                    name='timeAvailable'
+                    onChange={handleChange}
+                    placeholder='Pick time'
+                  >
+                    <option value='6am till noon'>6am till noon</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                  </select>
                 </div>
 
-                <div className='form__radio-group'>
-                  <h4 className='time'>What size is your dog?</h4>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='size'
-                    value='XS'
+                <div className='form__group'>
+                  <label htmlFor="dogSize"></label>
+                  <select
+                    className='select'
+                    name='timeNeeded'
                     onChange={handleChange}
-                  />
-                  <label htmlFor='XS' className='form__radio-label'>
-                    <span className='form__radio-button'></span> XS
-                  </label>
+                    placeholder='Pick time'
+                  >
+                    <option value='XS'>XS</option>
+                    <option value='S'>S</option>
+                    <option value='M'>M</option>
+                    <option value='L'>L</option>
+                    <option value='XL'>XL</option>
+                  </select>
                 </div>
-                <div className='form__radio-group'>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='size'
-                    value='S'
-                    onChange={handleChange}
-                  />
-                  <label htmlFor='S' className='form__radio-label'>
-                    <span className='form__radio-button'>S</span>
-                  </label>
-                </div>
-                <div className='form__radio-group'>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='size'
-                    value='M'
-                    onChange={handleChange}
-                  />
-                  <label htmlFor='M' className='form__radio-label'>
-                    <span className='form__radio-button'>M</span>
-                  </label>
-                </div>
-                <div className='form__radio-group'>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='size'
-                    value='L'
-                    onChange={handleChange}
-                  />
-                  <label htmlFor='L' className='form__radio-label'>
-                    <span className='form__radio-button'>L</span>
-                  </label>
-                </div>
-                <div className='form__radio-group'>
-                  <input
-                    className='form__radio-input'
-                    type='radio'
-                    name='size'
-                    value='XL'
-                    onChange={handleChange}
-                  />
-                  <label htmlFor='XL' className='form__radio-label'>
-                    <span className='form__radio-button'>XL</span>
-                  </label>
-                </div>
-
                 <div className='form__group'>
                   <textarea
                     className='form__input'
@@ -371,7 +265,7 @@ export default function UserSignup() {
                     placeholder='Tell us about your best friend'
                   />
                   <label htmlFor='dogBio' className='form__label'>
-                    Tell us about yourself
+                    Tell us about best friend
                   </label>
                 </div>
 
@@ -395,9 +289,8 @@ export default function UserSignup() {
                     Dog Photo
                   </label>
                 </div>
-
                 <div className='form__group'>
-                  <button>Submit</button>
+                  <button className='submit'>Submit</button>
                 </div>
               </form>
             </div>
