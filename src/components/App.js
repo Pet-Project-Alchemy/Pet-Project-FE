@@ -1,8 +1,6 @@
 import React from 'react';
-import Testimonials from './testimonials/Testimonials';
+import ImageGallery from './testimonials/ImageGallery';
 
 export default function App() {
-  return <Testimonials />;
+  return <ImageGallery />;
 }
-
-
