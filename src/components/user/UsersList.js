@@ -22,7 +22,7 @@ const UserList = ({ match }) => {
       <>
         <div className='container'>
           <Link key={user._id} className='Link' to={`/message/${user._id}`}>
-            <UserCard {...user}/>
+            <UserCard firstName={user.firstName} dogName={user.dog[0].name} timeNeeded={user.timeNeeded} timeAvailable={user.timeAvailable} zipcode={user.address.zipcode} dogBio={user.dog[0].bio} bio={user.bio}/>
           </Link>
         </div>
       </>

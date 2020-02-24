@@ -11,7 +11,6 @@ export const getUserSignup = (emailString, passwordString, firstNameString, time
       },
       body: JSON.stringify({
         email: emailString,
-
         password: passwordString,
         firstName: firstNameString,
         lastName: lastNameString,
