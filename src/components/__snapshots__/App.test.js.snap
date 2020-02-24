@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-
-exports[`App component renders App 1`] = `<UserSignup />`;
-
+exports[`App component renders App 1`] = `
+<Fragment>
+  <BrowserRouter>
+    <Nav />
+    <Route
+      component={[Function]}
+      path="/signup"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+  </BrowserRouter>
+</Fragment>
+`;
