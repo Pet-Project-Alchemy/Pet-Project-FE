@@ -1,5 +1,5 @@
 
-export const getUserSignup = (emailString, password) => {
+export const getUserSignup = (emailString, passwordString, firstNameString, timeNeededString, lastNameString, timeAvailableString, userImageString, userBioString, addressStreetString, addressCityString, addressStateString, addressZipcodeString, dogNameString, dogSizeString, dogBreedString, dogBioString, dogImageString) => {
   return fetch(
     'https://cors-anywhere.herokuapp.com/https://pet-project-be-staging.herokuapp.com/api/v1/auth/signup',
     {
@@ -11,7 +11,29 @@ export const getUserSignup = (emailString, password) => {
       },
       body: JSON.stringify({
         email: emailString,
-        passwordHash: password
+
+        password: passwordString,
+        firstName: firstNameString,
+        lastName: lastNameString,
+        timeNeeded: timeNeededString,
+        timeAvailable: timeAvailableString,
+        image: userImageString,
+        bio: userBioString,
+        address: {
+          street: addressStreetString,
+          city: addressCityString,
+          state: addressStateString,
+          zipcode: addressZipcodeString
+        },
+        dog: [
+          {
+            name: dogNameString,
+            size: dogSizeString,
+            breed: dogBreedString,
+            bio: dogBioString,
+            img: dogImageString
+          }
+        ]
       })
     }
   ).then(res => {
