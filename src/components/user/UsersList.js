@@ -7,7 +7,6 @@ import './Users.scss';
 
 const UserList = ({ match }) => {
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
-  console.log('xxxxxxxxxxxxx', match.params.zipcode, 'xxxxxxxxxxxxx', userZipcode);
   if(loading)
     return (
       <div className='spinner'>
