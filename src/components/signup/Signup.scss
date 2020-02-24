@@ -3,6 +3,7 @@
 @import '../abstract/mixins.scss';
 
 $color-primary: rgb(0,102,76);
+$color-primary2: rgb(1, 48, 36);
 $color-primary-light:rgb(45,130,106);
 $color-primary-light2: rgb(45,130,106);
 $color-primary-grey: #777;
@@ -82,19 +83,19 @@ $color-newGreen: rgb(32,133,96);
 .section-signup{
   padding: 1rem 0;
 
-  background-image: linear-gradient(to right bottom, ($color-black, 0.8), rgba($color-darkgrey, 0.8));
+  background-image: linear-gradient(to right bottom, $color-black, $color-black);
 }
 .signup{
  background-image: linear-gradient(
-      99deg,
+      100deg,
       rgba($color-darkgrey, 0.5) 0%,
-      rgba($color-darkgrey, 0.5) 50%,
-      transparent 40%
+      rgba($color-darkgrey, 0.9) 50%,
+      transparent 10%
     ),
     url(../assets/islaphoto.png);
   background-size: 100%;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba($color-black-med, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   height: 125rem;
 
   &__form {
@@ -104,13 +105,13 @@ $color-newGreen: rgb(32,133,96);
 }
 // form
 .form {
-  margin-left: 15rem;
+  margin-left: 5rem;
   &__group:not(:last-child) {
     margin-bottom: .7rem;
   }
   &__input {
-    font-size: 1rem;
-    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    padding: .7rem 1.7rem;
     border-radius: 2px;
     background: transparent;
     background: rgba($color-primary-white, 0.3);
@@ -135,7 +136,7 @@ $color-newGreen: rgb(32,133,96);
   }
 
   &__label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-left: 2rem;
     margin-top: .7rem;
@@ -151,10 +152,10 @@ $color-newGreen: rgb(32,133,96);
   } 
   &__select {
 	display: block;
-	font-size: 1.1rem;
+	font-size: 1.5rem;
 	font-family: sans-serif;
 	font-weight: 400;
-  color: rgb(142,139,139);
+  color: $color-primary2;
   border: 2px solid $color-black-med;
     border-bottom: 3px solid transparent;
 	line-height: 1.3;
@@ -201,6 +202,21 @@ $color-newGreen: rgb(32,133,96);
   box-shadow: 1px 1px 5px 1px $color-black-med;
   padding: .5rem;
 }
-  
+  .input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $color-primary2;
+  opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $color-primary2;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $color-primary2;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $color-primary2;
+  opacity: 1;
+}
 
 

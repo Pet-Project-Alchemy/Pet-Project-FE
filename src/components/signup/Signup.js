@@ -282,6 +282,8 @@ export default function UserSignup() {
                 <div className='form__group'>
                   <input
                     type='file'
+                    name='dogImage'
+                    value={dogImage}
                     className='form__input'
                     onChange={handleChange}
                   />
