@@ -13,7 +13,7 @@ export default function UserSignup() {
   const [userImage, setUserImage] = useState('');
 
   const [dogName, setDogName] = useState('');
-  const [size, setSize] = useState('');
+  const [dogSize, setSize] = useState('');
   const [breed, setBreed] = useState('');
   const [dogBio, setDogBio] = useState('');
   const [dogImage, setDogImage] = useState('');
@@ -33,7 +33,7 @@ export default function UserSignup() {
     userBio: setUserBio,
     userImage: setUserImage,
     dogName: setDogName,
-    size: setSize,
+    dogSize: setSize,
     breed: setBreed,
     dogBio: setDogBio,
     dogImage: setDogImage,
@@ -61,7 +61,7 @@ export default function UserSignup() {
       state,
       zipcode,
       dogName,
-      size,
+      dogSize,
       breed,
       dogBio,
       dogImage
@@ -233,7 +233,7 @@ export default function UserSignup() {
                   <label htmlFor='dogSize'></label>
                   <select
                     className='form__select'
-                    name='timeNeeded'
+                    name='dogSize'
                     onChange={handleChange}
                     placeholder='Pick time'
                   >
