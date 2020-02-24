@@ -18,7 +18,7 @@
   "scripts": {
     "test": "jest --verbose --updateSnapshot",
     "test:watch": "npm run test -- --watch",
-    "start": "webpack-dev-server --hot --mode development --devtool eval-source-map --host 0.0.0.0",
+    "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
     "build": "webpack -p --devtool source-map",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
