@@ -203,9 +203,9 @@ export default function UserSignup() {
                   </label>
                 </div>
                 <div className='form__group'>
-                  <label htmlFor="timeNeeded"></label>
+                  <label htmlFor='timeNeeded'></label>
                   <select
-                    className='select'
+                    className='form__select'
                     name='timeNeeded'
                     onChange={handleChange}
                     placeholder='Pick time'
@@ -216,9 +216,9 @@ export default function UserSignup() {
                   </select>
                 </div>
                 <div className='form__group'>
-                  <label htmlFor="timeAvailable"></label>
+                  <label htmlFor='timeAvailable'></label>
                   <select
-                    className='select'
+                    className='form__select'
                     name='timeAvailable'
                     onChange={handleChange}
                     placeholder='Pick time'
@@ -230,9 +230,9 @@ export default function UserSignup() {
                 </div>
 
                 <div className='form__group'>
-                  <label htmlFor="dogSize"></label>
+                  <label htmlFor='dogSize'></label>
                   <select
-                    className='select'
+                    className='form__select'
                     name='timeNeeded'
                     onChange={handleChange}
                     placeholder='Pick time'

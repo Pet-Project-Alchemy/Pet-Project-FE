@@ -13,7 +13,7 @@ $color-black-med: rgba(0, 0, 0, 0.418);
 $color-grey-light-1: #f7f7f7;
 $color-grey-med: #eee;
 $color-darkgrey: rgb(206, 200, 200);
-$color-darkgrey-2: #333;
+$color-darkgrey-2: rgb(99, 95, 95);
 $color-newGreen: rgb(32,133,96);
 .bottom {
   margin-bottom: 4rem;
@@ -54,11 +54,13 @@ $color-newGreen: rgb(32,133,96);
     @include respond(tab-port) {
       margin-bottom: $gutter-vertical-small;
     }
+    
   }
     @include respond(tab-port) {
       max-width: 50rem;
       // padding: 0 3rem;
     }
+    
   
   @include clearfix;
 
@@ -73,6 +75,9 @@ $color-newGreen: rgb(32,133,96);
     @include respond(tab-port) {
       width: 100% !important;
     }
+    @include respond(phone) {
+       width: 40% !important;
+     }
   }
 .section-signup{
   padding: 1rem 0;
@@ -109,7 +114,7 @@ $color-newGreen: rgb(32,133,96);
     border-radius: 2px;
     background: transparent;
     background: rgba($color-primary-white, 0.3);
-    border: 2px solid black;
+    border: 2px solid $color-black-med;
     border-bottom: 3px solid transparent;
     width: 65%;
     display: block;
@@ -144,14 +149,16 @@ $color-newGreen: rgb(32,133,96);
     transform: translateY(-4rem);
     
   } 
-  .select {
+  &__select {
 	display: block;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-family: sans-serif;
-	font-weight: 700;
-  color: $color-black;
+	font-weight: 400;
+  color: rgb(142,139,139);
+  border: 2px solid $color-black-med;
+    border-bottom: 3px solid transparent;
 	line-height: 1.3;
-	padding: .3em .8em .2em .4em;
+	padding: 1rem 1.5rem;
   width: 65%;
   height: 4rem;
   max-width: 100%;
@@ -165,26 +172,26 @@ $color-newGreen: rgb(32,133,96);
 	-webkit-appearance: none;
 	appearance: none;
 	background-color: $color-black-clear;
-	/* inline SVG */
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
-	
 	background-repeat: no-repeat, repeat;
 	background-position: right .7em top 50%, 0 0;
 	background-size: 1.5em auto, 100%;
-}
-.select::-ms-expand {
+
+&:-ms-expand {
 	display: none;
 }
-.select:hover {
+&:hover {
 	border-color: #888;
 }
-.select:focus {
-	border-color: #aaa;
-	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	color: #222;
-	outline: none;
+&:focus {
+      outline: none;
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
 }
+  }
+}
+
 .select option {
 	font-weight:normal;
 }
@@ -195,5 +202,5 @@ $color-newGreen: rgb(32,133,96);
   padding: .5rem;
 }
   
-}
+
 

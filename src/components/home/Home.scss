@@ -5,6 +5,7 @@
 .header {
   height: 95vh;
   .bg-video {
+   filter: grayscale(1);
   position: absolute;
   top: 0;
   left: 0;
@@ -12,7 +13,7 @@
   width: 100%;
   z-index: -1;
   opacity: .30;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
   
   &__content {
 width: 100%;
@@ -54,7 +55,7 @@ object-fit: cover;
   .section__title {
     color: $color-darkgrey;
     font-size: 4rem;
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   text-align: center;
   }
 
@@ -63,7 +64,7 @@ object-fit: cover;
   justify-content: center;
   align-items: center;
   background: $color-black;
-  padding: 3rem;
+
 
   &--paragraph {
     display: flex;
