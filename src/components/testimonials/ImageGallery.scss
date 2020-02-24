@@ -1,44 +1,42 @@
 body {
   margin: 20px;
   padding: 0;
-  background: #333;
+  background: #fff;
+  text-align: center;
 }
-
+//will need media query for small screen
 .container {
-  max-width: 760px;
+  max-width: 80%;
   margin: auto;
   border: #fff solid 3px;
   background: #fff;
 
-  .main-img img,
-  .imgs img {
-    width: 100%;
+  img {
+    object-fit: contain;
+    width: 75%;
   }
 
-  .imgs {
+  ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
+    list-style-type: none;
+
+    img {
+      width: 100%;
+    }
   }
 
-  .imgs img {
-    cursor: pointer;
+  a {
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 10px;
+    width: 20%;
   }
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in 1 forwards;
-}
-
-@media (max-width: 600px) {
-  .imgs {
-    grid-template-columns: repeat(2, 1fr);
+  a:hover {
+    background-color: blue;
+    color: white;
   }
 }
