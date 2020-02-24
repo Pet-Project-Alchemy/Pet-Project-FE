@@ -11,12 +11,12 @@
       "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "\\.(css)$": "identity-obj-proxy",
+      "\\.(css|less|scss)$": "identity-obj-proxy",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     }
   },
   "scripts": {
-    "test": "jest --verbose",
+    "test": "jest --verbose --updateSnapshot",
     "test:watch": "npm run test -- --watch",
     "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
     "build": "webpack -p --devtool source-map",
@@ -28,7 +28,8 @@
   "dependencies": {
     "postcss-mixins": "^6.2.3",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
