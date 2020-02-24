@@ -13,7 +13,7 @@ export default function UserSignup() {
   const [userImage, setUserImage] = useState('');
 
   const [dogName, setDogName] = useState('');
-  const [dogSize, setSize] = useState('');
+  const [dogSize, setDogSize] = useState('');
   const [breed, setBreed] = useState('');
   const [dogBio, setDogBio] = useState('');
   const [dogImage, setDogImage] = useState('');
@@ -33,7 +33,7 @@ export default function UserSignup() {
     userBio: setUserBio,
     userImage: setUserImage,
     dogName: setDogName,
-    dogSize: setSize,
+    dogSize: setDogSize,
     breed: setBreed,
     dogBio: setDogBio,
     dogImage: setDogImage,
