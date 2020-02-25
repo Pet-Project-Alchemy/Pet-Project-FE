@@ -117,7 +117,7 @@
       content: '';
       position: absolute;
       left: 0;
-      transition: all 0.2s;
+      transition: all 0.1s;
     }
     &::before {
       top: -0.8rem;
@@ -132,14 +132,14 @@
   &__button:hover &__icon::after {
     top: 1rem;
   }
-  &__checkbox:checked + &__button &__icon {
+  &__button-open > &__icon {
     background: transparent;
   }
-  &__checkbox:checked + &__button &__icon::before {
+  &__button-open > &__icon::before {
     top: 0;
     transform: rotate(135deg);
   }
-  &__checkbox:checked + &__button &__icon::after {
+  &__button-open > &__icon::after {
     top: 0;
     transform: rotate(-135deg);
   }
