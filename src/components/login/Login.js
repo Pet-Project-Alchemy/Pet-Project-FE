@@ -30,6 +30,7 @@ export default function UserLogin() {
           placeholder='******'
         />
       </label>
+      <button>Login</button>
     </form>
   );
 }
