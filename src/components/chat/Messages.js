@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import { useSocket } from 'react-socket-io-hooks';
 
 const Messages = () => {
-    const socket = useSocket();
+  const socket = useSocket();
   const state = useSocketState();
   const senderId = useSessionUser();
   //   const { receiverId } = useParams();

@@ -6,7 +6,7 @@ export const ChatForm = () => {
 
   const [message, setMessage] = useState('');
   const user = useSessionUser();
-  console.log('XXXXXXXXXXX', user);
+//   console.log('XXXXXXXXXXX', user);
 
   const sendMessage = useEmitEvent('sendMessage');
   const handleSubmit = (e) => {
@@ -16,7 +16,6 @@ export const ChatForm = () => {
 
   const handleChange = ({ target }) => {
     setMessage(target.value);
-    console.log(target);
   };
 
   return (

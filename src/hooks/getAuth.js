@@ -16,7 +16,7 @@ export const SessionProvider = ({ children }) => {
         console.log(user);
         setUser(user);
         // if user is logged in previously you land on this page
-        history.push('/zipcode/97201');
+        // history.push('/');
       })
       .catch(() => {
         history.push('/');
