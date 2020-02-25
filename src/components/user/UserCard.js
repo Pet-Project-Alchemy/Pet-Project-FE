@@ -20,24 +20,24 @@ const UserCard = ({
       <div className='card__picture card__picture--1'>&nbsp;</div>
       <h4 className='card__heading'>
         <span className='card__heading-span card__heading-span--1'>
-          {firstName}eve and isla{dogName}
+          {firstName}{dogName}
         </span>
       </h4>
       <img className='userImg' src={img ? img : defaultUserImg} />
       <img className='dogImg' src={dogImg ? dogImg : defaultDogImg} />
       <div className='card__details'>
         <ul>
-          <li>{zipcode}123</li>
-          <li>{timeAvailable}6-noon</li>
-          <li>{timeNeeded}6-12</li>
+          <li>{zipcode}</li>
+          <li>{timeAvailable}</li>
+          <li>{timeNeeded}</li>
         </ul>
       </div>
     </div>
     <div className='card__side card__side--back card__side--back-1'>
       <div className='card__cta'>
         <div className='card__bio-box'>
-          <p className='card__bio-text'>{bio}my bio</p>
-          <p className='card__bio-text'>{dogBio}my dogs bio</p>
+          <p className='card__bio-text'>{bio}</p>
+          <p className='card__bio-text'>{dogBio}</p>
         </div>
       </div>
     </div>
