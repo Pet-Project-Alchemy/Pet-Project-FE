@@ -6,14 +6,24 @@ body {
 }
 //will need media query for small screen
 .container {
-  max-width: 80%;
+  max-width: 40%;
   margin: auto;
   border: #fff solid 3px;
   background: #fff;
 
   img {
     object-fit: contain;
-    width: 75%;
+    max-width: 100%;
+  }
+
+  .main-image {
+    // border: 20px solid black;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
   }
 }
 
@@ -21,24 +31,20 @@ ul {
   display: grid;
   list-style-type: none;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+grid-column-gap: 20px;
+grid-row-gap: 20px;
+
 }
 
-.grid {
-  display: grid;
-}
 .image-container {
   width: 100%;
-  position: relative;
-  margin: auto;
-  background-color: grey;
-  border: 10px solid black;
-  overflow:hidden;
+  overflow: hidden;
+  position:relative;
+  background-color: white;
+  margin:auto;
+  border: 1px solid black;
+  height: 100px;
 }
-
-
-
 
 a {
   text-decoration: none;
@@ -67,4 +73,25 @@ a:hover {
 
   border: solid 1px black;
   height: auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+
+
+    .main-image {
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      height: 300px;
+      width: 100%;
+      border:none;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

@@ -5,6 +5,7 @@ import wallace from '../assets/wallace-park.jpg';
 import laurelhurst from '../assets/Laurelhurst_Park.jpeg';
 import alberta from '../assets/Alberta_park.jpg';
 import lucky from '../assets/Lucky-Lab.jpg';
+import java from '../assets/Java.jpg';
 
 export default function ImageGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,7 +51,7 @@ export default function ImageGallery() {
       address: '1945 NW Quimby St Portland, OR'
     },
     {
-      image: 'https://www.loaduppup.com/wp-content/uploads/2018/08/Java3.jpg',
+      image: java,
       name: 'Java Hound Coffee Bar',
       website: 'http://javahoundcoffee.com/',
       addressLink:
@@ -131,7 +132,7 @@ export default function ImageGallery() {
       <>
         <div className='image-container'>
           <li key={i} name={i} onClick={handleClick}>
-            <img src={img.image} name={i} />
+            <img src={img.image}  name={i} />
           </li>
         </div>
       </>
