@@ -140,6 +140,7 @@ export default function ImageGallery() {
 
   return (
     <>
+      <h1>Suggestions on where to meet?</h1>
       <div className='container'>
         <div className='main'>
           <img className='main-image' src={images[activeIndex].image} />

@@ -39,7 +39,6 @@ export default function Testimonials() {
           </p>
         </div>
       </div>
-      <h1>Suggestions on where to meet?</h1>
       <ImageGallery />
     </>
   );
