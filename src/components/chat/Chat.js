@@ -18,7 +18,7 @@ const Chat = () => {
   const socket = io('http://localhost:7890');
 
   socket.on('connection', (socket) => {
-    socket.on('hi', (data) => {
+    socket.on('hi', (message) => {
     });
   });
   const onChange = (e) => {

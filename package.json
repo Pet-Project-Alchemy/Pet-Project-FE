@@ -31,7 +31,8 @@
     "react-dom": "^16.12.0",
     "react-icons": "^3.9.0",
     "react-socket-io-hooks": "0.0.4",
-    "socket.io-client": "^2.3.0"
+    "socket.io-client": "^2.3.0",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
