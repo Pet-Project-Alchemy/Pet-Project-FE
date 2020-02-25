@@ -31,12 +31,17 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className='navigation__item'>
+              <NavLink to='/login' className='navigation__link' onClick={() => setOpen(!open)}>
+                Login
+              </NavLink>
+            </li>
+            <li className='navigation__item'>
               <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
                Profile
               </NavLink>
             </li>
             <li className='navigation__item'>
-              <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
+              <NavLink to='/zipcode/:zipcode' className='navigation__link' onClick={() => setOpen(!open)}>
                 Search
               </NavLink>
             </li>
