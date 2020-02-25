@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { getUserLogin } from '../service/fetchLogin';
 import { fetchVerify } from '../service/fetchVerify';
+import { getUserSignup } from '../service/fetchSignup';
 
 const SessionContext = createContext();
 
@@ -14,12 +15,22 @@ export const SessionProvider = ({ children }) => {
     fetchVerify()
       .then(user => {
         setUser(user);
-        history.push('/');
+        // history.push();
       })
       .catch(() => {
         history.push('/');
       });
   }, []);
+  const signup = formData => {
+    getUserSignup(formData)
+      .then(user => {
+        setUser(user)
+        history.push(`/zipcode/${user.address.zipcode}`);
+      })
+      .catch(err => {
+        setAuthError(err);
+      });
+  };
 
   const login = (email, password) => {
     setAuthError(null);
@@ -34,7 +45,7 @@ export const SessionProvider = ({ children }) => {
   };
 
   return (
-    <SessionContext.Provider value={{ user, login, authError }}>
+    <SessionContext.Provider value={{ user, login, authError, signup }}>
       {children}
     </SessionContext.Provider>
   );
@@ -58,4 +69,8 @@ export const useLogin = () => {
 export const useAuthError = () => {
   const { authError } = useContext(SessionContext);
   return authError;
+};
+export const useSignup = () => {
+  const { signup } = useContext(SessionContext);
+  return signup;
 };
