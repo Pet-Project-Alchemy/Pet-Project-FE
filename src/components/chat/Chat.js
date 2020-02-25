@@ -10,7 +10,6 @@ const reducer = (state, action) => {
     default: 
       return state;
   }
-
 };
 
 const Chat = () => {
@@ -19,21 +18,16 @@ const Chat = () => {
   const socket = io('http://localhost:7890');
 
   socket.on('connection', (socket) => {
-    console.log('hiXXXXX');
     socket.on('hi', (data) => {
-      console.log(data);
     });
   });
   const onChange = (e) => {
     setMessage(e.target.value);
   };
 
-
-
   const onSubmit = (event) => {
     event.preventDefault();
     socket.emit('message', (message) => {
-      console.log(message);
       setMessages(message);
     });
   };
@@ -54,7 +48,6 @@ const Chat = () => {
       </form>
       <Messages />
     </SocketProvider>
-
   );
 };
 
