@@ -1,48 +1,45 @@
 import React from 'react';
 import ImageGallery from './ImageGallery';
 import './ImageGallery.scss';
+import './testimonials.scss';
 
 export default function Testimonials() {
   return (
     <>
-      <section>
-        {/* <div>
-          <p className='testimonials'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            libero odio dolores cum corrupti eos. Reprehenderit, laboriosam!
-            Sint aut quae, expedita facilis ab vel
+      <div className='wrapper'>
+        <h1 className='text-center'>Testimonials</h1>
+        <div className='speechbubble'>
+          <p>
+            HI
+            <span className='username'>Nikki Sato</span>
           </p>
-        </div> */}
-        <h3>Ryan</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit libero
-          odio dolores cum corrupti eos. Reprehenderit, laboriosam! Sint aut
-          quae, expedita facilis ab vel iusto culpa voluptate quas consequatur
-          maiores, dolorum similique in sit numquam vero ipsam est dolorem.
-          Molestiae dicta est ab? Reprehenderit ullam reiciendis dolore
-          laboriosam cum, mollitia.
-        </p>
-
-        <h3>Sophia</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit libero
-          odio dolores cum corrupti eos. Reprehenderit, laboriosam! Sint aut
-          quae, expedita facilis ab vel iusto culpa voluptate quas consequatur
-          maiores, dolorum similique in sit numquam vero ipsam est dolorem.
-          Molestiae dicta est ab? Reprehenderit ullam reiciendis dolore
-          laboriosam cum, mollitia.
-        </p>
-
-        <h3>Yoda</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit libero
-          odio dolores cum corrupti eos. Reprehenderit, laboriosam! Sint aut
-          quae, expedita facilis ab vel iusto culpa voluptate quas consequatur
-          maiores, dolorum similique in sit numquam vero ipsam est dolorem.
-          Molestiae dicta est ab? Reprehenderit ullam reiciendis dolore
-          laboriosam cum, mollitia.
-        </p>
-      </section>
+        </div>
+        <div className='speechbubble'>
+          <p>
+            So I created this thread to see if anyone wants to work on creating
+            an N Wheeled classNameName vehicle with me, as opposed to a bunch of
+            people banging their heads against the wall seperately.
+            <span className='username'>Eve Stockstill</span>
+          </p>
+        </div>
+        <div className='speechbubble'>
+          <p>
+            So I created this thread to see if anyone wants to work on creating
+            an N Wheeled classNameName vehicle with me, as opposed to a bunch of
+            people banging their heads against the wall seperately.
+            <span className='username'>Sam Sterns</span>
+          </p>
+        </div>
+        <div className='speechbubble'>
+          <p>
+            So I created this thread to see if anyone wants to work on creating
+            an N Wheeled className vehicle with me, as opposed to a bunch of
+            people banging their heads against the wall seperately.
+            <span className='username'>BOB</span>
+          </p>
+        </div>
+      </div>
+      <h1>Suggestions on where to meet?</h1>
       <ImageGallery />
     </>
   );

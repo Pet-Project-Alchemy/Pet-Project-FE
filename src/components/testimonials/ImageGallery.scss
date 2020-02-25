@@ -60,7 +60,14 @@ a:hover {
   color: white;
 }
 
+.speech{
+  background-image: url(../assets/message-chat.png);
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+}
 .testimonials {
+  
   clip-path: polygon(
     0% 0%,
     100% 0%,
@@ -70,9 +77,6 @@ a:hover {
     50% 75%,
     0% 75%
   );
-
-  border: solid 1px black;
-  height: auto;
 }
 
 @media (max-width: 600px) {
