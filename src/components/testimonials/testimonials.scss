@@ -1,10 +1,11 @@
 $color1 :     #161719;
 $color2 :     #26272b;
-$text :       #9fa2a7;
-$highlight1 : #56b273;
-$highlight2 : #b388dd;
-$highlight3 : #ff8750;
-$highlight4 : #01AD9B;
+
+
+
+@import '../abstract/base.scss';
+@import '../abstract/variables.scss';
+
 
 .text-center {
 	text-align: center;
@@ -24,7 +25,7 @@ $highlight4 : #01AD9B;
 body {
 	background-color: $color1;
   font-family: 'Roboto', sans-serif;
-  color: $text;
+  color: $color-darkgrey;
 	.wrapper {
 		max-width: 450px;
 		margin: 0 auto;
@@ -36,7 +37,7 @@ body {
 		}
 		.speechbubble {
 			background-color: $color2;
-			color: $text;
+			color: $color-darkgrey;
 			font-size: .8em;
 			line-height: 1.75;
 			padding: 15px 25px;
