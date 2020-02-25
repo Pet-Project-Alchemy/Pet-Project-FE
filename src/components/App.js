@@ -18,7 +18,6 @@ export default function App() {
           <Route path='/login' component={Login} />
           <Route path='/zipcode/:zipcode' component={UserList} />
         </SessionProvider>
-        
       </Router>
     </>
   );
