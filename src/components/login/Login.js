@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import { getUserLogin } from '../../service/fetchLogin';
+import { useLogin } from '../../hooks/getAuth';
 
 export default function UserLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { login, authError } = useLogin();
 
   const handleSubmit = event => {
     event.preventDefault();
-    getUserLogin(email, password);
+    login(email, password);
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      {authError && <p>{authError}</p>}
       <label htmlFor='email'>
           Email
         <input

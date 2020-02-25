@@ -1,10 +1,11 @@
-export const fetchVerify = (path, method, body) => {
-  return fetch('https://cors-anywhere.herokuapp.com/https://pet-project-be-staging.herokuapp.com/api/v1/auth/verify', {
-    method,
-    headers: {
-      'Content-Type': 'application/json'
-    },
+export const fetchVerify = (body) => {
+  return fetch('https://pet-project-be-staging.herokuapp.com/api/v1/auth/verify', {
+    method: 'GET',
     credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+      origin: true
+    },
     body: JSON.stringify(body)
   })
     .then(res => Promise.all([res.ok, res.json()]))
