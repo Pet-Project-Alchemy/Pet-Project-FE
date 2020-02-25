@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import './ImageGallery.scss';
+import couch from '../assets/Couch_Park.jpg';
+import wallace from '../assets/wallace-park.jpg';
+import laurelhurst from '../assets/Laurelhurst_Park.jpeg';
+import alberta from '../assets/Alberta_park.jpg';
+import lucky from '../assets/Lucky-Lab.jpg';
 
 export default function ImageGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
   const images = [
     {
-      image: 'https://photos.bringfido.com/photo/2014/12/01/wallace_park.jpg?size=hero&density=2x',
+      image: wallace,
       name: 'Wallace Dog Park',
       // website: 'http://www.luckylab.com/',
       addressLink:
@@ -13,7 +18,7 @@ export default function ImageGallery() {
       address: '1628 NW 25th Ave, Portland, OR 97210'
     },
     {
-      image: 'https://www.portlandoregon.gov/shared/cfm/slb.cfm?id=531831',
+      image: couch,
       name: 'Couch Dog Park',
       // website: 'http://www.luckylab.com/',
       addressLink:
@@ -21,7 +26,7 @@ export default function ImageGallery() {
       address: '1961 NW Glisan St, Portland, OR 97209'
     },
     {
-      image: 'https://preview.ibb.co/iZ3Lww/img2.jpg',
+      image: laurelhurst,
       name: 'Laurelhurst Park',
       // website: 'http://www.luckylab.com/',
       addressLink:
@@ -29,7 +34,7 @@ export default function ImageGallery() {
       address: 'SE Cesar E Chavez Blvd & Stark St, Portland, OR 97214'
     },
     {
-      image: 'https://preview.ibb.co/iZ3Lww/img2.jpg',
+      image: alberta,
       name: 'Alberta Dog Park',
       // website: 'http://www.luckylab.com/',
       addressLink:
@@ -37,7 +42,7 @@ export default function ImageGallery() {
       address: '1905 NE Killingsworth St, Portland, OR 97211'
     },
     {
-      image: 'https://www.wweek.com/resizer/9aVqJYuam2TQGg3jf0id1GNYAb0=/1200x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/wweek/wp-content/uploads/2017/02/24164156/Lucky-Lab_Emily-Joan-Greene_2.jpg',
+      image: lucky,
       name: 'Lucky Labrador Beer Hall',
       website: 'http://www.luckylab.com/',
       addressLink:
@@ -45,7 +50,7 @@ export default function ImageGallery() {
       address: '1945 NW Quimby St Portland, OR'
     },
     {
-      image: 'https://preview.ibb.co/iQsPOb/img3.jpg',
+      image: 'https://www.loaduppup.com/wp-content/uploads/2018/08/Java3.jpg',
       name: 'Java Hound Coffee Bar',
       website: 'http://javahoundcoffee.com/',
       addressLink:
@@ -53,7 +58,8 @@ export default function ImageGallery() {
       address: '610 NW 23rd Ave Portland, OR'
     },
     {
-      image: 'https://preview.ibb.co/gFFdib/img4.jpg',
+      image:
+        'https://cdn.vox-cdn.com/thumbor/-7UBYAd7aXS252dC8yFx_vv12oo=/0x0:1800x1800/1870x1403/filters:focal(756x756:1044x1044):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62566192/the_rambler.0.0.jpg',
       name: 'The Rambler',
       website: 'https://www.ramblerbar.com/',
       addressLink:
@@ -61,7 +67,8 @@ export default function ImageGallery() {
       address: '4205 N Mississippi Ave Portland, OR'
     },
     {
-      image: 'https://res.cloudinary.com/sagacity/image/upload/v1438708571/victoria-2_w1wz8u.jpg',
+      image:
+        'https://res.cloudinary.com/sagacity/image/upload/v1438708571/victoria-2_w1wz8u.jpg',
       name: 'Victoria Bar',
       website: 'http://victoriapdx.com/',
       addressLink:
@@ -69,7 +76,8 @@ export default function ImageGallery() {
       address: '4835 N Albina Ave Portland, OR 97217'
     },
     {
-      image: 'https://images.squarespace-cdn.com/content/v1/5c75b4137eb88c1570f1435c/1556052975071-HCH6ENPLJLZNENHGFZB8/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/20181019-+Basecamp60e-9BCBC+Website.jpg',
+      image:
+        'https://images.squarespace-cdn.com/content/v1/5c75b4137eb88c1570f1435c/1556052975071-HCH6ENPLJLZNENHGFZB8/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/20181019-+Basecamp60e-9BCBC+Website.jpg',
       name: 'Base Camp Brewing',
       website: 'https://www.basecampbrewingco.com/',
       addressLink:
@@ -77,7 +85,8 @@ export default function ImageGallery() {
       address: ' 930 SE Oak St Portland, OR'
     },
     {
-      image: 'https://preview.ibb.co/bSWjOb/img7.jpg',
+      image:
+        'https://images.squarespace-cdn.com/content/v1/55c52dc7e4b05dcc99eab5d9/1554504893063-HUJTIRZ3BP8LCLVNMQBV/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/whs_G7A2127RGB+copy.jpg',
       name: 'Marthas',
       website: 'http://www.marthaspdx.com/',
       addressLink:
@@ -85,7 +94,8 @@ export default function ImageGallery() {
       address: '1300 SE Stark St Portland, OR 97214'
     },
     {
-      image: 'https://preview.ibb.co/i2o9pG/img8.jpg',
+      image:
+        'https://cdn.vox-cdn.com/thumbor/c0RdCWEfX4efmjcdKeh3qzwdZV0=/0x0:1800x1013/1870x1403/filters:focal(756x363:1044x651):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62566200/Tin_Shed_doggy.0.0.jpg',
       name: 'Tin Shed Garden Cafe',
       website: 'http://tinshedgardencafe.com/',
       addressLink:
@@ -93,15 +103,17 @@ export default function ImageGallery() {
       address: '1438 NE Alberta St Portland, OR 97211'
     },
     {
-      image: 'https://preview.ibb.co/i2o9pG/img8.jpg',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQV23H_hqwIGoW1age51Xk3aBvQz24PmuwPrca_VlEp3RqM--QD',
       name: 'The Station',
       website: 'http://stationpdx.com/',
       addressLink:
         'https://www.google.com/maps/place/The+Station+Pizza+Pub/@45.5591667,-122.6377778,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a6de507b907b:0x8afef9f51c461927!8m2!3d45.5591667!4d-122.6377778',
-      address: '  2603 NE Alberta Portland, OR'
+      address: '  2703 NE Alberta Portland, OR'
     },
     {
-      image: 'https://preview.ibb.co/i2o9pG/img8.jpg',
+      image:
+        'https://photos.bringfido.com/restaurants/7/1/0/68017/68017_256409.jpg?size=stack&density=2x',
       name: 'Pizza Jerk',
       website: 'http://www.pizzajerkpdx.com/',
       addressLink:
@@ -116,9 +128,13 @@ export default function ImageGallery() {
 
   const thumbnails = images.map((img, i) => {
     return (
-      <li key={i} name={i} onClick={handleClick}>
-        <img src={img.image} name={i} />
-      </li>
+      <>
+        <div className='image-container'>
+          <li key={i} name={i} onClick={handleClick}>
+            <img src={img.image} name={i} />
+          </li>
+        </div>
+      </>
     );
   });
 
@@ -136,7 +152,10 @@ export default function ImageGallery() {
           </a>
           <p>{images[activeIndex].address}</p>
         </div>
-        <ul>{thumbnails}</ul>
+
+        <div className='grid'>
+          <ul>{thumbnails}</ul>
+        </div>
       </div>
     </>
   );
