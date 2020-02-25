@@ -1,0 +1,84 @@
+@import '../abstract/base.scss';
+
+.container {
+  max-width: 40%;
+  margin: auto;
+  text-align: center;
+
+  img {
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  .main-image {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 50rem;
+    width: 100%;
+  }
+  h2,
+  a,
+  p {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+}
+
+ul {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: auto;
+  padding: 0;
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  min-height: 10rem;
+}
+
+a {
+  text-decoration: none;
+
+  color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 2rem;
+}
+a:hover {
+  background-color: blue;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    .main-image {
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      height: 30rem;
+      width: 100%;
+      border: none;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-container {
+      overflow: hidden;
+      position: relative;
+      background-color: white;
+      margin: auto;
+      height: 20%;
+    }
+  }
+}
