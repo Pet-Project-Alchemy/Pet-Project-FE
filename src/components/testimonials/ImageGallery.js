@@ -6,6 +6,13 @@ import laurelhurst from '../assets/Laurelhurst_Park.jpeg';
 import alberta from '../assets/Alberta_park.jpg';
 import lucky from '../assets/Lucky-Lab.jpg';
 import java from '../assets/Java.jpg';
+import rambler from '../assets/rambler.jpg';
+import victoria from '../assets/victoria.jpg';
+import basecamp from '../assets/Basecamp.jpg';
+import marthas from '../assets/marthas.jpg';
+import tinShed from '../assets/Tin_Shed.jpg';
+import station from '../assets/The_station.jpeg';
+import pizza from '../assets/pizza-jerk.jpg';
 
 export default function ImageGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -59,8 +66,7 @@ export default function ImageGallery() {
       address: '610 NW 23rd Ave Portland, OR'
     },
     {
-      image:
-        'https://cdn.vox-cdn.com/thumbor/-7UBYAd7aXS252dC8yFx_vv12oo=/0x0:1800x1800/1870x1403/filters:focal(756x756:1044x1044):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62566192/the_rambler.0.0.jpg',
+      image: rambler,
       name: 'The Rambler',
       website: 'https://www.ramblerbar.com/',
       addressLink:
@@ -68,17 +74,14 @@ export default function ImageGallery() {
       address: '4205 N Mississippi Ave Portland, OR'
     },
     {
-      image:
-        'https://res.cloudinary.com/sagacity/image/upload/v1438708571/victoria-2_w1wz8u.jpg',
-      name: 'Victoria Bar',
+      image: victoria,
       website: 'http://victoriapdx.com/',
       addressLink:
         'https://www.google.com/maps/place/Victoria+Bar/@45.5580195,-122.6752576,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a712ee8d9a13:0xfe173a70116370f0!8m2!3d45.5580195!4d-122.6752576',
       address: '4835 N Albina Ave Portland, OR 97217'
     },
     {
-      image:
-        'https://images.squarespace-cdn.com/content/v1/5c75b4137eb88c1570f1435c/1556052975071-HCH6ENPLJLZNENHGFZB8/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/20181019-+Basecamp60e-9BCBC+Website.jpg',
+      image: basecamp,
       name: 'Base Camp Brewing',
       website: 'https://www.basecampbrewingco.com/',
       addressLink:
@@ -86,8 +89,7 @@ export default function ImageGallery() {
       address: ' 930 SE Oak St Portland, OR'
     },
     {
-      image:
-        'https://images.squarespace-cdn.com/content/v1/55c52dc7e4b05dcc99eab5d9/1554504893063-HUJTIRZ3BP8LCLVNMQBV/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/whs_G7A2127RGB+copy.jpg',
+      image: marthas,
       name: 'Marthas',
       website: 'http://www.marthaspdx.com/',
       addressLink:
@@ -95,8 +97,7 @@ export default function ImageGallery() {
       address: '1300 SE Stark St Portland, OR 97214'
     },
     {
-      image:
-        'https://cdn.vox-cdn.com/thumbor/c0RdCWEfX4efmjcdKeh3qzwdZV0=/0x0:1800x1013/1870x1403/filters:focal(756x363:1044x651):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62566200/Tin_Shed_doggy.0.0.jpg',
+      image: tinShed,
       name: 'Tin Shed Garden Cafe',
       website: 'http://tinshedgardencafe.com/',
       addressLink:
@@ -104,8 +105,7 @@ export default function ImageGallery() {
       address: '1438 NE Alberta St Portland, OR 97211'
     },
     {
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQV23H_hqwIGoW1age51Xk3aBvQz24PmuwPrca_VlEp3RqM--QD',
+      image: station,
       name: 'The Station',
       website: 'http://stationpdx.com/',
       addressLink:
@@ -113,8 +113,7 @@ export default function ImageGallery() {
       address: '  2703 NE Alberta Portland, OR'
     },
     {
-      image:
-        'https://photos.bringfido.com/restaurants/7/1/0/68017/68017_256409.jpg?size=stack&density=2x',
+      image: pizza,
       name: 'Pizza Jerk',
       website: 'http://www.pizzajerkpdx.com/',
       addressLink:
@@ -132,7 +131,7 @@ export default function ImageGallery() {
       <>
         <div className='image-container'>
           <li key={i} name={i} onClick={handleClick}>
-            <img src={img.image}  name={i} />
+            <img src={img.image} name={i} />
           </li>
         </div>
       </>

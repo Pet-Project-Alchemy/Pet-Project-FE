@@ -43,7 +43,7 @@ grid-row-gap: 20px;
   background-color: white;
   margin:auto;
   border: 1px solid black;
-  height: 100px;
+  min-height: 100px;
 }
 
 a {
@@ -92,6 +92,16 @@ a:hover {
     ul {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-container {
+     
+      overflow: hidden;
+      position:relative;
+      background-color: white;
+      margin:auto;
+      border: 1px solid black;
+      height: 20%;
     }
   }
 }
