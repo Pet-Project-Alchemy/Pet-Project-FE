@@ -1,9 +1,9 @@
 export const getUserLogin = (emailString, passwordString) => {
   return fetch(
-    'https://cors-anywhere.herokuapp.com/https://pet-project-be-staging.herokuapp.com/api/v1/auth/login',
+    'https://pet-project-be-staging.herokuapp.com/api/v1/auth/login',
     {
       method: 'POST',
-  
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         origin: true

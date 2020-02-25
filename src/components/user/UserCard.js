@@ -58,8 +58,9 @@ const UserCard = ({
 UserCard.propTypes = {
   firstName: PropTypes.string.isRequired,
   dogName: PropTypes.string.isRequired,
-  userImg: PropTypes.string.isRequired,
-  dogImg: PropTypes.string.isRequired,
+  img: PropTypes.string,
+  dogImg: PropTypes.string,
+
   timeNeeded: PropTypes.string.isRequired,
   timeAvailable: PropTypes.string.isRequired,
   zipcode: PropTypes.string.isRequired,
