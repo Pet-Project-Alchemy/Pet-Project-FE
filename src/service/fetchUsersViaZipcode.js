@@ -1,6 +1,6 @@
 export const getUsersViaZipcode = (zipcode) => {
   return fetch(
-    `https://cors-anywhere.herokuapp.com/https://pet-project-be-staging.herokuapp.com/api/v1/auth/${zipcode}`,
+    `https://cors-anywhere.herokuapp.com/https://pet-project-be-staging.herokuapp.com/api/v1/auth/${97227}`,
     {
       method: 'GET',
       

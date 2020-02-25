@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
 import defaultUserImg from '../assets/dogLogo.png';
-import defaultDogImg from '../assets/dogLogo.png';
+import defaultDogImg from '../assets/ISLA.png';
 
 const UserCard = ({
   firstName,
   dogName,
-  img,
+  userImg,
   dogImg,
   timeNeeded,
   timeAvailable,
@@ -17,14 +17,25 @@ const UserCard = ({
 }) => (
   <div className='card'>
     <div className='card__side card__side--front'>
-      <div className='card__picture card__picture--1'>&nbsp;</div>
-      <h4 className='card__heading'>
-        <span className='card__heading-span card__heading-span--1'>
-          {firstName}{dogName}
-        </span>
-      </h4>
-      <img className='userImg' src={img ? img : defaultUserImg} />
-      <img className='dogImg' src={dogImg ? dogImg : defaultDogImg} />
+      <div className='card__picture card__picture--1'>
+        <div className='card__picture card__img'>
+          <img className='userImg' src={userImg ? userImg : defaultUserImg} />
+          <figcaption>
+            {' '}
+            <span className='card__heading-span card__heading-span--1'>
+              {firstName}&nbsp;
+            </span>
+          </figcaption>
+          <img className='dogImg' src={dogImg ? dogImg : defaultDogImg} />
+          <figcaption>
+            {' '}
+            <span className='card__heading-span card__heading-span--2'>
+              {dogName}&nbsp;
+            </span>
+          </figcaption>
+
+        </div> 
+      </div>
       <div className='card__details'>
         <ul>
           <li>{zipcode}</li>
@@ -47,7 +58,7 @@ const UserCard = ({
 UserCard.propTypes = {
   firstName: PropTypes.string.isRequired,
   dogName: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  userImg: PropTypes.string.isRequired,
   dogImg: PropTypes.string.isRequired,
   timeNeeded: PropTypes.string.isRequired,
   timeAvailable: PropTypes.string.isRequired,
