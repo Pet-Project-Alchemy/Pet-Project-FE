@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import io from 'socket.io-client';
 import { SocketProvider } from 'react-socket-io-hooks';
 import Messages from './Messages'; 
+import { ChatForm } from './ChatForm';
 
 const reducer = (state, action) => {
   switch(action.type){
@@ -13,39 +14,12 @@ const reducer = (state, action) => {
 };
 
 const Chat = () => {
-  const [message, setMessage] = useState('');
-  const [messages, setMessages] = useState([]);
-  const socket = io('http://localhost:7890');
-
-  socket.on('connection', (socket) => {
-    socket.on('hi', (message) => {
-    });
-  });
-  const onChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-    socket.emit('message', (message) => {
-      setMessages(message);
-    });
-  };
 
   return (
-    <SocketProvider uri="http://localhost:7891" 
+    <SocketProvider uri="http://localhost:7890" 
       reducer={reducer}
-      initialState ={{ messages:[{
-        senderId:'123',
-        receiverId:'432',
-        text:'hellop',
-        url:'www.'
-      }] }} >
-      <form onSubmit={onSubmit} onChange={onChange} id="message-form">
-        <label name="message">Message:</label>
-        <input value={message} type="text" name="message" required autoComplete="off"></input>
-        <button id="submit">Send</button>
-      </form>
+      initialState ={{ messages:[] }} >
+      <ChatForm />
       <Messages />
     </SocketProvider>
   );

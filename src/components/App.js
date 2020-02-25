@@ -6,10 +6,12 @@ import Nav from './nav/Nav';
 import UserList from './user/UsersList';
 import { SessionProvider } from '../hooks/getAuth';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Chat from './chat/Chat';
 
 export default function App() {
   return (
     <>
+      
       <Router>
         <Nav />
         <SessionProvider>
@@ -17,6 +19,7 @@ export default function App() {
           <Route path='/signup' component={Signup} />
           <Route path='/login' component={Login} />
           <Route path='/zipcode/:zipcode' component={UserList} />
+          <Route path='/chat' component={Chat} />
         </SessionProvider>
         
       </Router>

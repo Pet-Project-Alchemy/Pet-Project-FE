@@ -7,6 +7,8 @@ import './Users.scss';
 
 const UserList = ({ match }) => {
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
+  console.log(match.params.zipcode);
+  console.log(userZipcode);
   if(loading)
     return (
       <div className='spinner'>
@@ -14,8 +16,7 @@ const UserList = ({ match }) => {
         <div className='bounce2'></div>
       </div>
     );
-  if(!userZipcode.length) return;
-  <p className='error'>There are no users with your search criteria.</p>;
+  if(!userZipcode.length) return <p className='error'>There are no users with your search criteria.</p>;
 
   const userList = userZipcode.map(user => {
     return (

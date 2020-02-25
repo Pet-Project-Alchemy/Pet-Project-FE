@@ -13,8 +13,10 @@ export const SessionProvider = ({ children }) => {
   useEffect(() => {
     fetchVerify()
       .then(user => {
+        console.log(user);
         setUser(user);
-        history.push('/');
+        // if user is logged in previously you land on this page
+        history.push('/zipcode/97201');
       })
       .catch(() => {
         history.push('/');

@@ -9,6 +9,7 @@ export const useUsersViaZipcode = zipcode => {
     setLoading(true);
     getUsersViaZipcode(zipcode)
       .then(resObject => {
+        console.log(resObject);
         setUserZipcode(resObject);
       })
       .finally(() => setLoading(false));

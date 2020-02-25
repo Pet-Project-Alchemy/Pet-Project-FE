@@ -1,10 +1,20 @@
-import React from 'react';
-import { useSocketState } from 'react-socket-io-hooks';
+import React, { useEffect } from 'react';
+import { useSocketState, useEmitEvent } from 'react-socket-io-hooks';
 import Message from './Message';
+import { useSessionUser } from '../../hooks/getAuth';
+import { useParams } from 'react-router-dom';
+import { useSocket } from 'react-socket-io-hooks';
 
 const Messages = () => {
+    const socket = useSocket();
   const state = useSocketState();
-  console.log(state);
+  const senderId = useSessionUser();
+  //   const { receiverId } = useParams();
+  const receiverId = senderId;
+  const join = useEmitEvent('join');
+  useEffect(() => {
+    if(socket.connected) join({ senderId, receiverId });
+  }, [socket.connected]);
   const messagesArray = state.messages.map(message => {
     return <Message 
       key={message.message}
