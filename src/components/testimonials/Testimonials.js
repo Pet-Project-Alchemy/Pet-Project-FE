@@ -10,36 +10,26 @@ export default function Testimonials() {
         <h1 className='text-center'>Testimonials</h1>
         <div className='speechbubble'>
           <p>
-            HI
-            <span className='username'>Nikki Sato</span>
+            "I work nights, and most dog-walking services end at 6. I am so
+            happy to know that Spot gets his chance to go potty"
+            <span className='username'>- Karen </span>
           </p>
         </div>
         <div className='speechbubble'>
           <p>
-            So I created this thread to see if anyone wants to work on creating
-            an N Wheeled classNameName vehicle with me, as opposed to a bunch of
-            people banging their heads against the wall seperately.
-            <span className='username'>Eve Stockstill</span>
+            "As a senior on a fixed income, I appreciate sharing with a
+            neighbor. It is not just another service app"
+            <span className='username'>-Meryl</span>
           </p>
         </div>
         <div className='speechbubble'>
           <p>
-            So I created this thread to see if anyone wants to work on creating
-            an N Wheeled classNameName vehicle with me, as opposed to a bunch of
-            people banging their heads against the wall seperately.
-            <span className='username'>Sam Sterns</span>
-          </p>
-        </div>
-        <div className='speechbubble'>
-          <p>
-            So I created this thread to see if anyone wants to work on creating
-            an N Wheeled className vehicle with me, as opposed to a bunch of
-            people banging their heads against the wall seperately.
-            <span className='username'>BOB</span>
+            "Pet pals isn't just a way to get your dog walked. It is a way to
+            build connections."
+            <span className='username'> -Sam</span>
           </p>
         </div>
       </div>
-      <ImageGallery />
     </>
   );
 }
