@@ -145,10 +145,10 @@ export default function ImageGallery() {
         <div className='main'>
           <img className='main-image' src={images[activeIndex].image} />
           <h2>{images[activeIndex].name}</h2>
-          <a target='_blank' href={images[activeIndex].addressLink}>
+          <a  href={images[activeIndex].addressLink}>
             Directions
           </a>
-          <a target='_blank' href={images[activeIndex].website}>
+          <a  href={images[activeIndex].website}>
             Website
           </a>
           <p>{images[activeIndex].address}</p>

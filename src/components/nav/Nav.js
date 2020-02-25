@@ -21,8 +21,8 @@ const Nav = () => {
         <nav className={`navigation__nav ${open ? 'navigation__nav-open' : 'navigation__nav-close'}`}>
           <ul className='navigation__list'>
             <li className='navigation__item'>
-              <NavLink to='/explore' className='navigation__link' onClick={() => setOpen(!open)}>
-                Explore
+              <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
+                Discover
               </NavLink>
             </li>
             <li className='navigation__item'>
