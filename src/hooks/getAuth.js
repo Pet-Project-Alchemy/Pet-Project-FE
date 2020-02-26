@@ -16,6 +16,7 @@ export const SessionProvider = ({ children }) => {
     setLoading(true);
     fetchVerify()
       .then(user => {
+        console.log(user);
         setUser(user);
         setLoading(false);
         // history.push();
