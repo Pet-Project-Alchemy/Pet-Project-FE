@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { getUserSignup } from '../../service/fetchSignup';
+import { useSignup } from '../../hooks/getAuth';
 import './Signup.scss';
 
 export default function UserSignup() {
+  const signup = useSignup();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -47,7 +48,7 @@ export default function UserSignup() {
   };
   const handleSubmit = event => {
     event.preventDefault();
-    getUserSignup(
+    signup({
       email,
       password,
       firstName,
@@ -65,7 +66,7 @@ export default function UserSignup() {
       breed,
       dogBio,
       dogImage
-    );
+    });
   };
   return (
     <>
@@ -291,9 +292,11 @@ export default function UserSignup() {
                     Dog Photo
                   </label>
                 </div>
-                <div className='form__group'>
-                  <button className='submit'>Submit</button>
-                </div>
+                {/* <Link to={`/zipcode/${zipcode}`}> */}
+                  <div className='form__group'>
+                    <button className='submit' >Submit</button>
+                  </div>
+                {/* </Link> */}
               </form>
             </div>
           </div>

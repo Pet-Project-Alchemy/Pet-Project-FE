@@ -5,7 +5,7 @@ import Home from './home/Home';
 import Nav from './nav/Nav';
 import UserList from './user/UsersList';
 import { SessionProvider } from '../hooks/getAuth';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export default function App() {
   return (
@@ -13,10 +13,13 @@ export default function App() {
       <Router>
         <Nav />
         <SessionProvider>
-          <Route exact path='/' component={Home} />
-          <Route path='/signup' component={Signup} />
-          <Route path='/login' component={Login} />
-          <Route path='/zipcode/:zipcode' component={UserList} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/signup' component={Signup} />
+            <Route path='/login' component={Login} />
+            <Route path='/messages/:id' component={Login} />
+            <Route path='/zipcode/:zipcode' component={UserList} />
+          </Switch>
         </SessionProvider>
       </Router>
     </>
