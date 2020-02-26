@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { getUserSignup } from '../../service/fetchSignup';
+//import { getUserSignup } from '../../service/fetchSignup';
+import { fileUpload } from '../../service/postImage';
 import './Signup.scss';
 
 export default function UserSignup() {
@@ -22,6 +23,7 @@ export default function UserSignup() {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipcode, setZipcode] = useState('');
+  //const [images, setImages] = useState([]);
 
   const stateFactoryMethod = {
     email: setEmail,
@@ -42,38 +44,73 @@ export default function UserSignup() {
     state: setState,
     zipcode: setZipcode
   };
+
+  const handleImages = (event) => {
+    if(event.target.name === 'profileImage'){
+      setUserImage(event.target.files[0]);
+    } else if(event.target.name === 'dogImage'){
+      setDogImage(event.target.files[0]);
+    }
+  };
+
+  const postImages = (event) => {
+    event.preventDefault();
+    const fd = new FormData();
+    fd.append('dogImage', dogImage);
+    fd.append('profileImage', userImage);
+    fd.append('email', email);
+    fd.append('firstName', firstName);
+    fd.append('lastName', lastName);
+    fd.append('userBio', userBio);
+    fd.append('password', password);
+    fd.append('timeNeeded', timeNeeded);
+    fd.append('timeAvailable', timeAvailable);
+    fd.append('street', street);
+    fd.append('city', city);
+    fd.append('state', state);
+    fd.append('zipcode', zipcode);
+    fd.append('dogName', dogName);
+    fd.append('dogBio', dogBio);
+    fd.append('dogSize', dogSize);
+    fd.append('breed', breed);
+    
+    fileUpload(fd)
+      .then(res => console.log(res, ' **response '));
+
+  };
   const handleChange = ({ target }) => {
     stateFactoryMethod[target.name](target.value);
   };
-  const handleSubmit = event => {
-    event.preventDefault();
-    getUserSignup(
-      email,
-      password,
-      firstName,
-      timeNeeded,
-      lastName,
-      timeAvailable,
-      userImage,
-      userBio,
-      street,
-      city,
-      state,
-      zipcode,
-      dogName,
-      dogSize,
-      breed,
-      dogBio,
-      dogImage
-    );
-  };
+
+  // const handleSubmit = event => {
+  //   event.preventDefault();
+  //   getUserSignup(
+  //     email,
+  //     password,
+  //     firstName,
+  //     timeNeeded,
+  //     lastName,
+  //     timeAvailable,
+  //     userImage,
+  //     userBio,
+  //     street,
+  //     city,
+  //     state,
+  //     zipcode,
+  //     dogName,
+  //     dogSize,
+  //     breed,
+  //     dogBio,
+  //     dogImage
+  //   );
+  // };
   return (
     <>
       <section className='section-signup'>
         <div className='grid'>
           <div className='signup'>
             <div className='signup__form'>
-              <form onSubmit={handleSubmit} className='form'>
+              <form onSubmit={postImages} className='form'>
                 <div className='title'>
                   <h2 className='heading'>Sign up!</h2>
                 </div>
@@ -272,8 +309,9 @@ export default function UserSignup() {
                 <div className='form__group'>
                   <input
                     type='file'
+                    name='profileImage'
                     className='form__input'
-                    onChange={handleChange}
+                    onChange={handleImages}
                   />
                   <label htmlFor='userImage' className='form__label'>
                     Your Photo
@@ -283,9 +321,8 @@ export default function UserSignup() {
                   <input
                     type='file'
                     name='dogImage'
-                    value={dogImage}
                     className='form__input'
-                    onChange={handleChange}
+                    onChange={handleImages}
                   />
                   <label htmlFor='dogImage' className='form__label'>
                     Dog Photo
