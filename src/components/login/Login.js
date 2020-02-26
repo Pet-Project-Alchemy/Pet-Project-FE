@@ -1,18 +1,33 @@
 import React, { useState } from 'react';
 import { useLogin } from '../../hooks/getAuth';
-// import { Link } from 'react-router-dom';
+import { getUserLogout } from '../../service/fetchLogout';
+import { useHistory } from 'react-router-dom';
 
 export default function UserLogin() {
-  
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, authError } = useLogin();
  
-
   const handleSubmit = event => {
     event.preventDefault();
     login(email, password);
   };
+  const handleClick = () => {
+    getUserLogout();
+    history.push('/');
+  };
+  
+  if(document.cookie.split(';').filter((item) => item.includes('session=')).length) {
+    return (
+      <>
+        <section>
+          <button onClick={handleClick}>Log Out</button>
+        </section>
+      </>
+    );
+  }
+
 
   return (
     <>

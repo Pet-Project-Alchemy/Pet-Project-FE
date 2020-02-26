@@ -16,7 +16,7 @@ const UserList = ({ match }) => {
     );
   if(userZipcode.length <= 1) {
     return (
-      <p className='error'>Your the fist one in zipcode</p>
+      <p className='error'>Your the first one to signup in this zip code</p>
     );
   }
 
