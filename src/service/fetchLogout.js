@@ -1,6 +1,6 @@
 export const getUserLogout = () => {
   return fetch(
-    'http://localhost:7890/api/v1/auth/logout',
+    ''https://pet-project-be-staging.herokuapp.com/api/v1/auth/logout,
     {
       method: 'POST',
       credentials: 'include',
@@ -14,4 +14,3 @@ export const getUserLogout = () => {
     throw `Response: ${res.status}`;
   });
 };
-//'https://pet-project-be-staging.herokuapp.com/api/v1/auth/logout'
