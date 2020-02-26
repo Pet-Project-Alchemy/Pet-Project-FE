@@ -1,9 +1,11 @@
 @import '../abstract/base.scss';
 @import '../abstract/base.scss';
 @import '../abstract/mixins.scss';
+@import '../abstract//variables.scss';
 
-$color-primary: rgb(0,102,76);
+$color-primary: rgb(25, 154, 163);
 $color-primary2: rgb(1, 48, 36);
+$color-primary3: rgb(22, 224, 231);
 $color-primary-light:rgb(45,130,106);
 $color-primary-light2: rgb(45,130,106);
 $color-primary-grey: #777;
@@ -83,16 +85,16 @@ $color-newGreen: rgb(32,133,96);
 .section-signup{
   padding-top: 5rem ;
 
-  background-image: $color-black;
 }
 .signup{
+ 
  background-image: linear-gradient(
       100deg,
-      rgba($color-darkgrey, 0.5) 0%,
-      rgba($color-darkgrey, 0.5) 50%,
+      rgba($color-black, 1) 0%,
+      rgba($color-black-clear, 0.6) 50%,
       transparent 10%
     ),
-    url(../assets/islaphoto.png);
+    url(../assets/ISLA.png);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
@@ -105,7 +107,7 @@ $color-newGreen: rgb(32,133,96);
 }
 // form
 .form {
-  margin-left: 5rem;
+  margin-left: 12rem;
   &__group:not(:last-child) {
     margin-bottom: .7rem;
   }

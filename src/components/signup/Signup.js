@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 //import { getUserSignup } from '../../service/fetchSignup';
 import { fileUpload } from '../../service/postImage';
+import { useSignup } from '../../hooks/getAuth';
 import './Signup.scss';
 
 export default function UserSignup() {
+  const signup = useSignup();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -23,7 +25,6 @@ export default function UserSignup() {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipcode, setZipcode] = useState('');
-  //const [images, setImages] = useState([]);
 
   const stateFactoryMethod = {
     email: setEmail,
@@ -46,9 +47,9 @@ export default function UserSignup() {
   };
 
   const handleImages = (event) => {
-    if(event.target.name === 'profileImage'){
+    if(event.target.name === 'profileImage') {
       setUserImage(event.target.files[0]);
-    } else if(event.target.name === 'dogImage'){
+    } else if(event.target.name === 'dogImage') {
       setDogImage(event.target.files[0]);
     }
   };
@@ -73,37 +74,15 @@ export default function UserSignup() {
     fd.append('dogBio', dogBio);
     fd.append('dogSize', dogSize);
     fd.append('breed', breed);
-    
+
     fileUpload(fd)
-      .then(res => console.log(res, ' **response '));
+      .then(res => console.log(res, ' response '));
 
   };
   const handleChange = ({ target }) => {
     stateFactoryMethod[target.name](target.value);
   };
 
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   getUserSignup(
-  //     email,
-  //     password,
-  //     firstName,
-  //     timeNeeded,
-  //     lastName,
-  //     timeAvailable,
-  //     userImage,
-  //     userBio,
-  //     street,
-  //     city,
-  //     state,
-  //     zipcode,
-  //     dogName,
-  //     dogSize,
-  //     breed,
-  //     dogBio,
-  //     dogImage
-  //   );
-  // };
   return (
     <>
       <section className='section-signup'>
@@ -328,9 +307,11 @@ export default function UserSignup() {
                     Dog Photo
                   </label>
                 </div>
+                {/* <Link to={`/zipcode/${zipcode}`}> */}
                 <div className='form__group'>
-                  <button className='submit'>Submit</button>
+                  <button className='submit' >Submit</button>
                 </div>
+                {/* </Link> */}
               </form>
             </div>
           </div>
