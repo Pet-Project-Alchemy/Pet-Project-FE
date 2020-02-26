@@ -1,17 +1,23 @@
-import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import { isLogin } from '../utils';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Route, useHistory, useLocation } from 'react-router-dom';
+import { useHasSession } from '../../hooks/getAuth';
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        isLogin() ? <Component {...props} /> : <Redirect to='/signup' />
-      }
-    />
-  );
+const PrivateRoute = ({ component, path }) => {
+  const authenticated = useHasSession();
+  const location = useLocation();
+  const history = useHistory();
+
+  if(!authenticated) {
+    history.replace(`/auth?redirect=${location.pathname}`);
+  }
+
+  return <Route path={path} component={component} />;
 };
 
+PrivateRoute.propTypes = {
+  component: PropTypes.func,
+  path: PropTypes.string.isRequired
+};
 
 export default PrivateRoute;

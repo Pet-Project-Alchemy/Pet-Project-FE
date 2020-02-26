@@ -10,37 +10,47 @@ export const SessionProvider = ({ children }) => {
   const history = useHistory();
   const [user, setUser] = useState();
   const [authError, setAuthError] = useState();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetchVerify()
       .then(user => {
         setUser(user);
+        setLoading(false);
         // history.push();
       })
       .catch(() => {
         history.push('/');
+        setLoading(false);
       });
   }, []);
   const signup = formData => {
+    setLoading(true);
     getUserSignup(formData)
       .then(user => {
-        setUser(user)
+        setUser(user);
+        setLoading(false);
         history.push(`/zipcode/${user.address.zipcode}`);
       })
       .catch(err => {
         setAuthError(err);
+        setLoading(false);
       });
   };
 
   const login = (email, password) => {
+    setLoading(true);
     setAuthError(null);
     return getUserLogin(email, password)
       .then(user => {
         setUser(user);
+        setLoading(false);
         history.push('/');
       })
       .catch(err => {
         setAuthError(err.message);
+        setLoading(false);
       });
   };
 
@@ -74,3 +84,8 @@ export const useSignup = () => {
   const { signup } = useContext(SessionContext);
   return signup;
 };
+
+// export const useIsAuthenticated = () => {
+//   const { user } = useContent(SessionContent);
+//   return user;
+// };
