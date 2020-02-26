@@ -18,13 +18,13 @@ const Header = () => {
           <div className='header__text-box'>
             <h1 className='heading__primary'>
               <span className='heading-primary__sub--main'>Pet Pals</span>
-              <span className='heading-primary__sub'>lets go outside</span>
+              <span className='heading-primary__sub'>Let's Go Outside</span>
             </h1>
           </div>
         </header>
 
         <section className='section__main'>
-          <h3 className='section__title'>What pet pals is all about</h3>
+          <h3 className='section__title'>Learn More</h3>
           <div className='main__container'>
             <p className='main__container--paragraph'>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
