@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
 import defaultUserImg from '../assets/dogLogo.png';
-import defaultDogImg from '../assets/ISLA.png';
+import defaultDogImg from '../assets/islaphoto1.png';
 
 const UserCard = ({
   firstName,
@@ -58,7 +58,7 @@ const UserCard = ({
 UserCard.propTypes = {
   firstName: PropTypes.string.isRequired,
   dogName: PropTypes.string.isRequired,
-  img: PropTypes.string,
+  userImg: PropTypes.string,
   dogImg: PropTypes.string,
 
   timeNeeded: PropTypes.string.isRequired,

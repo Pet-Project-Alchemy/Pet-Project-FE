@@ -15,7 +15,7 @@ export const SessionProvider = ({ children }) => {
     fetchVerify()
       .then(user => {
         setUser(user);
-        // history.push();
+        // history.push(`/zipcode/${user.address.zipcode}`);
       })
       .catch(() => {
         history.push('/');
