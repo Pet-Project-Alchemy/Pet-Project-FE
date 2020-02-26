@@ -14,7 +14,7 @@ const reducer = (state, action) => {
   }
 };
 
-const Chat = ({ match }) => {
+const Chat = () => {
   return (
     <SocketProvider uri="http://localhost:7890" 
       reducer={reducer}

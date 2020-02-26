@@ -7,6 +7,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>src/setupTests.js"
     ],
+    "transformIgnorePatterns": [
+      "node_modules/react-socket-io-hooks/"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
