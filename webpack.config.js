@@ -11,7 +11,7 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    port: 7890,
+    port: 7891,
     historyApiFallback: true
   },
   plugins: [
@@ -24,6 +24,18 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.(mp4|webm)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[contenthash].[ext]',
+            outputPath: 'assets/videos/',
+            publicPath: 'assets/videos/'
+          }
+        }
+      },
+      
       {
         test: /\.js$/,
         exclude: /node_modules/,

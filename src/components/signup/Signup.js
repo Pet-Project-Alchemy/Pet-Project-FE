@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { getUserSignup } from '../../service/fetchSignup';
+import { useSignup } from '../../hooks/getAuth';
+import './Signup.scss';
 
 export default function UserSignup() {
+  const signup = useSignup();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -12,7 +14,7 @@ export default function UserSignup() {
   const [userImage, setUserImage] = useState('');
 
   const [dogName, setDogName] = useState('');
-  const [size, setSize] = useState('');
+  const [dogSize, setDogSize] = useState('');
   const [breed, setBreed] = useState('');
   const [dogBio, setDogBio] = useState('');
   const [dogImage, setDogImage] = useState('');
@@ -32,7 +34,7 @@ export default function UserSignup() {
     userBio: setUserBio,
     userImage: setUserImage,
     dogName: setDogName,
-    size: setSize,
+    dogSize: setDogSize,
     breed: setBreed,
     dogBio: setDogBio,
     dogImage: setDogImage,
@@ -46,190 +48,260 @@ export default function UserSignup() {
   };
   const handleSubmit = event => {
     event.preventDefault();
-    getUserSignup(email, password, firstName, timeNeeded, lastName, timeAvailable, userImage, userBio, street, city, state, zipcode, dogName, size, breed, dogBio, dogImage);
+    signup({
+      email,
+      password,
+      firstName,
+      timeNeeded,
+      lastName,
+      timeAvailable,
+      userImage,
+      userBio,
+      street,
+      city,
+      state,
+      zipcode,
+      dogName,
+      dogSize,
+      breed,
+      dogBio,
+      dogImage
+    });
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='email'>
-          Email
-          <input
-            value={email}
-            name='email'
-            onChange={handleChange}
-            placeholder='you@you.com'
-          />
-        </label>
-        <label htmlFor='password'>
-          Password
-          <input
-            value={password}
-            name='password'
-            onChange={handleChange}
-            placeholder='******'
-          />
-        </label>
-        <label htmlFor='firstName'>
-          First Name{' '}
-          <input
-            value={firstName}
-            name='firstName'
-            onChange={handleChange}
-            placeholder='Name'
-          />
-        </label>
-        <label htmlFor='lastName'>
-          Last Name{' '}
-          <input
-            value={lastName}
-            name='lastName'
-            onChange={handleChange}
-            placeholder='Last Name'
-          />
-        </label>
-        <div className='radioTimeNeeded'>
-          <label>What time do you need </label>
-          <label htmlFor='6 till noon'>6am till Noon</label>
-          <input
-            type='radio'
-            name='timeNeeded'
-            value='6 till noon'
-            onChange={handleChange}
-          />
-          <label htmlFor='noon till 6'>noon till 6pm</label>
-          <input
-            type='radio'
-            name='timeNeeded'
-            value='noon till 6'
-            onChange={handleChange}
-          />
-          <label htmlFor='6 till midnight'>6pm till Midnight</label>
-          <input
-            type='radio'
-            name='timeNeeded'
-            value='6 till midnight'
-            onChange={handleChange}
-          />
+      <section className='section-signup'>
+        <div className='grid'>
+          <div className='signup'>
+            <div className='signup__form'>
+              <form onSubmit={handleSubmit} className='form'>
+                <div className='title'>
+                  <h2 className='heading'>Sign up!</h2>
+                </div>
+                <div className='form__group'>
+                  <input
+                    type='email'
+                    aria-label='email'
+                    aria-required='true'
+                    className='form__input'
+                    value={email}
+                    name='email'
+                    onChange={handleChange}
+                    placeholder='you@you.com'
+                  />
+                  <label htmlFor='email' className='form__label'>
+                    Email
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    aria-label='password'
+                    aria-required='true'
+                    className='form__input'
+                    value={password}
+                    name='password'
+                    onChange={handleChange}
+                    placeholder='******'
+                  />
+                  <label htmlFor='password' className='form__label'>
+                    Password
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={firstName}
+                    name='firstName'
+                    onChange={handleChange}
+                    placeholder='Name'
+                  />
+                  <label htmlFor='firstName' className='form__label'>
+                    First Name
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={lastName}
+                    name='lastName'
+                    onChange={handleChange}
+                    placeholder='Last Name'
+                  />
+                  <label htmlFor='lastName' className='form__label'>
+                    Last Name
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={street}
+                    name='street'
+                    onChange={handleChange}
+                    placeholder='55 Spot way'
+                  />
+                  <label htmlFor='street' className='form__label'>
+                    Street Address
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={city}
+                    name='city'
+                    onChange={handleChange}
+                    placeholder='RoverCity'
+                  />
+                  <label htmlFor='city' className='form__label'>
+                    City
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={state}
+                    name='state'
+                    onChange={handleChange}
+                    placeholder='Oregon'
+                  />
+                  <label htmlFor='state' className='form__label'>
+                    State
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={zipcode}
+                    name='zipcode'
+                    onChange={handleChange}
+                    placeholder='55555'
+                  />
+                  <label htmlFor='zipcode' className='form__label'>
+                    Zipcode
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={dogName}
+                    name='dogName'
+                    onChange={handleChange}
+                    placeholder='spot'
+                  />
+                  <label htmlFor='dogName' className='form__label'>
+                    Dogs name
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    className='form__input'
+                    value={breed}
+                    name='breed'
+                    onChange={handleChange}
+                    placeholder='Dog Breed'
+                  />
+                  <label htmlFor='breed' className='form__label'>
+                    Dog Breed
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <label htmlFor='timeNeeded'></label>
+                  <select
+                    className='form__select'
+                    name='timeNeeded'
+                    onChange={handleChange}
+                    placeholder='Pick time'
+                  >
+                    <option value='6am till noon'>6am till noon</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                  </select>
+                </div>
+                <div className='form__group'>
+                  <label htmlFor='timeAvailable'></label>
+                  <select
+                    className='form__select'
+                    name='timeAvailable'
+                    onChange={handleChange}
+                    placeholder='Pick time'
+                  >
+                    <option value='6am till noon'>6am till noon</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                  </select>
+                </div>
+
+                <div className='form__group'>
+                  <label htmlFor='dogSize'></label>
+                  <select
+                    className='form__select'
+                    name='dogSize'
+                    onChange={handleChange}
+                    placeholder='Pick time'
+                  >
+                    <option value='XS'>XS</option>
+                    <option value='S'>S</option>
+                    <option value='M'>M</option>
+                    <option value='L'>L</option>
+                    <option value='XL'>XL</option>
+                  </select>
+                </div>
+                <div className='form__group'>
+                  <textarea
+                    className='form__input'
+                    name='userBio'
+                    value={userBio}
+                    onChange={handleChange}
+                    placeholder='Tell us about you'
+                  />
+                  <label htmlFor='userBio' className='form__label'>
+                    Tell us about yourself
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <textarea
+                    className='form__input'
+                    name='dogBio'
+                    value={dogBio}
+                    onChange={handleChange}
+                    placeholder='Tell us about your best friend'
+                  />
+                  <label htmlFor='dogBio' className='form__label'>
+                    Tell us about best friend
+                  </label>
+                </div>
+
+                <div className='form__group'>
+                  <input
+                    type='file'
+                    className='form__input'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='userImage' className='form__label'>
+                    Your Photo
+                  </label>
+                </div>
+                <div className='form__group'>
+                  <input
+                    type='file'
+                    name='dogImage'
+                    value={dogImage}
+                    className='form__input'
+                    onChange={handleChange}
+                  />
+                  <label htmlFor='dogImage' className='form__label'>
+                    Dog Photo
+                  </label>
+                </div>
+                {/* <Link to={`/zipcode/${zipcode}`}> */}
+                  <div className='form__group'>
+                    <button className='submit' >Submit</button>
+                  </div>
+                {/* </Link> */}
+              </form>
+            </div>
+          </div>
         </div>
-        <div className='radioTimeAvailable'>
-          <label>What time do you have available </label>
-          <label htmlFor='6 till noon'>6am till Noon</label>
-          <input
-            type='radio'
-            name='timeAvailable'
-            value='6 till noon'
-            onChange={handleChange}
-          />
-          <label htmlFor='noon till 6'>noon till 6pm</label>
-          <input
-            type='radio'
-            name='timeAvailable'
-            value='noon till 6'
-            onChange={handleChange}
-          />
-          <label htmlFor='6 till midnight'>6pm till Midnight</label>
-          <input
-            type='radio'
-            name='timeAvailable'
-            value={'6 till midnight'}
-            onChange={handleChange}
-          />
-        </div>
-        <label htmlFor='userBio'>
-          Tell us about yourself
-          <textarea
-            name='userBio'
-            value={userBio}
-            onChange={handleChange}
-            placeholder='Tell us about you'
-          />
-        </label>
-        <label htmlFor='userImage'>
-          <input type='file' onChange={handleChange} />
-        </label>
-        <label htmlFor='dogName'>
-          What is your pups name
-          <input
-            value={dogName}
-            name='dogName'
-            onChange={handleChange}
-            placeholder='spot'
-          />
-        </label>
-        <div className='radioDogSize'>
-          <label>How big is your dog </label>
-          <label htmlFor='XS'>XS</label>
-          <input type='radio' name='size' value='XS' onChange={handleChange} />
-          <label htmlFor='S'>S</label>
-          <input type='radio' name='size' value='S' onChange={handleChange} />
-          <label htmlFor='M'>M</label>
-          <input type='radio' name='size' value='M' onChange={handleChange} />
-          <label htmlFor='L'>L</label>
-          <input type='radio' name='size' value='L' onChange={handleChange} />
-          <label htmlFor='XL'>XL</label>
-          <input type='radio' name='size' value='XL' onChange={handleChange} />
-        </div>
-        <label htmlFor='breed'>
-          Dog Breed{' '}
-          <input
-            value={breed}
-            name='breed'
-            onChange={handleChange}
-            placeholder='Dog Breed'
-          />
-        </label>
-        <label>
-          Tell us about yourself
-          <textarea
-            name='dogBio'
-            value={dogBio}
-            onChange={handleChange}
-            placeholder='Tell us about your best friend'
-          />
-        </label>
-        <label htmlFor='dogImage'>
-          <input type='file' onChange={handleChange} />
-        </label>
-        <label htmlFor='street'>
-          Street Address
-          <input
-            value={street}
-            name='street'
-            onChange={handleChange}
-            placeholder='55 Spot way'
-          />
-        </label>
-        <label htmlFor='city'>
-          City
-          <input
-            value={city}
-            name='city'
-            onChange={handleChange}
-            placeholder='RoverCity'
-          />
-        </label>
-        <label htmlFor='state'>
-          State
-          <input
-            value={state}
-            name='state'
-            onChange={handleChange}
-            placeholder='Oregon'
-          />
-        </label>
-        <label htmlFor='zipcode'>
-          Zipcode
-          <input
-            value={zipcode}
-            name='zipcode'
-            onChange={handleChange}
-            placeholder='55555'
-          />
-        </label>
-        <button>Submit</button>
-      </form>
+      </section>
     </>
   );
-};
-
-
+}
