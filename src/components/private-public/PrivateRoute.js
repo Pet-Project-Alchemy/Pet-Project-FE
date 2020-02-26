@@ -6,10 +6,11 @@ import { useHasSession } from '../../hooks/getAuth';
 const PrivateRoute = ({ component, path }) => {
   const authenticated = useHasSession();
   const location = useLocation();
-  const history = useHistory();
+  //   const history = useHistory();
 
-  if(!authenticated) {
-    history.replace(`/auth?redirect=${location.pathname}`);
+  if (!authenticated) {
+    // history.replace(`/auth?redirect=${location.pathname}`);
+    console.log('hiii');
   }
 
   return <Route path={path} component={component} />;

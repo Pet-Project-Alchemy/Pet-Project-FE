@@ -7,7 +7,7 @@ import { getUserSignup } from '../service/fetchSignup';
 const SessionContext = createContext();
 
 export const SessionProvider = ({ children }) => {
-  const history = useHistory();
+  // const history = useHistory();
   const [user, setUser] = useState();
   const [authError, setAuthError] = useState();
   const [loading, setLoading] = useState(false);
@@ -84,8 +84,3 @@ export const useSignup = () => {
   const { signup } = useContext(SessionContext);
   return signup;
 };
-
-// export const useIsAuthenticated = () => {
-//   const { user } = useContent(SessionContent);
-//   return user;
-// };
