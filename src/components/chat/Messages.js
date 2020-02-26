@@ -7,15 +7,21 @@ import { useSocket } from 'react-socket-io-hooks';
 
 const Messages = () => {
   const socket = useSocket();
-  const state = useSocketState();
-  const senderId = useSessionUser();
-  //   const { receiverId } = useParams();
-  const receiverId = senderId;
+  const messages = useSocketState();
+  const sender = useSessionUser();
+  console.log(messages);
+  const { receiverId } = useParams();
   const join = useEmitEvent('join');
+
   useEffect(() => {
-    if(socket.connected) join({ senderId, receiverId });
-  }, [socket.connected]);
-  const messagesArray = state.messages.map(message => {
+    console.log('joining', socket, sender);
+    if(socket.connected !== undefined && sender) join({ senderId: sender._id, receiverId });
+  }, [socket.connected, sender]);
+
+  const messagesArray = messages.map(message => {
+
+    console.log(message);
+
     return <Message 
       key={message.message}
       senderId={message.senderId}

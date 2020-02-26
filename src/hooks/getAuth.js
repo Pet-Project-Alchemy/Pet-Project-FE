@@ -16,12 +16,7 @@ export const SessionProvider = ({ children }) => {
       .then(user => {
         console.log(user);
         setUser(user);
-<<<<<<< HEAD
-        // if user is logged in previously you land on this page
-        // history.push('/');
-=======
         // history.push();
->>>>>>> d4acd4201bec00737c1916e6e9aba397f673a7a1
       })
       .catch(() => {
         history.push('/');
@@ -30,7 +25,7 @@ export const SessionProvider = ({ children }) => {
   const signup = formData => {
     getUserSignup(formData)
       .then(user => {
-        setUser(user)
+        setUser(user);
         history.push(`/zipcode/${user.address.zipcode}`);
       })
       .catch(err => {
