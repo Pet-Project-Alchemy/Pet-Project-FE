@@ -16,4 +16,3 @@ export const fetchVerify = (body) => {
     });
 };
 
-//'https://pet-project-be-staging.herokuapp.com/api/v1/auth/verify'

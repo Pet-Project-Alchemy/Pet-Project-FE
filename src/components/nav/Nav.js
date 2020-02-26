@@ -42,7 +42,7 @@ const Nav = () => {
             </li>
             <li className='navigation__item'>
               <NavLink to='/zipcode/:zipcode' className='navigation__link' onClick={() => setOpen(!open)}>
-                Search
+                Find Nearby Users
               </NavLink>
             </li>
             <li className='navigation__item'>
