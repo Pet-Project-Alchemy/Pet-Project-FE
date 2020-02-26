@@ -4,16 +4,28 @@ import { Link } from 'react-router-dom';
 
 
 export default function UserLogin() {
-  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, authError } = useLogin();
  
-
   const handleSubmit = event => {
     event.preventDefault();
     login(email, password);
   };
+  const handleClick = () => {
+    document.cookie = ('session=', '', -1);
+  };
+  
+  if(document.cookie.split(';').filter((item) => item.includes('session=')).length) {
+    return (
+      <>
+        <section>
+          <button onClick={handleClick}>Log Out</button>
+        </section>
+      </>
+    );
+  }
+
 
   return (
     <>

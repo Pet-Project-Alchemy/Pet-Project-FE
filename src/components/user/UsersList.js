@@ -7,7 +7,7 @@ import './Users.scss';
 
 const UserList = ({ match }) => {
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
-  if (loading)
+  if(loading)
     return (
       <div className='spinner'>
         <div className='bounce1'></div>
@@ -16,7 +16,7 @@ const UserList = ({ match }) => {
     );
   if(userZipcode.length <= 1) {
     return (
-      <p className='error'>Your the fist one in area code</p>
+      <p className='error'>Your the first one to signup in this zip code</p>
     );
   }
 

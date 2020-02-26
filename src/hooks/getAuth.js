@@ -24,7 +24,7 @@ export const SessionProvider = ({ children }) => {
   const signup = formData => {
     getUserSignup(formData)
       .then(user => {
-        setUser(user)
+        setUser(user);
         history.push(`/zipcode/${user.address.zipcode}`);
       })
       .catch(err => {

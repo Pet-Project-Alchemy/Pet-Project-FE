@@ -293,9 +293,9 @@ export default function UserSignup() {
                   </label>
                 </div>
                 {/* <Link to={`/zipcode/${zipcode}`}> */}
-                  <div className='form__group'>
-                    <button className='submit' >Submit</button>
-                  </div>
+                <div className='form__group'>
+                  <button className='submit' >Submit</button>
+                </div>
                 {/* </Link> */}
               </form>
             </div>
