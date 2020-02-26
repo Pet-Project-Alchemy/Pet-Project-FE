@@ -9,18 +9,14 @@ const Messages = () => {
   const socket = useSocket();
   const messages = useSocketState();
   const sender = useSessionUser();
-  console.log(messages);
   const { receiverId } = useParams();
   const join = useEmitEvent('join');
 
   useEffect(() => {
-    console.log('joining', socket, sender);
     if(socket.connected !== undefined && sender) join({ senderId: sender._id, receiverId });
   }, [socket.connected, sender]);
 
   const messagesArray = messages.map(message => {
-
-    console.log(message);
 
     return <Message 
       key={message.message}
@@ -36,4 +32,3 @@ const Messages = () => {
   );
 };
 export default Messages;
-
