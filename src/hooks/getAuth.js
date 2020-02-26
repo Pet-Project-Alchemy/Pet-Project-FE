@@ -14,6 +14,7 @@ export const SessionProvider = ({ children }) => {
   useEffect(() => {
     fetchVerify()
       .then(user => {
+        console.log(user);
         setUser(user);
         // history.push();
       })
@@ -24,7 +25,7 @@ export const SessionProvider = ({ children }) => {
   const signup = formData => {
     getUserSignup(formData)
       .then(user => {
-        setUser(user)
+        setUser(user);
         history.push(`/zipcode/${user.address.zipcode}`);
       })
       .catch(err => {
