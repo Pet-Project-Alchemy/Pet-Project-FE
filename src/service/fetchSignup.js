@@ -18,7 +18,7 @@ export const getUserSignup = ({
   dogImage
 }) => {
   return fetch(
-    'https://pet-project-be-staging.herokuapp.com/api/v1/auth/signup',
+    'http://localhost:7890/api/v1/auth/signup',
     {
       method: 'POST',
       credentials: 'include',
@@ -57,3 +57,4 @@ export const getUserSignup = ({
     throw `Response: ${res.status}`;
   });
 };
+//'https://pet-project-be-staging.herokuapp.com/api/v1/auth/signup';
