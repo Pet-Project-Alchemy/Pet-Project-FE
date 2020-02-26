@@ -3,7 +3,6 @@ import { useLogin } from '../../hooks/getAuth';
 import { getUserLogout } from '../../service/fetchLogout';
 import { useHistory } from 'react-router-dom';
 
-
 export default function UserLogin() {
   const history = useHistory();
   const [email, setEmail] = useState('');

@@ -21,11 +21,11 @@ const UserList = ({ match }) => {
   }
 
   const userList = userZipcode.map(user => {
-    console.log(user, 'xxx');
+  
     return (
       <>
         <div className='container'>
-          <Link className='Link' to={`/message/${user._id}`}>
+          <Link className='Link' to={`/chat/${user._id}`}>
             <UserCard
               key={user._id}
               firstName={user.firstName}
