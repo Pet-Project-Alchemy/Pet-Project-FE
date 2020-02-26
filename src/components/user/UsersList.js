@@ -7,23 +7,35 @@ import './Users.scss';
 
 const UserList = ({ match }) => {
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
-  console.log(match.params.zipcode);
-  console.log(userZipcode);
-  if(loading)
+  if (loading)
     return (
       <div className='spinner'>
         <div className='bounce1'></div>
         <div className='bounce2'></div>
       </div>
     );
-  if(!userZipcode.length) return <p className='error'>There are no users with your search criteria.</p>;
+  if(userZipcode.length <= 1) {
+    return (
+      <p className='error'>Your the fist one in area code</p>
+    );
+  }
 
   const userList = userZipcode.map(user => {
+    console.log(user, 'xxx');
     return (
       <>
         <div className='container'>
-          <Link key={user._id} className='Link' to={`/message/${user._id}`}>
-            <UserCard firstName={user.firstName} dogName={user.dog[0].name} timeNeeded={user.timeNeeded} timeAvailable={user.timeAvailable} zipcode={user.address.zipcode} dogBio={user.dog[0].bio} bio={user.bio}/>
+          <Link className='Link' to={`/message/${user._id}`}>
+            <UserCard
+              key={user._id}
+              firstName={user.firstName}
+              dogName={user.dog[0].name}
+              timeNeeded={user.timeNeeded}
+              timeAvailable={user.timeAvailable}
+              zipcode={user.address.zipcode}
+              dogBio={user.dog[0].bio}
+              bio={user.bio}
+            />
           </Link>
         </div>
       </>
@@ -35,7 +47,7 @@ const UserList = ({ match }) => {
 UserList.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      zipcode: PropTypes.string.isRequired,
+      zipcode: PropTypes.string.isRequired
     }).isRequired
   }).isRequired
 };

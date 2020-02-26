@@ -1,5 +1,22 @@
-
-export const getUserSignup = (emailString, passwordString, firstNameString, timeNeededString, lastNameString, timeAvailableString, userImageString, userBioString, addressStreetString, addressCityString, addressStateString, addressZipcodeString, dogNameString, dogSizeString, dogBreedString, dogBioString, dogImageString) => {
+export const getUserSignup = ({
+  email,
+  password,
+  firstName,
+  timeNeeded,
+  lastName,
+  timeAvailable,
+  userImage,
+  userBio,
+  street,
+  city,
+  state,
+  zipcode,
+  dogName,
+  dogSize,
+  breed,
+  dogBio,
+  dogImage
+}) => {
   return fetch(
     'http://pet-project-be-staging.herokuapp.com/api/v1/auth/signup',
     {
@@ -10,27 +27,27 @@ export const getUserSignup = (emailString, passwordString, firstNameString, time
         origin: true
       },
       body: JSON.stringify({
-        email: emailString,
-        password: passwordString,
-        firstName: firstNameString,
-        lastName: lastNameString,
-        timeNeeded: timeNeededString,
-        timeAvailable: timeAvailableString,
-        image: userImageString,
-        bio: userBioString,
+        email: email,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+        timeNeeded: timeNeeded,
+        timeAvailable: timeAvailable,
+        image: userImage,
+        bio: userBio,
         address: {
-          street: addressStreetString,
-          city: addressCityString,
-          state: addressStateString,
-          zipcode: addressZipcodeString
+          street,
+          city,
+          state,
+          zipcode,
         },
         dog: [
           {
-            name: dogNameString,
-            size: dogSizeString,
-            breed: dogBreedString,
-            bio: dogBioString,
-            img: dogImageString
+            name: dogName,
+            size: dogSize,
+            breed,
+            bio: dogBio,
+            img: dogImage
           }
         ]
       })

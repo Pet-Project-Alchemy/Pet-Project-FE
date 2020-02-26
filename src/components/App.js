@@ -5,8 +5,12 @@ import Home from './home/Home';
 import Nav from './nav/Nav';
 import UserList from './user/UsersList';
 import { SessionProvider } from '../hooks/getAuth';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Chat from './chat/Chat';
+=======
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+>>>>>>> d4acd4201bec00737c1916e6e9aba397f673a7a1
 
 export default function App() {
   return (
@@ -15,13 +19,22 @@ export default function App() {
       <Router>
         <Nav />
         <SessionProvider>
+<<<<<<< HEAD
           <Route exact path='/' component={Home} />
           <Route path='/signup' component={Signup} />
           <Route path='/login' component={Login} />
           <Route path='/zipcode/:zipcode' component={UserList} />
           <Route path='/chat' component={Chat} />
+=======
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/signup' component={Signup} />
+            <Route path='/login' component={Login} />
+            <Route path='/messages/:id' component={Login} />
+            <Route path='/zipcode/:zipcode' component={UserList} />
+          </Switch>
+>>>>>>> d4acd4201bec00737c1916e6e9aba397f673a7a1
         </SessionProvider>
-        
       </Router>
     </>
   );

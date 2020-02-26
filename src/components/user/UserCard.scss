@@ -2,13 +2,15 @@
 @import '../abstract/variables.scss';
 
 .card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 55rem;
+  height: 42rem;
 
   &__side {
-    height: 55rem;
+    height: 42rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -20,7 +22,7 @@
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     &--front {
-      background-color: $color-primary-white;
+      background-color: $color-primary;
     }
     &--back {
       transform: rotateY(180deg);
@@ -42,9 +44,7 @@
   }
 
   &__picture {
-    background-size: cover;
     height: 23rem;
-    background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     background-clip: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     border-top-left-radius: 3px;
@@ -62,24 +62,35 @@
     font-size: 2.8rem;
     font-weight: 300;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     color: $color-primary-white;
     position: absolute;
-    top: 12rem;
-    right: 2rem;
+    top: 1rem;
+    right: rem;
     width: 75%;
   }
   &__heading-span {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    &--1 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-newGreen, 0.85),
-        rgba($color-black-med, 0.85)
-      );
-    }
+    
+    // &--1 {
+    //   border-radius: 5px;
+    //   background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba($color-newGreen, 0.85),
+    //     rgba($color-black-med, 0.85)
+    //   );
+    // }
+    // &--2 {
+      
+    //   border-radius: 5px;
+    //   background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba($color-newGreen, 0.85),
+    //     rgba($color-black-med, 0.85)
+    //   );
+    // }
   }
   &__details {
     padding: 3rem;
@@ -108,10 +119,33 @@
   &__bio-box {
     text-align: center;
     color: $color-primary-white;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
   }
   &__bio-text {
     font-size: 1.4rem;
     text-transform: uppercase;
+  }
+  
+}
+.userImg {
+  top: 2.5rem;
+  left: 2.5rem;
+  margin: 1rem .5rem 0 1rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  &figcaption {
+   padding: .5rem;
+  }
+}
+.dogImg {
+  top: 2.5rem;
+  right: 7.5rem;
+ margin: 1rem .5rem 0 1rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  &figcaption {
+   
   }
 }
