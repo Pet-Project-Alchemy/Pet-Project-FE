@@ -1,56 +1,78 @@
 import React, { useState } from 'react';
 import { useLogin } from '../../hooks/getAuth';
-import { Link } from 'react-router-dom';
-
+import './Login.scss';
+import { useHistory } from 'react-router-dom';
+import { getUserLogout } from '../../service/fetchLogout';
+import { useHasSession } from '../../hooks/getAuth';
 
 export default function UserLogin() {
-  
+  const history = useHistory();
+  const authenticated = useHasSession();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, authError } = useLogin();
- 
 
   const handleSubmit = event => {
     event.preventDefault();
     login(email, password);
   };
+  const handleClick = () => {
+    getUserLogout();
+    history.push('/');
+  };
+  
+  if(authenticated) {
+    return (
+      <>
+        <section>
+          <button onClick={handleClick}>Log Out</button>
+        </section>
+      </>
+    );
+  }
+
 
   return (
     <>
-      <section className='section-login'>
-        <div className='grid'>
-          <div className='login'>
-            <div className='login__form'>
-              <form onSubmit={handleSubmit} className='form'>
+      <section className='section-Login'>
+        <div className='Logingrid'>
+          <div className='Login'>
+            <div className='Login__form'>
+              <form onSubmit={handleSubmit} className='Loginform'>
                 <div className='title'>
-                  <h2 className='heading'>Login</h2>
+                  <h2 className='Loginheading'>Login</h2>
                 </div>
                 {authError && <p>{authError}</p>}
-                <div className='form__group'>
+                <div className='Loginform__group'>
                   <input
-                    className='form__input'
+                    className='Loginform__input'
                     value={email}
                     name='email'
                     onChange={({ target }) => setEmail(target.value)}
                     placeholder='you@you.com'
                   />
-                  <label htmlFor='email' className='form__label'>Email</label>
+                  <label htmlFor='email' className='Loginform__label'>
+                    Email
+                  </label>
                 </div>
-                <div className='form__group'>
+                <div className='Loginform__group'>
                   <input
-                    className='form__input'
+                    type='password'
+                    id='password'
+                    className='Loginform__input'
                     value={password}
                     name='password'
                     onChange={({ target }) => setPassword(target.value)}
                     placeholder='******'
                   />
-                  <label htmlFor='password' className='form__label'>Password</label>
+                  <label htmlFor='password' className='Loginform__label'>
+                    Password
+                  </label>
                 </div>
-                <Link to={'/zipcode/:zipcode'}>
-                  <div className='form__group'>
-                    <button className='submit'>Submit</button>
-                  </div>
-                </Link>
+
+                <div className='form__group'>
+                  <button className='submit'>Submit</button>
+                </div>
               </form>
             </div>
           </div>

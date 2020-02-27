@@ -1,125 +1,87 @@
 @import '../abstract/base.scss';
-@import '../abstract/base.scss';
-@import '../abstract/mixins.scss';
 
-$color-primary: rgb(0,102,76);
-$color-primary2: rgb(1, 48, 36);
-$color-primary-light:rgb(45,130,106);
-$color-primary-light2: rgb(45,130,106);
-$color-primary-grey: #777;
-$color-primary-white: #fff;
-$color-black: rgb(0, 0, 0);
-$color-red: rgb(210, 73, 9);
-$color-black-med: rgba(0, 0, 0, 0.418);
-$color-grey-light-1: #f7f7f7;
-$color-grey-med: #eee;
-$color-darkgrey: rgb(206, 200, 200);
-$color-darkgrey-2: rgb(99, 95, 95);
-$color-newGreen: rgb(32,133,96);
+@import '../abstract//variables.scss';
+
+
 .bottom {
   margin-bottom: 4rem;
 }
-
- .heading{
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    display: inline-block;
-    font-weight: 700;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: 2px;
-    transition: all 0.2s;
-
-    @include respond(tab-port) {
-      font-size: 3rem;
-    }
-    @include respond(phone) {
-      font-size: 2.5rem;
-    }
-
-    &:hover {
-      transform: skewY(3deg) skewX(15deg) scaleX(1.1);
-      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-    }
-  }
-
-.grid {
-  max-width: $grid-width;
-  margin: 0 auto;
-
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-
-    @include respond(tab-port) {
-      margin-bottom: $gutter-vertical-small;
-    }
-    
-  }
-    @include respond(tab-port) {
-      max-width: 50rem;
-      // padding: 0 3rem;
-    }
-    
-  
-  @include clearfix;
-
-  [class^="col-"] {
-    float: left;
-
-      @include respond(tab-port) {
-        margin-right: 0;
-        margin-bottom: $gutter-vertical-small;
-      }
-    }
-    @include respond(tab-port) {
-      width: 100% !important;
-    }
-    @include respond(phone) {
-       width: 40% !important;
-     }
-  }
-.section-login{
-  padding-top: 5rem ;
-
-  background-image: $color-black;
+#password {
+  -webkit-text-security: disc;
+    -moz-text-security:circle;
 }
-.login{
- background-image: linear-gradient(
-      10deg,
-      rgba($color-darkgrey, 0.5) 0%,
-      rgba($color-darkgrey, 0.5) 50%,
-      transparent 10%
+
+.Loginheading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-black,
+    $color-black,
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skewY(3deg) skewX(15deg) scaleX(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.Logingrid {
+  max-width: 95%;
+}
+.section-Login {
+  width: 90%;
+  margin: 1rem auto;
+}
+.Login {
+  margin-top: 2.5rem;
+  height: 100rem;
+  background: linear-gradient(
+      99deg,
+      rgba($color-primary, 1) 0%,
+      rgba($color-primary, 1) 20%,
+      rgba($color-black-clear, .4) 50%,
+      transparent 50%
     ),
-    url(../assets/islaphoto.png);
-  background-size: 100%;
+    url(../assets/calebsm.png);
+  background-size: cover;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit minmax(24rem auto));
+  align-items: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-  height: 125rem;
 
   &__form {
-    width: 60%;
-    padding: 1.3em;
+    width: 50%;
+    padding: 6rem;
+    margin-bottom: 25rem;
   }
 }
 // form
-.form {
-  margin-left: 5rem;
+.Loginform {
+  margin-left: 7rem;
   &__group:not(:last-child) {
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
   &__input {
-    font-size: 1.5rem;
-    padding: .7rem 1.7rem;
+    font-size: 1.5em;
+    padding: 0.7rem 1.7rem;
     border-radius: 2px;
     background: transparent;
     background: rgba($color-primary-white, 0.3);
     border: 2px solid $color-black-med;
     border-bottom: 3px solid transparent;
-    width: 65%;
+    width: 85%;
     display: block;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:focus {
       outline: none;
@@ -128,7 +90,7 @@ $color-newGreen: rgb(32,133,96);
     }
 
     &:focus:invalid {
-        border-bottom: 3px solid $color-red;
+      border-bottom: 3px solid $color-red;
     }
     &::-webkit-input-placeholder {
       color: $color-black;
@@ -139,14 +101,20 @@ $color-newGreen: rgb(32,133,96);
     font-size: 1.3rem;
     font-weight: 700;
     margin-left: 2rem;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     color: $color-black;
     display: block;
-    transition: all .3s;
+    transition: all 0.3s;
   }
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
-    
-  } 
+  }
+  .Loginsubmit {
+    background: $color-black-clear;
+    font-size: 2rem;
+    box-shadow: 1px 1px 5px 1px $color-black-med;
+    padding: 0.5rem;
+  }
+}

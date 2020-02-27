@@ -1,13 +1,12 @@
 @import '../abstract/base.scss';
-@import '../abstract/base.scss';
-@import '../abstract/mixins.scss';
+
 @import '../abstract//variables.scss';
 
-$color-primary: rgb(25, 154, 163);
+$color-primary: rgb(12, 122, 122);
 $color-primary2: rgb(1, 48, 36);
 $color-primary3: rgb(22, 224, 231);
-$color-primary-light:rgb(45,130,106);
-$color-primary-light2: rgb(45,130,106);
+$color-primary-light: rgb(45, 130, 106);
+$color-primary-light2: rgb(45, 130, 106);
 $color-primary-grey: #777;
 $color-primary-white: #fff;
 $color-black: rgb(0, 0, 0);
@@ -17,111 +16,82 @@ $color-grey-light-1: #f7f7f7;
 $color-grey-med: #eee;
 $color-darkgrey: rgb(206, 200, 200);
 $color-darkgrey-2: rgb(99, 95, 95);
-$color-newGreen: rgb(32,133,96);
+$color-newGreen: rgb(32, 133, 96);
 .bottom {
   margin-bottom: 4rem;
 }
-
- .heading{
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    display: inline-block;
-    font-weight: 700;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: 2px;
-    transition: all 0.2s;
-
-    @include respond(tab-port) {
-      font-size: 3rem;
-    }
-    @include respond(phone) {
-      font-size: 2.5rem;
-    }
-
-    &:hover {
-      transform: skewY(3deg) skewX(15deg) scaleX(1.1);
-      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-    }
+#password {
+  -webkit-text-security: disc;
+    -moz-text-security:circle;
+}
+.heading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-black,
+    $color-black
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  
+  &:hover {
+    transform: skewY(3deg) skewX(15deg) scaleX(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
+}
 
 .grid {
-  max-width: $grid-width;
-  margin: 0 auto;
-
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-
-    @include respond(tab-port) {
-      margin-bottom: $gutter-vertical-small;
-    }
-    
-  }
-    @include respond(tab-port) {
-      max-width: 50rem;
-      // padding: 0 3rem;
-    }
-    
-  
-  @include clearfix;
-
-  [class^="col-"] {
-    float: left;
-
-      @include respond(tab-port) {
-        margin-right: 0;
-        margin-bottom: $gutter-vertical-small;
-      }
-    }
-    @include respond(tab-port) {
-      width: 100% !important;
-    }
-    @include respond(phone) {
-       width: 40% !important;
-     }
-  }
-.section-signup{
-  padding-top: 5rem ;
-
+  max-width: 95%;
 }
-.signup{
- 
- background-image: linear-gradient(
+.section-signup {
+  width: 100%;
+  margin: 1rem auto;
+}
+.signup {
+  background: linear-gradient(
       100deg,
-      rgba($color-black, 1) 0%,
+      rgba($color-primary, .9) 0%,
+      rgba($color-primary, 1) 20%,
       rgba($color-black-clear, 0.6) 50%,
-      transparent 10%
-    ),
-    url(../assets/ISLA.png);
-  background-size: 100%;
+      transparent 50%
+    ) ,
+    url(../assets/islaphoto1.png) center;
+  background-size: cover;
+  padding: 1rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit minmax(24rem auto));
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-  height: 125rem;
-
+  
   &__form {
-    width: 60%;
-    padding: 1.3em;
+    width: 50%;
+    padding: 2rem 1rem 2rem 6rem;
   }
 }
 // form
 .form {
-  margin-left: 12rem;
+  display: grid;
+  margin-left: 7rem;
   &__group:not(:last-child) {
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
   &__input {
-    font-size: 1.5rem;
-    padding: .7rem 1.7rem;
+    font-size: 1.5em;
+    padding: 0.7rem 1.7rem;
     border-radius: 2px;
     background: transparent;
     background: rgba($color-primary-white, 0.3);
     border: 2px solid $color-black-med;
     border-bottom: 3px solid transparent;
-    width: 65%;
+    width: 85%;
     display: block;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:focus {
       outline: none;
@@ -130,7 +100,7 @@ $color-newGreen: rgb(32,133,96);
     }
 
     &:focus:invalid {
-        border-bottom: 3px solid $color-red;
+      border-bottom: 3px solid $color-red;
     }
     &::-webkit-input-placeholder {
       color: $color-black;
@@ -141,84 +111,84 @@ $color-newGreen: rgb(32,133,96);
     font-size: 1.3rem;
     font-weight: 700;
     margin-left: 2rem;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     color: $color-black;
     display: block;
-    transition: all .3s;
+    transition: all 0.3s;
   }
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
-    
-  } 
+  }
   &__select {
-	display: block;
-	font-size: 1.5rem;
-	font-family: sans-serif;
-	font-weight: 400;
-  color: $color-primary2;
-  border: 2px solid $color-black-med;
+    display: block;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: $color-primary2;
+    border: 2px solid $color-black-med;
     border-bottom: 3px solid transparent;
-	line-height: 1.3;
-	padding: 1rem 1.5rem;
-  width: 65%;
-  height: 4rem;
-  max-width: 100%;
-  border: 2px, 2px, 0, 2px $color-black;
-	box-sizing: border-box;
-	margin-bottom: 2.5rem;
-	border: .3 solid black;
-	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-	border-radius: .2em;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	background-color: $color-black-clear;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
-	background-repeat: no-repeat, repeat;
-	background-position: right .7em top 50%, 0 0;
-	background-size: 1.5em auto, 100%;
+    line-height: 1.3;
+    padding: 1rem 1.5rem;
+    width: 85%;
+    height: 4rem;
+    max-width: 100%;
+    border: 2px, 2px, 0, 2px $color-black;
+    margin-bottom: 2.5rem;
+    border: 0.3 solid black;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    border-radius: 0.2em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $color-black-clear;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A');
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 1.5em auto, 100%;
 
-&:-ms-expand {
-	display: none;
-}
-&:hover {
-	border-color: #888;
-}
-&:focus {
+    &:-ms-expand {
+      display: none;
+    }
+    &:hover {
+      border-color: #888;
+    }
+    &:focus {
       outline: none;
       color: $color-primary;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
       border-bottom: 3px solid $color-primary;
-}
+    }
   }
 }
 
 .select option {
-	font-weight:normal;
+  font-weight: normal;
 }
-.submit{
+.submit {
   background: $color-black-clear;
   font-size: 2rem;
   box-shadow: 1px 1px 5px 1px $color-black-med;
-  padding: .5rem;
+  padding: 0.5rem;
 }
-  .input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: $color-primary2;
   opacity: 1;
 }
-::-moz-placeholder { /* Firefox 19+ */
+::-moz-placeholder {
+  /* Firefox 19+ */
   color: $color-primary2;
   opacity: 1;
 }
-:-ms-input-placeholder { /* IE 10+ */
+:-ms-input-placeholder {
+  /* IE 10+ */
   color: $color-primary2;
   opacity: 1;
 }
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
+  /* Firefox 18- */
   color: $color-primary2;
   opacity: 1;
 }
-
-

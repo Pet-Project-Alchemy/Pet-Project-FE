@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+//import { getUserSignup } from '../../service/fetchSignup';
+import { fileUpload } from '../../service/postImage';
 import { useSignup } from '../../hooks/getAuth';
 import './Signup.scss';
 
@@ -43,38 +45,51 @@ export default function UserSignup() {
     state: setState,
     zipcode: setZipcode
   };
+
+  const handleImages = (event) => {
+    if(event.target.name === 'profileImage') {
+      setUserImage(event.target.files[0]);
+    } else if(event.target.name === 'dogImage') {
+      setDogImage(event.target.files[0]);
+    }
+  };
+
+  const postImages = (event) => {
+    event.preventDefault();
+    const fd = new FormData();
+    fd.append('dogImage', dogImage);
+    fd.append('profileImage', userImage);
+    fd.append('email', email);
+    fd.append('firstName', firstName);
+    fd.append('lastName', lastName);
+    fd.append('userBio', userBio);
+    fd.append('password', password);
+    fd.append('timeNeeded', timeNeeded);
+    fd.append('timeAvailable', timeAvailable);
+    fd.append('street', street);
+    fd.append('city', city);
+    fd.append('state', state);
+    fd.append('zipcode', zipcode);
+    fd.append('dogName', dogName);
+    fd.append('dogBio', dogBio);
+    fd.append('dogSize', dogSize);
+    fd.append('breed', breed);
+
+    fileUpload(fd)
+      .then(res => console.log(res, ' response '));
+
+  };
   const handleChange = ({ target }) => {
     stateFactoryMethod[target.name](target.value);
   };
-  const handleSubmit = event => {
-    event.preventDefault();
-    signup({
-      email,
-      password,
-      firstName,
-      timeNeeded,
-      lastName,
-      timeAvailable,
-      userImage,
-      userBio,
-      street,
-      city,
-      state,
-      zipcode,
-      dogName,
-      dogSize,
-      breed,
-      dogBio,
-      dogImage
-    });
-  };
+
   return (
     <>
       <section className='section-signup'>
         <div className='grid'>
           <div className='signup'>
             <div className='signup__form'>
-              <form onSubmit={handleSubmit} className='form'>
+              <form onSubmit={postImages} className='form'>
                 <div className='title'>
                   <h2 className='heading'>Sign up!</h2>
                 </div>
@@ -95,6 +110,8 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <input
+                    type='password'
+                    id='password'
                     aria-label='password'
                     aria-required='true'
                     className='form__input'
@@ -213,7 +230,7 @@ export default function UserSignup() {
                   >
                     <option value='6am till noon'>6am till noon</option>
                     <option value='noon til 6pm'>noon til 6pm</option>
-                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='6pm till midnight'>6pm till midnight</option>
                   </select>
                 </div>
                 <div className='form__group'>
@@ -226,7 +243,7 @@ export default function UserSignup() {
                   >
                     <option value='6am till noon'>6am till noon</option>
                     <option value='noon til 6pm'>noon til 6pm</option>
-                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='6pm till midnight'>6pm till midnight</option>
                   </select>
                 </div>
 
@@ -273,8 +290,9 @@ export default function UserSignup() {
                 <div className='form__group'>
                   <input
                     type='file'
+                    name='profileImage'
                     className='form__input'
-                    onChange={handleChange}
+                    onChange={handleImages}
                   />
                   <label htmlFor='userImage' className='form__label'>
                     Your Photo
@@ -284,19 +302,17 @@ export default function UserSignup() {
                   <input
                     type='file'
                     name='dogImage'
-                    value={dogImage}
                     className='form__input'
-                    onChange={handleChange}
+                    onChange={handleImages}
                   />
                   <label htmlFor='dogImage' className='form__label'>
                     Dog Photo
                   </label>
                 </div>
-                {/* <Link to={`/zipcode/${zipcode}`}> */}
-                  <div className='form__group'>
-                    <button className='submit' >Submit</button>
-                  </div>
-                {/* </Link> */}
+                <div className='form__group'>
+                  <button className='submit' >Submit</button>
+                </div>
+
               </form>
             </div>
           </div>

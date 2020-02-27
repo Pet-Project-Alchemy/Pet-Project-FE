@@ -32,22 +32,27 @@ const Nav = () => {
             </li>
             <li className='navigation__item'>
               <NavLink to='/login' className='navigation__link' onClick={() => setOpen(!open)}>
-                Login
+                Login/Log Out
               </NavLink>
             </li>
             <li className='navigation__item'>
-              <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
-               Profile
+              <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
+               About
               </NavLink>
             </li>
             <li className='navigation__item'>
               <NavLink to='/zipcode/:zipcode' className='navigation__link' onClick={() => setOpen(!open)}>
-                Search
+                Find Nearby Users
               </NavLink>
             </li>
             <li className='navigation__item'>
               <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
                 Home
+              </NavLink>
+            </li>
+            <li className='navigation__item'>
+              <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
+                About Devs
               </NavLink>
             </li>
           </ul>

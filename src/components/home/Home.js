@@ -18,22 +18,20 @@ const Header = () => {
           <div className='header__text-box'>
             <h1 className='heading__primary'>
               <span className='heading-primary__sub--main'>Pet Pals</span>
-              <span className='heading-primary__sub'>lets go outside</span>
+              <span className='heading-primary__sub'>Let's Go Outside</span>
             </h1>
           </div>
         </header>
 
         <section className='section__main'>
-          <h3 className='section__title'>What pet pals is all about</h3>
+          <h3 className='section__title'>Learn More</h3>
           <div className='main__container'>
             <p className='main__container--paragraph'>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
-              dolores itaque, ab reprehenderit obcaecati animi quasi ratione cum
-              molestias nesciunt temporibus magni repellendus hic officiis
-              expedita, facilis nobis ea possimus voluptatem ducimus tempora
-              nemo dolorum sunt. Quam tenetur perspiciatis illo ea inventore
-              beatae sapiente exercitationem repellat corrupti magni nesciunt
-              necessitatibus debitis, rerum consequatur accusamus?
+              We love our pets. Pet Pals builds community and fights loneliness.
+              Share the responsibilities of potty breaks or short walks with
+              your new Pet Pal. Create your profile, search for dog-lovers in
+              your area, use our chat to set up a meeting at the featured local
+              dog-friendly spots.
             </p>
           </div>
         </section>
