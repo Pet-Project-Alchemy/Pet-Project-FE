@@ -35,8 +35,10 @@ const UserList = ({ match }) => {
             timeNeeded={user.timeNeeded}
             timeAvailable={user.timeAvailable}
             zipcode={user.address.zipcode}
+            userImage={user.userImg}
+            dogImage={user.dogImg}
             dogBio={user.dog[0].bio}
-            bio={user.bio}
+            userBio={user.user.Bio}
           />
         </Link>
       </>
