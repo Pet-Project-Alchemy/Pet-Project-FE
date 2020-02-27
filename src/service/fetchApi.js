@@ -4,6 +4,7 @@ const request = (path, method, body) => {
     headers: {
       'Content-Type': 'application/json'
     },
+    credentials: 'include',
     body: JSON.stringify(body)
   })
     .then(res => Promise.all([res.ok, res.json()]))
@@ -13,6 +14,9 @@ const request = (path, method, body) => {
     });
 };
 
-const post = (path, body) => request(path, 'POST', body);
-const get = path => request(path, 'GET');
-// const patch = ()
+
+export const post = (path, body) => request(path, 'POST', body);
+export const get = path => request(path, 'GET');
+export const patch = (path, body) => request(path, 'PATCH', body);
+export const del = path => request(path, 'DELETE');
+

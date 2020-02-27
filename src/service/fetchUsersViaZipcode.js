@@ -13,4 +13,3 @@ export const getUsersViaZipcode = (zipcode) => {
     throw `Response: ${res.status}`;
   });
 };
-//https://pet-project-be-staging.herokuapp.com/api/v1/auth/zipcode/${zipcode}
