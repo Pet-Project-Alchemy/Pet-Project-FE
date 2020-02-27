@@ -14,7 +14,6 @@ const UserList = ({ match }) => {
     return null;
   }
 
-  console.log(user, 'XXXXX');
 
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
   if(loading)
