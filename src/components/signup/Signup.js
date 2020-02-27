@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-//import { getUserSignup } from '../../service/fetchSignup';
-import { fileUpload } from '../../service/postImage';
-import { useSignup } from '../../hooks/getAuth';
 import './Signup.scss';
+import { useSignup } from '../../hooks/getAuth';
 
 export default function UserSignup() {
-  const signup = useSignup();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -25,6 +22,7 @@ export default function UserSignup() {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipcode, setZipcode] = useState('');
+  const signup = useSignup();
 
   const stateFactoryMethod = {
     email: setEmail,
@@ -46,15 +44,15 @@ export default function UserSignup() {
     zipcode: setZipcode
   };
 
-  const handleImages = (event) => {
-    if(event.target.name === 'profileImage') {
+  const handleImages = event => {
+    if (event.target.name === 'profileImage') {
       setUserImage(event.target.files[0]);
-    } else if(event.target.name === 'dogImage') {
+    } else if (event.target.name === 'dogImage') {
       setDogImage(event.target.files[0]);
     }
   };
 
-  const postImages = (event) => {
+  const postImages = event => {
     event.preventDefault();
     const fd = new FormData();
     fd.append('dogImage', dogImage);
@@ -74,10 +72,8 @@ export default function UserSignup() {
     fd.append('dogBio', dogBio);
     fd.append('dogSize', dogSize);
     fd.append('breed', breed);
-
-    fileUpload(fd)
-      .then(res => console.log(res, ' response '));
-
+    signup(fd);
+    
   };
   const handleChange = ({ target }) => {
     stateFactoryMethod[target.name](target.value);
@@ -118,7 +114,7 @@ export default function UserSignup() {
                     value={password}
                     name='password'
                     onChange={handleChange}
-                    placeholder='******'
+                    placeholder='Password'
                   />
                   <label htmlFor='password' className='form__label'>
                     Password
@@ -130,7 +126,7 @@ export default function UserSignup() {
                     value={firstName}
                     name='firstName'
                     onChange={handleChange}
-                    placeholder='Name'
+                    placeholder='Username'
                   />
                   <label htmlFor='firstName' className='form__label'>
                     First Name
@@ -154,7 +150,7 @@ export default function UserSignup() {
                     value={street}
                     name='street'
                     onChange={handleChange}
-                    placeholder='55 Spot way'
+                    placeholder='Street Address (only zipcode displayed)'
                   />
                   <label htmlFor='street' className='form__label'>
                     Street Address
@@ -166,7 +162,7 @@ export default function UserSignup() {
                     value={city}
                     name='city'
                     onChange={handleChange}
-                    placeholder='RoverCity'
+                    placeholder='SpotCity'
                   />
                   <label htmlFor='city' className='form__label'>
                     City
@@ -190,7 +186,7 @@ export default function UserSignup() {
                     value={zipcode}
                     name='zipcode'
                     onChange={handleChange}
-                    placeholder='55555'
+                    placeholder='Zipcode'
                   />
                   <label htmlFor='zipcode' className='form__label'>
                     Zipcode
@@ -202,7 +198,7 @@ export default function UserSignup() {
                     value={dogName}
                     name='dogName'
                     onChange={handleChange}
-                    placeholder='spot'
+                    placeholder='Dogs name i.e spot'
                   />
                   <label htmlFor='dogName' className='form__label'>
                     Dogs name
@@ -228,9 +224,12 @@ export default function UserSignup() {
                     onChange={handleChange}
                     placeholder='Pick time'
                   >
-                    <option value='6am till noon'>6am till noon</option>
-                    <option value='noon til 6pm'>noon til 6pm</option>
-                    <option value='6pm till midnight'>6pm till midnight</option>
+                    <option disabled selected>
+                      What time do you need?
+                    </option>
+                    <option value='6am till noon'>6am - noon</option>
+                    <option value='noon til 6pm'>noon - 6pm</option>
+                    <option value='6pm till midnight'>6pm - midnight</option>
                   </select>
                 </div>
                 <div className='form__group'>
@@ -241,9 +240,12 @@ export default function UserSignup() {
                     onChange={handleChange}
                     placeholder='Pick time'
                   >
-                    <option value='6am till noon'>6am till noon</option>
-                    <option value='noon til 6pm'>noon til 6pm</option>
-                    <option value='6pm till midnight'>6pm till midnight</option>
+                    <option disabled selected>
+                      What time can you help?{' '}
+                    </option>
+                    <option value='6am till noon'>6am - noon</option>
+                    <option value='noon til 6pm'>noon - 6pm</option>
+                    <option value='6pm till midnight'>6pm - midnight</option>
                   </select>
                 </div>
 
@@ -255,6 +257,9 @@ export default function UserSignup() {
                     onChange={handleChange}
                     placeholder='Pick time'
                   >
+                    <option disabled selected>
+                      How big is your Dog?{' '}
+                    </option>
                     <option value='XS'>XS</option>
                     <option value='S'>S</option>
                     <option value='M'>M</option>
@@ -264,6 +269,7 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <textarea
+                    id='textarea'
                     className='form__input'
                     name='userBio'
                     value={userBio}
@@ -276,6 +282,7 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <textarea
+                    id='textarea2'
                     className='form__input'
                     name='dogBio'
                     value={dogBio}
@@ -310,9 +317,8 @@ export default function UserSignup() {
                   </label>
                 </div>
                 <div className='form__group'>
-                  <button className='submit' >Submit</button>
+                  <button className='submit'>Submit</button>
                 </div>
-
               </form>
             </div>
           </div>

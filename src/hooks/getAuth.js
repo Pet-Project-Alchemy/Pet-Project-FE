@@ -17,7 +17,6 @@ export const SessionProvider = ({ children }) => {
     fetchVerify()
       .then(user => {
         setUser(user);
-        // history.push(`/zipcode/${user.address.zipcode}`);
         setLoading(false);
       })
       .catch(() => {
@@ -25,7 +24,7 @@ export const SessionProvider = ({ children }) => {
         setLoading(false);
       });
   }, []);
-  const signup = formData => {
+  const signup = (formData) => {
 
     setLoading(true);
     fileUpload(formData)
