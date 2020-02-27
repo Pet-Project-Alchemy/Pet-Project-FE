@@ -11,7 +11,6 @@ import Chat from './chat/Chat';
 export default function App() {
   return (
     <>
-      
       <Router>
         <Nav />
         <SessionProvider>
@@ -19,7 +18,6 @@ export default function App() {
             <Route exact path='/' component={Home} />
             <Route path='/signup' component={Signup} />
             <Route path='/login' component={Login} />
-            <Route path='/messages/:id' component={Chat} />
             <Route path='/zipcode/:zipcode' component={UserList} />
             <Route path='/chat/:receiverId' component={Chat} />
           </Switch>
