@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, useHistory, useLocation } from 'react-router-dom';
-import { useHasSession } from '../../hooks/getAuth';
+import { Route, useHistory } from 'react-router-dom';
+import { useHasSession, useSessionLoading } from '../../hooks/getAuth';
 
 const PrivateRoute = ({ component, path }) => {
+  const history = useHistory();
   const authenticated = useHasSession();
-  const location = useLocation();
-  //   const history = useHistory();
+  const loading = useSessionLoading();
 
-  if (!authenticated) {
-    // history.replace(`/auth?redirect=${location.pathname}`);
-    console.log('hiii');
+  if (!authenticated && !loading) {
+    history.push('/signup');
   }
 
   return <Route path={path} component={component} />;

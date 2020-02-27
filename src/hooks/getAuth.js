@@ -7,16 +7,15 @@ import { getUserSignup } from '../service/fetchSignup';
 const SessionContext = createContext();
 
 export const SessionProvider = ({ children }) => {
-  // const history = useHistory();
-  const [user, setUser] = useState();
+  const history = useHistory();
+  const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
     fetchVerify()
       .then(user => {
-        console.log(user);
         setUser(user);
         setLoading(false);
         // history.push();
@@ -56,7 +55,9 @@ export const SessionProvider = ({ children }) => {
   };
 
   return (
-    <SessionContext.Provider value={{ user, login, authError, signup }}>
+    <SessionContext.Provider
+      value={{ user, login, authError, signup, loading }}
+    >
       {children}
     </SessionContext.Provider>
   );
@@ -84,4 +85,9 @@ export const useAuthError = () => {
 export const useSignup = () => {
   const { signup } = useContext(SessionContext);
   return signup;
+};
+
+export const useSessionLoading = () => {
+  const { loading } = useContext(SessionContext);
+  return loading;
 };
