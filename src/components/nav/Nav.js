@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSessionUser } from '../../hooks/getAuth';
 import './Nav.scss';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
+  const user = useSessionUser();
+  if(!user){
+    return null;
+  }
   return (
     <>
       <div className='navigation'>
@@ -47,6 +52,11 @@ const Nav = () => {
             <li className='navigation__item'>
               <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
                 Home
+              </NavLink>
+            </li>
+            <li className='navigation__item'>
+              <NavLink to={`/zipcode/${user.address.zipcode}`} className='navigation__link' onClick={() => setOpen(!open)}>
+                Find 
               </NavLink>
             </li>
             {/* <li className='navigation__item'>
