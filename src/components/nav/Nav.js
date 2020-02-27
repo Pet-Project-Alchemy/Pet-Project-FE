@@ -37,22 +37,17 @@ const Nav = () => {
             </li>
             <li className='navigation__item'>
               <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
-               About
+               About Us
               </NavLink>
             </li>
-            <li className='navigation__item'>
+            {/* <li className='navigation__item'>
               <NavLink to='/zipcode/:zipcode' className='navigation__link' onClick={() => setOpen(!open)}>
                 Find Nearby Users
               </NavLink>
-            </li>
+            </li> */}
             <li className='navigation__item'>
               <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
                 Home
-              </NavLink>
-            </li>
-            <li className='navigation__item'>
-              <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
-                About Devs
               </NavLink>
             </li>
           </ul>
