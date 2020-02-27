@@ -1,0 +1,76 @@
+@import '../abstract/base.scss';
+@import '../abstract/variables.scss';
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+.bounce1,
+.bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+.bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+.profileTitle {
+  display: flex;
+  text-transform: capitalize;
+  justify-content: center;
+  font-size: 3rem;
+  padding: .5rem;
+  margin-top: 4rem;
+}
+  
+.LinkUserList {
+  color: inherit;
+  text-decoration: inherit;
+  padding: 0.8rem 0.3rem 1rem 0.3rem;
+}
+.ulUserList {
+  width: 60vw;
+  margin: 3.4rem auto;
+  padding: 1rem 0;
+}
+@media screen and (min-width: 550px) {
+  .ulUserList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+}
+
+
+
