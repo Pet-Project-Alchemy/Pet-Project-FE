@@ -16,8 +16,8 @@ export default function App() {
   return (
     <>
       <Router>
-        <Nav />
         <SessionProvider>
+          <Nav />
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/signup' component={Signup} />
