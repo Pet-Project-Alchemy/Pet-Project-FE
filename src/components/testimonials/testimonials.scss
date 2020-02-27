@@ -4,12 +4,12 @@ $color2: #26272b;
 @import '../abstract/variables.scss';
 
 .wrapper {
-  max-width: 45rem;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   .speechbubble {
     background-color: $color2;
@@ -18,9 +18,8 @@ $color2: #26272b;
     line-height: 1.5;
     padding: 2.5rem;
     color: white;
-    display:inline;
     margin: 2rem;
-    max-height: 5%;
+    width: 25rem;
 
     &:nth-child(2n + 2) {
       border-left: 5px solid;
@@ -58,3 +57,14 @@ $color2: #26272b;
     }
   }
 }
+
+// @media (min-width: 800px){
+
+//   .wrapper {
+//     margin-top: 10%;
+//       .speechbubble{
+//         margin-bottom: 5%;
+//       }
+//   }
+  
+// }

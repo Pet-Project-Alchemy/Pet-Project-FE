@@ -129,11 +129,9 @@ export default function ImageGallery() {
   const thumbnails = images.map((img, i) => {
     return (
       <>
-        <div className='image-container'>
-          <li key={i} name={i} onClick={handleClick}>
-            <img src={img.image} name={i} />
-          </li>
-        </div>
+        <li key={i} name={i} onClick={handleClick}>
+          <img key={i} src={img.image} className="img" name={i} />
+        </li>
       </>
     );
   });

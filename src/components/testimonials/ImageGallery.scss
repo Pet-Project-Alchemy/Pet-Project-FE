@@ -16,7 +16,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    height: 50rem;
+    height: 40rem;
     width: 100%;
   }
 
@@ -32,7 +32,6 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
   margin: auto;
-  padding: 0;
 }
 
 .image-container {
@@ -40,7 +39,6 @@
   overflow: hidden;
   position: relative;
   margin: auto;
-  min-height: 10rem;
 }
 
 .button {
@@ -53,7 +51,7 @@
   color: green;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .container {
     max-width: 100%;
     .main-image {
@@ -61,14 +59,14 @@
       position: relative;
       display: flex;
       justify-content: center;
-      height: 30rem;
+      height: 20rem;
       width: 100%;
       border: none;
     }
-    .thumbnails {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
+    // .thumbnails {
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
 
     .image-container {
       overflow: hidden;
@@ -79,3 +77,4 @@
     }
   }
 }
+
