@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import { getUserLogin } from '../service/fetchLogin';
 import { fetchVerify } from '../service/fetchVerify';
 import { fileUpload } from '../service/postImage';
-//import { getUserSignup } from '../service/fetchSignup';
 
 const SessionContext = createContext();
 
@@ -18,8 +17,8 @@ export const SessionProvider = ({ children }) => {
     fetchVerify()
       .then(user => {
         setUser(user);
+        // history.push(`/zipcode/${user.address.zipcode}`);
         setLoading(false);
-        // history.push();
       })
       .catch(() => {
         history.push('/');
