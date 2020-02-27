@@ -24,6 +24,7 @@ const UserList = ({ match }) => {
     );
 
   const userList = userZipcode.map(user => {
+    
     return (
       <>
         <Link className='LinkUserList' to={`/chat/${user._id}`}>

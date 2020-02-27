@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useSignup } from '../../hooks/getAuth';
 import './Signup.scss';
+import { useSignup } from '../../hooks/getAuth';
 
 export default function UserSignup() {
   const [email, setEmail] = useState('');
@@ -72,10 +72,8 @@ export default function UserSignup() {
     fd.append('dogBio', dogBio);
     fd.append('dogSize', dogSize);
     fd.append('breed', breed);
-    console.log(signup);
-    console.log(typeof signup);
     signup(fd);
-    // .then(res => console.log(res, ' response '));
+    
   };
   const handleChange = ({ target }) => {
     stateFactoryMethod[target.name](target.value);

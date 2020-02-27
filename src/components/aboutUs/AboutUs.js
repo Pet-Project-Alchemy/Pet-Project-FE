@@ -3,6 +3,7 @@ import './AboutUs.scss';
 import eve from '../assets/aboutUs/eveisla.png';
 import nikki from '../assets/aboutUs/nikki.png';
 
+
 const AboutUs = () => {
   return (
     <>
