@@ -24,7 +24,7 @@ export default function App() {
             <Route path='/login' component={Login} />
             <PrivateRoute path='/explore' component={ExplorePage} />
             <Route path='/messages/:id' component={Chat} />
-            <Route path='/profile/:id' component={ProfilePage} />
+            <Route path='/profile/' component={ProfilePage} />
             <Route path='/zipcode/:zipcode' component={UserList} />
             <Route path='/chat/:receiverId' component={Chat} />
             <Route path='/about' component={AboutUs} />
