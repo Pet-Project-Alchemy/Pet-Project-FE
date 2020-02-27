@@ -93,6 +93,7 @@ const AboutUs = () => {
           </div>
           <h3 className='about__name'>DOGGY?</h3>
           <div className='about__info'>
+            DOGGY
             <li className='Li'>https://github.com/evestockstill</li>
             <li className='Li'>https://www.linkedin.com/in/evestockstill/</li>
           </div>
