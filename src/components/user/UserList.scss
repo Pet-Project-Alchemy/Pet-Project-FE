@@ -51,43 +51,42 @@
   padding: 3rem;
   margin-top: 4rem;
 }
-  .container {
-    position: relative;
-    width: auto;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
+.otherUsers {
+  display: flex;
+  text-transform: capitalize;
+  justify-content: center;
+  font-size: 3rem;
+  padding: .5rem;
+  margin-top: 4rem;
+}
   
-.Link {
+.LinkUserList {
   color: inherit;
   text-decoration: inherit;
   padding: 0.8rem 0.3rem 1rem 0.3rem;
 }
-.ul {
-  width: 70vw;
+.ulUserList {
+  width: 60vw;
   margin: 3.4rem auto;
   padding: 1rem 0;
 }
 @media screen and (min-width: 550px) {
-  .ul {
+  .ulUserList {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.5rem;
   }
 }
 @media screen and (min-width: 780px) {
-  .ul {
+  .ulUserList {
     width: 85vw;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 1140px) {
-  .ul {
+  .ulUserList {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media screen and (min-width: 1680px) {
-  .ul {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
+
+
