@@ -1,9 +1,8 @@
-$color1: #161719;
-$color2: #26272b;
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
 
 .wrapper {
+  margin-top: 5rem;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -12,7 +11,8 @@ $color2: #26272b;
   justify-content: space-evenly;
 
   .speechbubble {
-    background-color: $color2;
+    margin-top: 10%;
+    background-color: $color-darkgrey-2;
     color: $color-darkgrey;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -57,14 +57,3 @@ $color2: #26272b;
     }
   }
 }
-
-// @media (min-width: 800px){
-
-//   .wrapper {
-//     margin-top: 10%;
-//       .speechbubble{
-//         margin-bottom: 5%;
-//       }
-//   }
-  
-// }
