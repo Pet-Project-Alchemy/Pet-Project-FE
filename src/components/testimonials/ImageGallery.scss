@@ -23,6 +23,13 @@
   .font {
     font-size: 2rem;
     padding: 1.5rem;
+    color: $color-primary;
+  }
+
+  .link-a {
+    font-size: 2rem;
+    padding: 1.5rem;
+    color: $color-primary-white;
   }
 }
 
@@ -43,12 +50,12 @@
 
 .button {
   text-decoration: none;
-  color: white;
+  color: $color-darkgrey;
   transition: all 0.5s ease-in;
 }
 
 .button:hover {
-  color: green;
+  color: $color-primary;
 }
 
 @media (max-width: 650px) {
@@ -63,14 +70,13 @@
       width: 100%;
       border: none;
     }
-  
+
     .image-container {
       overflow: hidden;
       position: relative;
-      background-color: white;
+      background-color: $color-primary-white;
       margin: auto;
       height: 20%;
     }
   }
 }
-
