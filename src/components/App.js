@@ -4,7 +4,7 @@ import Login from './login/Login';
 import Home from './home/Home';
 import Nav from './nav/Nav';
 import UserList from './user/UsersList';
-import { SessionProvider } from '../hooks/getAuth';
+//import { SessionProvider } from '../hooks/getAuth';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Chat from './chat/Chat';
 
@@ -14,7 +14,7 @@ export default function App() {
       
       <Router>
         <Nav />
-        <SessionProvider>
+        {/* <SessionProvider> */}
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/signup' component={Signup} />
@@ -23,7 +23,7 @@ export default function App() {
             <Route path='/zipcode/:zipcode' component={UserList} />
             <Route path='/chat/:receiverId' component={Chat} />
           </Switch>
-        </SessionProvider>
+        {/* </SessionProvider> */}
       </Router>
     </>
   );
