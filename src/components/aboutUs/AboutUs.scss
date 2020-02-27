@@ -5,18 +5,19 @@
   background: $color-primary;
   border-radius: 1rem;
   padding: 0.6rem;
-  height: 35rem;
+  height: 45rem;
   width: 100%;
   margin: 5rem 0.5;
   text-decoration: none;
   overflow: hidden;
 }
   .about__image {
+    filter: grayscale(1);
     width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     display: block;
-    padding: 1rem 0.6rem;
+    padding: 0.6rem;
     text-decoration: none;
     
   }
@@ -29,14 +30,14 @@
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
-  .about_info {
-    h3 {
+  .about_name {
+    
       text-transform: uppercase;
       color: $color-primary;
       background-color: $color-black;
       text-decoration: none;
       text-align: center;
-    }
+    
   }
 
 .Li {
