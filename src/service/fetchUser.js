@@ -1,6 +1,6 @@
 export const getUserProfile = id => {
   return fetch(
-    `https://pet-project-be-staging.herokuapp.com/api/v1/auth/zipcode/${id}`,
+    `http://localhost:7890/api/v1/auth/zipcode/${id}`,
     {
       method: 'GET',
 
