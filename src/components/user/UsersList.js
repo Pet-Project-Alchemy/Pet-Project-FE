@@ -5,10 +5,19 @@ import UserCard from './UserCard';
 import './UserList.scss';
 import { Link } from 'react-router-dom';
 import './UserList.scss';
+import { useSessionUser } from '../../hooks/getAuth';
 
 const UserList = ({ match }) => {
+
+  const user = useSessionUser();
+  if(!user){
+    return null;
+  }
+
+  console.log(user, 'XXXXX');
+
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
-  if (loading)
+  if(loading)
     return (
       <div className='spinner'>
         <div className='bounce1'></div>
@@ -37,6 +46,8 @@ const UserList = ({ match }) => {
             zipcode={user.address.zipcode}
             dogBio={user.dog[0].bio}
             bio={user.bio}
+            userImg={user.image}
+            dogImg={user.dog[0].img}
           />
         </Link>
       </>
@@ -44,7 +55,7 @@ const UserList = ({ match }) => {
   });
   return (
     <>
-      <p className='otherUsers'>The pet pals in {match.params.zipcode}</p>;
+      <p className='otherUsers'>Hello, {user.firstName} The pet pals in {match.params.zipcode}</p>;
       <ul className='ulUserList'>{userList}</ul>
     </>
   );
