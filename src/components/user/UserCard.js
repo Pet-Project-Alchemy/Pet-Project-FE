@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
 import defaultUserImg from '../assets/profile.png';
-import defaultDogImg from '../assets/islaphoto1.png';
 
 const UserCard = ({
   firstName,
   dogName,
-  userImg,
+  profileImg,
   dogImg,
   timeNeeded,
   timeAvailable,
-  zipcode,
   bio,
   dogBio
 }) => (
@@ -19,13 +17,13 @@ const UserCard = ({
     <div className='card__side card__side--front'>
       <div className='card__picture card__picture--1'>
         <div className='card__picture card__img'>
-          <img className='userImg' src={userImg ? userImg : defaultUserImg} />
+          <img className='userImg' src={profileImg ? profileImg : defaultUserImg} />
           <figcaption>
             <span className='card__heading-span card__heading-span--1'>
               {firstName}&nbsp;
             </span>
           </figcaption>
-          <img className='dogImg' />
+          <img className='dogImg' style={`{backgroundImage: url${dogImg}`}/>
           <figcaption>
             <span className='card__heading-span card__heading-span--2'>
               {dogName}&nbsp;
@@ -56,7 +54,7 @@ UserCard.propTypes = {
   dogName: PropTypes.string.isRequired,
   userImg: PropTypes.string,
   dogImg: PropTypes.string,
-
+  profileImg:PropTypes.string,
   timeNeeded: PropTypes.string.isRequired,
   timeAvailable: PropTypes.string.isRequired,
   zipcode: PropTypes.string.isRequired,
