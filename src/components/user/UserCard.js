@@ -20,7 +20,7 @@ const UserCard = ({
           <img className='userImg' src={userImg ? userImg : defaultUserImg} />
           <figcaption>
             <span className='card__heading-span card__heading-span--1'>
-              {firstName}&nbsp;
+              {firstName}&nbsp;&
             </span>
           </figcaption>
           <section
@@ -57,7 +57,7 @@ UserCard.propTypes = {
   dogName: PropTypes.string.isRequired,
   userImg: PropTypes.string,
   dogImg: PropTypes.string,
-  profileImg:PropTypes.string,
+  profileImg: PropTypes.string,
   timeNeeded: PropTypes.string.isRequired,
   timeAvailable: PropTypes.string.isRequired,
   zipcode: PropTypes.string.isRequired,
