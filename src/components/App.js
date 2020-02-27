@@ -3,6 +3,7 @@ import Signup from './signup/Signup';
 import Login from './login/Login';
 import Home from './home/Home';
 import Nav from './nav/Nav';
+import ProfilePage  from './profile/ProfilePage';
 import UserList from './user/UsersList';
 import PrivateRoute from '../components/private-public/PrivateRoute';
 import { SessionProvider } from '../hooks/getAuth';
@@ -23,6 +24,7 @@ export default function App() {
             <Route path='/login' component={Login} />
             <PrivateRoute path='/explore' component={ExplorePage} />
             <Route path='/messages/:id' component={Chat} />
+            <Route path='/profile/:id' component={ProfilePage} />
             <Route path='/zipcode/:zipcode' component={UserList} />
             <Route path='/chat/:receiverId' component={Chat} />
             <Route path='/about' component={AboutUs} />
