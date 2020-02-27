@@ -15,6 +15,7 @@ export const SessionProvider = ({ children }) => {
   useEffect(() => {
     fetchVerify()
       .then(user => {
+        console.log(user);
         setUser(user);
         // history.push();
       })

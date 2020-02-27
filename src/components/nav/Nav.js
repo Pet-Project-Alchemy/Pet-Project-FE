@@ -32,7 +32,7 @@ const Nav = () => {
             </li>
             <li className='navigation__item'>
               <NavLink to='/login' className='navigation__link' onClick={() => setOpen(!open)}>
-                Login
+                Login/Log Out
               </NavLink>
             </li>
             <li className='navigation__item'>

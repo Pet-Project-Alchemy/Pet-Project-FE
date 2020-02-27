@@ -307,11 +307,9 @@ export default function UserSignup() {
                     Dog Photo
                   </label>
                 </div>
-                {/* <Link to={`/zipcode/${zipcode}`}> */}
                 <div className='form__group'>
                   <button className='submit' >Submit</button>
                 </div>
-                {/* </Link> */}
               </form>
             </div>
           </div>
