@@ -8,7 +8,7 @@ import './UserList.scss';
 
 const UserList = ({ match }) => {
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
-  if(loading)
+  if (loading)
     return (
       <div className='spinner'>
         <div className='bounce1'></div>
@@ -16,38 +16,37 @@ const UserList = ({ match }) => {
       </div>
     );
 
-if (userZipcode.length <= 1) return <p className='error'>Your the first one in this zipcode, check back soon</p>;
-
+  if(userZipcode.length <= 1)
+    return (
+      <p className='error'>
+        Your the first one in this zipcode, check back soon
+      </p>
+    );
 
   const userList = userZipcode.map(user => {
-    console.log(user);
-
     return (
       <>
-        <div className='container'>
-          <Link className='Link' to={`/chat/${user._id}`}>
-            <UserCard
-              key={user._id}
-              firstName={user.firstName}
-              dogName={user.dog[0].name}
-              timeNeeded={user.timeNeeded}
-              timeAvailable={user.timeAvailable}
-              zipcode={user.address.zipcode}
-              dogBio={user.dog[0].bio}
-              bio={user.bio}
-            />
-          </Link>
-        </div>
+        <Link className='LinkUserList' to={`/chat/${user._id}`}>
+          <UserCard
+            key={user._id}
+            firstName={user.firstName}
+            dogName={user.dog[0].name}
+            timeNeeded={user.timeNeeded}
+            timeAvailable={user.timeAvailable}
+            zipcode={user.address.zipcode}
+            dogBio={user.dog[0].bio}
+            bio={user.bio}
+          />
+        </Link>
       </>
     );
   });
   return (
     <>
-      <p className='error'>The pet pals in {match.params.zipcode}</p>;
-      <ul className='ul'>{userList}</ul>
+      <p className='otherUsers'>The pet pals in {match.params.zipcode}</p>;
+      <ul className='ulUserList'>{userList}</ul>
     </>
   );
-
 };
 
 UserList.propTypes = {
