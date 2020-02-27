@@ -11,7 +11,6 @@ import victoria from '../assets/victoria.jpg';
 import basecamp from '../assets/Basecamp.jpg';
 import marthas from '../assets/marthas.jpg';
 import tinShed from '../assets/Tin_Shed.jpg';
-import station from '../assets/The_station.jpeg';
 import pizza from '../assets/pizza-jerk.jpg';
 
 export default function ImageGallery() {
@@ -20,7 +19,8 @@ export default function ImageGallery() {
     {
       image: wallace,
       name: 'Wallace Dog Park',
-      // website: 'http://www.luckylab.com/',
+      website:
+        'https://www.portlandoregon.gov/parks/finder/index.cfm?action=ViewPark&PropertyID=839',
       addressLink:
         'https://www.google.com/maps/place/Wallace+Dog+Park/@45.5336111,-122.7027777,17z/data=!4m5!3m4!1s0x0:0xe2449f99188567f6!8m2!3d45.5336111!4d-122.7027777',
       address: '1628 NW 25th Ave, Portland, OR 97210'
@@ -28,7 +28,8 @@ export default function ImageGallery() {
     {
       image: couch,
       name: 'Couch Dog Park',
-      // website: 'http://www.luckylab.com/',
+      website:
+        'https://www.portlandoregon.gov/parks/finder/index.cfm?action=ViewPark&PropertyID=23',
       addressLink:
         'https://www.google.com/maps/place/Couch+Park/@45.5266564,-122.6926879,17z/data=!3m1!4b1!4m5!3m4!1s0x549509fb79cffce1:0xaf5d6ed627dc70fa!8m2!3d45.5266564!4d-122.6904992',
       address: '1961 NW Glisan St, Portland, OR 97209'
@@ -36,19 +37,21 @@ export default function ImageGallery() {
     {
       image: laurelhurst,
       name: 'Laurelhurst Park',
-      // website: 'http://www.luckylab.com/',
+      website:
+        'https://www.portlandoregon.gov/parks/finder/index.cfm?action=ViewPark&PropertyID=224',
       addressLink:
         'https://www.google.com/maps/place/Laurelhurst+Park/@45.5211073,-122.6294081,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a0eac4eeb42d:0xa26df736588d055e!8m2!3d45.5211073!4d-122.6272194',
       address: 'SE Cesar E Chavez Blvd & Stark St, Portland, OR 97214'
     },
-    // {
-    //   image: alberta,
-    //   name: 'Alberta Dog Park',
-    //   // website: 'http://www.luckylab.com/',
-    //   addressLink:
-    //     'https://www.google.com/maps/place/Alberta+Park/@45.5644753,-122.6472932,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a6e3d71a4269:0x779c416cabef73d5!8m2!3d45.5644753!4d-122.6451045',
-    //   address: '1905 NE Killingsworth St, Portland, OR 97211'
-    // },
+    {
+      image: alberta,
+      name: 'Alberta Dog Park',
+      website:
+        'https://www.portlandoregon.gov/parks/finder/index.cfm?action=ViewPark&PropertyID=49',
+      addressLink:
+        'https://www.google.com/maps/place/Alberta+Park/@45.5644753,-122.6472932,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a6e3d71a4269:0x779c416cabef73d5!8m2!3d45.5644753!4d-122.6451045',
+      address: '1905 NE Killingsworth St, Portland, OR 97211'
+    },
     {
       image: lucky,
       name: 'Lucky Labrador Beer Hall',
@@ -75,6 +78,7 @@ export default function ImageGallery() {
     },
     {
       image: victoria,
+      name: 'Victoria',
       website: 'http://victoriapdx.com/',
       addressLink:
         'https://www.google.com/maps/place/Victoria+Bar/@45.5580195,-122.6752576,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a712ee8d9a13:0xfe173a70116370f0!8m2!3d45.5580195!4d-122.6752576',
@@ -105,14 +109,6 @@ export default function ImageGallery() {
       address: '1438 NE Alberta St Portland, OR 97211'
     },
     {
-      image: station,
-      name: 'The Station',
-      website: 'http://stationpdx.com/',
-      addressLink:
-        'https://www.google.com/maps/place/The+Station+Pizza+Pub/@45.5591667,-122.6377778,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a6de507b907b:0x8afef9f51c461927!8m2!3d45.5591667!4d-122.6377778',
-      address: '  2703 NE Alberta Portland, OR'
-    },
-    {
       image: pizza,
       name: 'Pizza Jerk',
       website: 'http://www.pizzajerkpdx.com/',
@@ -129,11 +125,9 @@ export default function ImageGallery() {
   const thumbnails = images.map((img, i) => {
     return (
       <>
-        <div className='image-container'>
-          <li key={i} name={i} onClick={handleClick}>
-            <img src={img.image} name={i} />
-          </li>
-        </div>
+        <li key={i} name={i} onClick={handleClick}>
+          <img src={img.image} className='img' name={i} />
+        </li>
       </>
     );
   });
@@ -141,21 +135,21 @@ export default function ImageGallery() {
   return (
     <>
       <div className='container'>
-        <h1>Suggestions on where to meet?</h1>
+        <h1 className='font'>Suggestions on where to meet?</h1>
         <div className='main'>
-          <img className='main-image' src={images[activeIndex].image} />
+          <img className='main-image img' src={images[activeIndex].image} />
           <h2 className='font'>{images[activeIndex].name}</h2>
-          <a className='button font' href={images[activeIndex].addressLink}>
+          <a className='button link-a' href={images[activeIndex].addressLink}>
             Directions
           </a>
-          <a className='button font' href={images[activeIndex].website}>
+          <a className='button link-a' href={images[activeIndex].website}>
             Website
           </a>
           <p className='font'>{images[activeIndex].address}</p>
         </div>
 
         <div className='grid'>
-          <ul className='thumbnails'>{thumbnails}</ul>
+          <ul className='thumbnails img'>{thumbnails}</ul>
         </div>
       </div>
     </>
