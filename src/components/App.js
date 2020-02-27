@@ -3,6 +3,7 @@ import Signup from './signup/Signup';
 import Login from './login/Login';
 import Home from './home/Home';
 import Nav from './nav/Nav';
+import ExplorePage from './testimonials/ExplorePage';
 import UserList from './user/UsersList';
 
 import PrivateRoute from '../components/private-public/PrivateRoute';
