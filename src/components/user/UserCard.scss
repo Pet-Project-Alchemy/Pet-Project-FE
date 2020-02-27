@@ -7,10 +7,10 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 42rem;
+  height: 38rem;
 
   &__side {
-    height: 42rem;
+    height: 38rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -28,12 +28,20 @@
       transform: rotateY(180deg);
 
       &-1 {
-        background: linear-gradient(
-          to bottom right,
-          $color-primary-light,
-          $color-primary-grey
-        );
+        filter: grayscale(1);
+       background: linear-gradient(
+      170deg,
+      rgba($color-darkgrey, .6) 0%,
+      rgba($color-darkgrey, .4) 100%,
+      transparent 80%, 
+      
+    ) ,
+    url(../assets/sidePaw.png) center;
+  padding: 3rem 0rem;
+  
+  border-radius: 3px;
       }
+      
     }
   }
   &:hover &__side--front {
@@ -51,11 +59,8 @@
     border-top-right-radius: 3px;
 
     &--1 {
-      background-image: linear-gradient(
-        to bottom right,
-        $color-primary-light,
-        $color-primary-grey
-      );
+      background: linear-gradient(to bottom right, $color-primary, $color-black-clear),
+        url(../assets/dog.png)
     }
   }
   &__heading {
@@ -74,23 +79,6 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     
-    // &--1 {
-    //   border-radius: 5px;
-    //   background-image: linear-gradient(
-    //     to right bottom,
-    //     rgba($color-newGreen, 0.85),
-    //     rgba($color-black-med, 0.85)
-    //   );
-    // }
-    // &--2 {
-      
-    //   border-radius: 5px;
-    //   background-image: linear-gradient(
-    //     to right bottom,
-    //     rgba($color-newGreen, 0.85),
-    //     rgba($color-black-med, 0.85)
-    //   );
-    // }
   }
   &__details {
     padding: 3rem;
@@ -124,6 +112,7 @@
   &__bio-text {
     font-size: 1.4rem;
     text-transform: uppercase;
+    color: black;
   }
   
 }
@@ -138,14 +127,14 @@
    padding: .5rem;
   }
 }
-.dogImg {
-  top: 2.5rem;
-  right: 7.5rem;
- margin: 1rem .5rem 0 1rem;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  &figcaption {
+// .dogImg {
+//   top: 2.5rem;
+//   right: 7.5rem;
+//  margin: 1rem .5rem 0 1rem;
+//   height: 6rem;
+//   width: 6rem;
+//   border-radius: 50%;
+//   &figcaption {
    
-  }
-}
+//   }
+

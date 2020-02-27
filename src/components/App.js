@@ -9,7 +9,7 @@ import { SessionProvider } from '../hooks/getAuth';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ExplorePage from '../components/testimonials/ExplorePage';
 import Chat from './chat/Chat';
-import About from './aboutUs/AboutUs';
+import AboutUs from './aboutUs/AboutUs';
 
 export default function App() {
   return (
@@ -25,7 +25,7 @@ export default function App() {
             <Route path='/messages/:id' component={Chat} />
             <Route path='/zipcode/:zipcode' component={UserList} />
             <Route path='/chat/:receiverId' component={Chat} />
-            <Route path='/about' component={About} />
+            <Route path='/about' component={AboutUs} />
           </Switch>
         </SessionProvider>
       </Router>
