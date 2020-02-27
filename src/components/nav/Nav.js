@@ -50,6 +50,11 @@ const Nav = () => {
                 Home
               </NavLink>
             </li>
+            <li className='navigation__item'>
+              <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
+                About Devs
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>

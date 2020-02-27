@@ -8,12 +8,11 @@ const request = (path, method, body) => {
   })
     .then(res => Promise.all([res.ok, res.json()]))
     .then(([ok, json]) => {
-      if(!ok) throw json;
+      if (!ok) throw json;
       return json;
     });
 };
 
-
 const post = (path, body) => request(path, 'POST', body);
 const get = path => request(path, 'GET');
-const patch = ()
+// const patch = ()
