@@ -5,7 +5,7 @@
   margin: auto;
   text-align: center;
 
-  img {
+  .img {
     object-fit: contain;
     width: 100%;
     filter: grayscale(1);
@@ -46,9 +46,6 @@
 .button {
   text-decoration: none;
   color: white;
-  // border-radius: 1rem;
-  // padding: 0.5rem;
-  // width: 1rem;
   transition: all 0.5s ease-in;
 }
 
@@ -68,7 +65,7 @@
       width: 100%;
       border: none;
     }
-    ul {
+    .thumbnails {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }

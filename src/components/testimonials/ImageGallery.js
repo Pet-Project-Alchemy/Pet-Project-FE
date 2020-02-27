@@ -143,7 +143,7 @@ export default function ImageGallery() {
       <div className='container'>
         <h1>Suggestions on where to meet?</h1>
         <div className='main'>
-          <img className='main-image' src={images[activeIndex].image} />
+          <img className='main-image img' src={images[activeIndex].image} />
           <h2 className='font'>{images[activeIndex].name}</h2>
           <a className='button font' href={images[activeIndex].addressLink}>
             Directions
@@ -155,7 +155,7 @@ export default function ImageGallery() {
         </div>
 
         <div className='grid'>
-          <ul className='thumbnails'>{thumbnails}</ul>
+          <ul className='thumbnails img'>{thumbnails}</ul>
         </div>
       </div>
     </>
