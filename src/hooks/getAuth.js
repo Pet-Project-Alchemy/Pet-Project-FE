@@ -25,7 +25,7 @@ export const SessionProvider = ({ children }) => {
         setLoading(false);
       });
   }, []);
-  const signup = formData => {
+  const signup = (formData) => {
 
     setLoading(true);
     fileUpload(formData)
@@ -66,6 +66,7 @@ export const SessionProvider = ({ children }) => {
 
 export const useSessionUser = () => {
   const { user } = useContext(SessionContext);
+  console.log(user);
   return user;
 };
 

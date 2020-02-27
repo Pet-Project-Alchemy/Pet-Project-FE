@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+// import { useSessionUser } from '../../hooks/getAuth';
 import './Nav.scss';
 
 const Nav = () => {
-
+  // const user  = useSessionUser();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -41,7 +42,7 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className='navigation__item'>
-              <NavLink to='/zipcode/:zipcode' className='navigation__link' onClick={() => setOpen(!open)}>
+              <NavLink to={'/zipcode/:zipcode'}className='navigation__link' onClick={() => setOpen(!open)}>
                 Find Nearby Users
               </NavLink>
             </li>

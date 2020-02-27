@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-//import { getUserSignup } from '../../service/fetchSignup';
-import { fileUpload } from '../../service/postImage';
 import { useSignup } from '../../hooks/getAuth';
 import './Signup.scss';
 
 export default function UserSignup() {
-  const signup = useSignup();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -25,6 +23,7 @@ export default function UserSignup() {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipcode, setZipcode] = useState('');
+  const  signup = useSignup();
 
   const stateFactoryMethod = {
     email: setEmail,
@@ -74,9 +73,10 @@ export default function UserSignup() {
     fd.append('dogBio', dogBio);
     fd.append('dogSize', dogSize);
     fd.append('breed', breed);
-
-    fileUpload(fd)
-      .then(res => console.log(res, ' response '));
+    console.log(signup);
+    console.log(typeof(signup));
+    signup(fd);
+    // .then(res => console.log(res, ' response '));
 
   };
   const handleChange = ({ target }) => {
