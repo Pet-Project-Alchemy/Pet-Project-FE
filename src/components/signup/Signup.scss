@@ -2,7 +2,7 @@
 
 @import '../abstract//variables.scss';
 
-$color-primary: rgb(25, 154, 163);
+$color-primary: rgb(12, 122, 122);
 $color-primary2: rgb(1, 48, 36);
 $color-primary3: rgb(22, 224, 231);
 $color-primary-light: rgb(45, 130, 106);
@@ -20,7 +20,10 @@ $color-newGreen: rgb(32, 133, 96);
 .bottom {
   margin-bottom: 4rem;
 }
-
+#password {
+  -webkit-text-security: disc;
+    -moz-text-security:circle;
+}
 .heading {
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -28,8 +31,8 @@ $color-newGreen: rgb(32, 133, 96);
   font-weight: 700;
   background-image: linear-gradient(
     to right,
-    $color-primary-light,
-    $color-primary
+    $color-black,
+    $color-black
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -47,24 +50,22 @@ $color-newGreen: rgb(32, 133, 96);
   max-width: 95%;
 }
 .section-signup {
-  width: 90%;
+  width: 100%;
   margin: 1rem auto;
 }
 .signup {
   background: linear-gradient(
       100deg,
-      rgba($color-black, 1) 0%,
-      rgba($color-black, .9) 20%,
-      rgba($color-black, .8) 30%,
+      rgba($color-primary, .9) 0%,
+      rgba($color-primary, 1) 20%,
       rgba($color-black-clear, 0.6) 50%,
       transparent 50%
     ) ,
     url(../assets/islaphoto1.png) center;
   background-size: cover;
-  padding: 3rem 2rem;
+  padding: 1rem 0rem;
   display: grid;
   grid-template-columns: repeat(auto-fit minmax(24rem auto));
-  align-items: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   
@@ -81,8 +82,6 @@ $color-newGreen: rgb(32, 133, 96);
     margin-bottom: 0.7rem;
   }
   &__input {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit minmax(auto));
     font-size: 1.5em;
     padding: 0.7rem 1.7rem;
     border-radius: 2px;
@@ -136,7 +135,6 @@ $color-newGreen: rgb(32, 133, 96);
     height: 4rem;
     max-width: 100%;
     border: 2px, 2px, 0, 2px $color-black;
-    box-sizing: border-box;
     margin-bottom: 2.5rem;
     border: 0.3 solid black;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);

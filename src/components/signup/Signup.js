@@ -95,6 +95,8 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <input
+                    type='password'
+                    id='password'
                     aria-label='password'
                     aria-required='true'
                     className='form__input'
@@ -213,7 +215,7 @@ export default function UserSignup() {
                   >
                     <option value='6am till noon'>6am till noon</option>
                     <option value='noon til 6pm'>noon til 6pm</option>
-                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='6pm till midnight'>6pm till midnight</option>
                   </select>
                 </div>
                 <div className='form__group'>
@@ -226,7 +228,7 @@ export default function UserSignup() {
                   >
                     <option value='6am till noon'>6am till noon</option>
                     <option value='noon til 6pm'>noon til 6pm</option>
-                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='6pm till midnight'>6pm till midnight</option>
                   </select>
                 </div>
 
@@ -293,9 +295,9 @@ export default function UserSignup() {
                   </label>
                 </div>
                 {/* <Link to={`/zipcode/${zipcode}`}> */}
-                  <div className='form__group'>
-                    <button className='submit' >Submit</button>
-                  </div>
+                <div className='form__group'>
+                  <button className='submit'>Submit</button>
+                </div>
                 {/* </Link> */}
               </form>
             </div>

@@ -36,8 +36,8 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className='navigation__item'>
-              <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
-               Profile
+              <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
+               About
               </NavLink>
             </li>
             <li className='navigation__item'>

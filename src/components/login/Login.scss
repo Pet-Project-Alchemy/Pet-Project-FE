@@ -2,23 +2,13 @@
 
 @import '../abstract//variables.scss';
 
-$color-primary: rgb(25, 154, 163);
-$color-primary2: rgb(1, 48, 36);
-$color-primary3: rgb(22, 224, 231);
-$color-primary-light: rgb(45, 130, 106);
-$color-primary-light2: rgb(45, 130, 106);
-$color-primary-grey: #777;
-$color-primary-white: #fff;
-$color-black: rgb(0, 0, 0);
-$color-red: rgb(210, 73, 9);
-$color-black-med: rgba(0, 0, 0, 0.418);
-$color-grey-light-1: #f7f7f7;
-$color-grey-med: #eee;
-$color-darkgrey: rgb(206, 200, 200);
-$color-darkgrey-2: rgb(99, 95, 95);
-$color-newGreen: rgb(32, 133, 96);
+
 .bottom {
   margin-bottom: 4rem;
+}
+#password {
+  -webkit-text-security: disc;
+    -moz-text-security:circle;
 }
 
 .Loginheading {
@@ -28,8 +18,8 @@ $color-newGreen: rgb(32, 133, 96);
   font-weight: 700;
   background-image: linear-gradient(
     to right,
-    $color-primary-light,
-    $color-primary
+    $color-black,
+    $color-black,
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -51,18 +41,18 @@ $color-newGreen: rgb(32, 133, 96);
   margin: 1rem auto;
 }
 .Login {
-  margin-top: 1rem;
-  height: 69rem;
+  margin-top: 2.5rem;
+  height: 100rem;
   background: linear-gradient(
       99deg,
-      rgba($color-black, 1) 0%,
-      rgba($color-black, .7) 20%,
+      rgba($color-primary, 1) 0%,
+      rgba($color-primary, 1) 20%,
       rgba($color-black-clear, .4) 50%,
       transparent 50%
     ),
-    url(../assets/caleb.png);
+    url(../assets/calebsm.png);
   background-size: cover;
-  padding: 3rem 2rem;
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit minmax(24rem auto));
   align-items: center;
@@ -72,11 +62,11 @@ $color-newGreen: rgb(32, 133, 96);
   &__form {
     width: 50%;
     padding: 6rem;
+    margin-bottom: 25rem;
   }
 }
 // form
 .Loginform {
-  display: grid;
   margin-left: 7rem;
   &__group:not(:last-child) {
     margin-bottom: 0.7rem;

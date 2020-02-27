@@ -2,8 +2,9 @@ import React from 'react';
 import { useUsersViaZipcode } from '../../hooks/getUsersViaZipcode';
 import PropTypes from 'prop-types';
 import UserCard from './UserCard';
+import './UserList.scss';
 import { Link } from 'react-router-dom';
-import './Users.scss';
+import './UserList.scss';
 
 const UserList = ({ match }) => {
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
@@ -14,14 +15,10 @@ const UserList = ({ match }) => {
         <div className='bounce2'></div>
       </div>
     );
-  if(userZipcode.length <= 1) {
-    return (
-      <p className='error'>Your the fist one in area code</p>
-    );
-  }
+if (userZipcode.length <= 1) return <p className='error'>Your the first one in this zipcode, check back soon</p>;
+
 
   const userList = userZipcode.map(user => {
-    console.log(user, 'xxx');
     return (
       <>
         <div className='container'>
@@ -41,7 +38,13 @@ const UserList = ({ match }) => {
       </>
     );
   });
-  return <ul className='ul'>{userList}</ul>;
+  return (
+    <>
+      <p className='error'>The pet pals in {match.params.zipcode}</p>;
+      <ul className='ul'>{userList}</ul>
+    </>
+  );
+
 };
 
 UserList.propTypes = {

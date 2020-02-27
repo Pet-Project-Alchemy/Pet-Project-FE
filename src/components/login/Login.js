@@ -3,13 +3,10 @@ import { useLogin } from '../../hooks/getAuth';
 import './Login.scss';
 import { Link } from 'react-router-dom';
 
-
 export default function UserLogin() {
-  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, authError } = useLogin();
- 
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -35,17 +32,23 @@ export default function UserLogin() {
                     onChange={({ target }) => setEmail(target.value)}
                     placeholder='you@you.com'
                   />
-                  <label htmlFor='email' className='Loginform__label'>Email</label>
+                  <label htmlFor='email' className='Loginform__label'>
+                    Email
+                  </label>
                 </div>
                 <div className='Loginform__group'>
                   <input
+                    type='password'
+                    id='password'
                     className='Loginform__input'
                     value={password}
                     name='password'
                     onChange={({ target }) => setPassword(target.value)}
                     placeholder='******'
                   />
-                  <label htmlFor='password' className='Loginform__label'>Password</label>
+                  <label htmlFor='password' className='Loginform__label'>
+                    Password
+                  </label>
                 </div>
                 <Link to={'/zipcode/:zipcode'}>
                   <div className='Loginform__group'>
