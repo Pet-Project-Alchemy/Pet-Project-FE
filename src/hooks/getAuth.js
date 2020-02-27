@@ -2,7 +2,8 @@ import React, { createContext, useEffect, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { getUserLogin } from '../service/fetchLogin';
 import { fetchVerify } from '../service/fetchVerify';
-import { getUserSignup } from '../service/fetchSignup';
+import { fileUpload } from '../service/postImage';
+//import { getUserSignup } from '../service/fetchSignup';
 
 const SessionContext = createContext();
 
@@ -26,8 +27,9 @@ export const SessionProvider = ({ children }) => {
       });
   }, []);
   const signup = formData => {
+
     setLoading(true);
-    getUserSignup(formData)
+    fileUpload(formData)
       .then(user => {
         setUser(user);
         setLoading(false);
