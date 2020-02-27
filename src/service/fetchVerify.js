@@ -1,5 +1,5 @@
 export const fetchVerify = (body) => {
-  return fetch('http://localhost:7890/api/v1/auth/verify', {
+  return fetch('https://pet-project-be-staging.herokuapp.com/api/v1/auth/verify', {
     method: 'GET',
     credentials: 'include',
     headers: {
