@@ -21,10 +21,10 @@ export default function App() {
             <Route exact path='/' component={Home} />
             <Route path='/signup' component={Signup} />
             <Route path='/login' component={Login} />
-            <PrivateRoute path='/explore' component={ExplorePage} />
-            <Route path='/messages/:id' component={Chat} />
-            <Route path='/zipcode/:zipcode' component={UserList} />
-            <Route path='/chat/:receiverId' component={Chat} />
+            <Route path='/explore' component={ExplorePage} />
+            <PrivateRoute path='/messages/:id' component={Chat} />
+            <PrivateRoute path='/zipcode/:zipcode' component={UserList} />
+            <PrivateRoute path='/chat/:receiverId' component={Chat} />
             <Route path='/about' component={AboutUs} />
           </Switch>
         </SessionProvider>
