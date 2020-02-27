@@ -46,6 +46,8 @@ const UserList = ({ match }) => {
             zipcode={user.address.zipcode}
             dogBio={user.dog[0].bio}
             bio={user.bio}
+            userImg={user.image}
+            dogImg={user.dog[0].img}
           />
         </Link>
       </>
