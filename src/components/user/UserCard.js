@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
-import defaultUserImg from '../assets/dogLogo.png';
-import defaultDogImg from '../assets/ISLA.png';
+import defaultUserImg from '../assets/profile.png';
+import defaultDogImg from '../assets/islaphoto1.png';
 
 const UserCard = ({
   firstName,
@@ -21,26 +21,22 @@ const UserCard = ({
         <div className='card__picture card__img'>
           <img className='userImg' src={userImg ? userImg : defaultUserImg} />
           <figcaption>
-            {' '}
             <span className='card__heading-span card__heading-span--1'>
               {firstName}&nbsp;
             </span>
           </figcaption>
-          <img className='dogImg' src={dogImg ? dogImg : defaultDogImg} />
+          <img className='dogImg' />
           <figcaption>
-            {' '}
             <span className='card__heading-span card__heading-span--2'>
               {dogName}&nbsp;
             </span>
           </figcaption>
-
-        </div> 
+        </div>
       </div>
       <div className='card__details'>
         <ul>
-          <li>{zipcode}</li>
-          <li>{timeAvailable}</li>
-          <li>{timeNeeded}</li>
+          <li>I can help {timeAvailable}</li>
+          <li>I need help {timeNeeded}</li>
         </ul>
       </div>
     </div>
@@ -58,7 +54,7 @@ const UserCard = ({
 UserCard.propTypes = {
   firstName: PropTypes.string.isRequired,
   dogName: PropTypes.string.isRequired,
-  img: PropTypes.string,
+  userImg: PropTypes.string,
   dogImg: PropTypes.string,
 
   timeNeeded: PropTypes.string.isRequired,

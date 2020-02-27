@@ -27,7 +27,11 @@ const Header = () => {
           <h3 className='section__title'>Learn More</h3>
           <div className='main__container'>
             <p className='main__container--paragraph'>
-            Pet Pals builds community and fights loneliness. Share the responsibilities of potty breaks or short walks with your new Pet Pal. Create your profile, search for dog-lovers in your area, use our chat to set up a meeting at the featured local dog-friendly spots.
+              We love our pets. Pet Pals builds community and fights loneliness.
+              Share the responsibilities of potty breaks or short walks with
+              your new Pet Pal. Create your profile, search for dog-lovers in
+              your area, use our chat to set up a meeting at the featured local
+              dog-friendly spots.
             </p>
           </div>
         </section>

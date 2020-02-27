@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+// import { useSessionUser } from '../../hooks/getAuth';
 import './Nav.scss';
 
 const Nav = () => {
-
+  // const user  = useSessionUser();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -32,22 +33,27 @@ const Nav = () => {
             </li>
             <li className='navigation__item'>
               <NavLink to='/login' className='navigation__link' onClick={() => setOpen(!open)}>
-                Login
+                Login/Log Out
               </NavLink>
             </li>
             <li className='navigation__item'>
-              <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
-               Profile
+              <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
+               About
               </NavLink>
             </li>
             <li className='navigation__item'>
-              <NavLink to='/zipcode/:zipcode' className='navigation__link' onClick={() => setOpen(!open)}>
-                Search
+              <NavLink to={'/zipcode/:zipcode'}className='navigation__link' onClick={() => setOpen(!open)}>
+                Find Nearby Users
               </NavLink>
             </li>
             <li className='navigation__item'>
               <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
                 Home
+              </NavLink>
+            </li>
+            <li className='navigation__item'>
+              <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
+                About Devs
               </NavLink>
             </li>
           </ul>
