@@ -126,7 +126,7 @@ export default function ImageGallery() {
     return (
       <>
         <li key={i} name={i} onClick={handleClick}>
-          <img key={i} src={img.image} className='img' name={i} />
+          <img src={img.image} className='img' name={i} />
         </li>
       </>
     );
