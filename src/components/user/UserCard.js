@@ -23,7 +23,10 @@ const UserCard = ({
               {firstName}&nbsp;
             </span>
           </figcaption>
-          {/* <section className='dogImg' style={`{backgroundImage: url${dogImg}`}/> */}
+          <section
+            className='dogImg'
+            style={{ backgroundImage: `url(${dogImg})` }}
+          />
           <figcaption>
             <span className='card__heading-span card__heading-span--2'>
               {dogName}&nbsp;
