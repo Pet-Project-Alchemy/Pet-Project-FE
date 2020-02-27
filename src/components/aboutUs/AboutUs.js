@@ -3,7 +3,6 @@ import './AboutUs.scss';
 import eve from '../assets/aboutUs/eveisla.png';
 import nikki from '../assets/aboutUs/nikki.png';
 
-
 const AboutUs = () => {
   return (
     <>
@@ -41,8 +40,12 @@ const AboutUs = () => {
             creative side with a dash of coding. I&apos;m also a local portland
             photography you can catch me wandering around portland catching
             reflections.
-            <li className='Li'>https://www.linkedin.com/in/nikkisato/</li>
-            <li className='Li'>https://www.linkedin.com/in/evestockstill/</li>
+            <li className='Li'>
+              <a href='https://www.linkedin.com/in/nikkisato/'>Linkedin</a>
+            </li>
+            <li className='Li'>
+              <a href='https://www.github.com/evestockstill'>Github</a>
+            </li>
           </div>
         </article>
 
@@ -50,7 +53,7 @@ const AboutUs = () => {
           <div className='img__container'>
             <img className='about__image' src={eve} alt='eve picture' />
           </div>
-          <h3 className='about__name'>Eve Stockstill</h3>
+          <h3 className='about__name'>Zak Hyslin</h3>
           <div className='about__info'>
             I am a software developer who is obsessed with her dog in my free
             time, I find new ways to spoil her, or you can find me around a pool
@@ -64,7 +67,7 @@ const AboutUs = () => {
           <div className='img__container'>
             <img className='about__image' src={eve} alt='eve picture' />
           </div>
-          <h3 className='about__name'>Eve Stockstill</h3>
+          <h3 className='about__name'>Caleb Pendergraft</h3>
           <div className='about__info'>
             I am a software developer who is obsessed with her dog in my free
             time, I find new ways to spoil her, or you can find me around a pool
@@ -77,7 +80,18 @@ const AboutUs = () => {
           <div className='img__container'>
             <img className='about__image' src={eve} alt='eve picture' />
           </div>
-          <h3 className='about__name'>Eve Stockstill</h3>
+          <h3 className='about__name'>Sam Sterns</h3>
+          <div className='about__info'>
+            <li className='Li'>https://github.com/evestockstill</li>
+            <li className='Li'>https://www.linkedin.com/in/evestockstill/</li>
+          </div>
+        </article>
+
+        <article className='about'>
+          <div className='img__container'>
+            <img className='about__image' src={eve} alt='eve picture' />
+          </div>
+          <h3 className='about__name'>DOGGY?</h3>
           <div className='about__info'>
             <li className='Li'>https://github.com/evestockstill</li>
             <li className='Li'>https://www.linkedin.com/in/evestockstill/</li>
@@ -106,7 +120,7 @@ const AboutUs = () => {
 //           photography you can catch me wandering around portland catching
 //           reflections.
 //         </p>
-        // <a href='https://www.linkedin.com/in/nikkisato/'>
+// <a href='https://www.linkedin.com/in/nikkisato/'>
 //           <FaLinkedin size={32} />
 //         </a>
 //         <a href='https://github.com/nikkisato'>
