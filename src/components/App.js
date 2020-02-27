@@ -11,22 +11,21 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ExplorePage from '../components/testimonials/ExplorePage';
 import Chat from './chat/Chat';
 import AboutUs from './aboutUs/AboutUs';
-
 export default function App() {
   return (
     <>
       <Router>
-        <Nav />
         <SessionProvider>
+          <Nav />
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/signup' component={Signup} />
             <Route path='/login' component={Login} />
-            <PrivateRoute path='/explore' component={ExplorePage} />
-            <Route path='/messages/:id' component={Chat} />
-            <Route path='/profile/' component={ProfilePage} />
-            <Route path='/zipcode/:zipcode' component={UserList} />
-            <Route path='/chat/:receiverId' component={Chat} />
+            <Route path='/explore' component={ExplorePage} />
+            <PrivateRoute path='/profile' component={ProfilePage} />
+            <PrivateRoute path='/messages/:id' component={Chat} />
+            <PrivateRoute path='/zipcode/:zipcode' component={UserList} />
+            <PrivateRoute path='/chat/:receiverId' component={Chat} />
             <Route path='/about' component={AboutUs} />
           </Switch>
         </SessionProvider>
@@ -34,3 +33,4 @@ export default function App() {
     </>
   );
 }
+

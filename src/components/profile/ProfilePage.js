@@ -6,12 +6,13 @@ import { useUserDelete } from '../../hooks/GetDeleteUsers';
 import './ProfilePage.scss';
 
 const ProfilePage = () => {
-  const user = useSessionUser();
+  const userDelete = useUserDelete();
+  const user = useSessionUser();  
   if(!user){
     return null;
   }
   const handleDelete = () => {
-    useUserDelete(user._id);
+    userDelete(user._id);
   };
   const handleEdit = () => {
     console.log('placeholder');
