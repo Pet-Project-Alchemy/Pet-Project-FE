@@ -32,6 +32,7 @@ const UserList = ({ match }) => {
     );
 
   const userList = userZipcode.map(user => {
+    console.log('A user: ', user);
     
     return (
       <>
