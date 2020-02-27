@@ -20,6 +20,7 @@ if (userZipcode.length <= 1) return <p className='error'>Your the first one in t
 
 
   const userList = userZipcode.map(user => {
+    console.log(user);
 
     return (
       <>

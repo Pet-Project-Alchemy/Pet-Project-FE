@@ -6,7 +6,7 @@ import defaultUserImg from '../assets/profile.png';
 const UserCard = ({
   firstName,
   dogName,
-  profileImg,
+  userImg,
   dogImg,
   timeNeeded,
   timeAvailable,
@@ -17,13 +17,13 @@ const UserCard = ({
     <div className='card__side card__side--front'>
       <div className='card__picture card__picture--1'>
         <div className='card__picture card__img'>
-          <img className='userImg' src={profileImg ? profileImg : defaultUserImg} />
+          <img className='userImg' src={userImg ? userImg : defaultUserImg} />
           <figcaption>
             <span className='card__heading-span card__heading-span--1'>
               {firstName}&nbsp;
             </span>
           </figcaption>
-          <img className='dogImg' style={`{backgroundImage: url${dogImg}`}/>
+          {/* <section className='dogImg' style={`{backgroundImage: url${dogImg}`}/> */}
           <figcaption>
             <span className='card__heading-span card__heading-span--2'>
               {dogName}&nbsp;
