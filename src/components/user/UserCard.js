@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
 import defaultUserImg from '../assets/profile.png';
-import defaultDogImg from '../assets/islaphoto1.png';
 
 const UserCard = ({
   firstName,
@@ -11,7 +10,6 @@ const UserCard = ({
   dogImg,
   timeNeeded,
   timeAvailable,
-  zipcode,
   bio,
   dogBio
 }) => (
@@ -25,7 +23,10 @@ const UserCard = ({
               {firstName}&nbsp;
             </span>
           </figcaption>
-          <img className='dogImg' />
+          <section
+            className='dogImg'
+            style={{ backgroundImage: `url(${dogImg})` }}
+          />
           <figcaption>
             <span className='card__heading-span card__heading-span--2'>
               {dogName}&nbsp;
@@ -56,7 +57,7 @@ UserCard.propTypes = {
   dogName: PropTypes.string.isRequired,
   userImg: PropTypes.string,
   dogImg: PropTypes.string,
-
+  profileImg:PropTypes.string,
   timeNeeded: PropTypes.string.isRequired,
   timeAvailable: PropTypes.string.isRequired,
   zipcode: PropTypes.string.isRequired,
