@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-// import { useSessionUser } from '../../hooks/getAuth';
 import './Nav.scss';
 
 const Nav = () => {
-  // const user  = useSessionUser();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -33,17 +31,17 @@ const Nav = () => {
             </li>
             <li className='navigation__item'>
               <NavLink to='/login' className='navigation__link' onClick={() => setOpen(!open)}>
-                Login/Log Out
+                Login / Log Out
+              </NavLink>
+            </li>
+            <li className='navigation__item'>
+              <NavLink to='/profile' className='navigation__link' onClick={() => setOpen(!open)}>
+              Profile
               </NavLink>
             </li>
             <li className='navigation__item'>
               <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
-               About
-              </NavLink>
-            </li>
-            <li className='navigation__item'>
-              <NavLink to={'/zipcode/:zipcode'}className='navigation__link' onClick={() => setOpen(!open)}>
-                Find Nearby Users
+                About Us
               </NavLink>
             </li>
             <li className='navigation__item'>

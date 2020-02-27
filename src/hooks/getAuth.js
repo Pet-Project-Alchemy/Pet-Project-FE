@@ -17,7 +17,6 @@ export const SessionProvider = ({ children }) => {
     fetchVerify()
       .then(user => {
         setUser(user);
-        // history.push(`/zipcode/${user.address.zipcode}`);
         setLoading(false);
       })
       .catch(() => {
@@ -66,7 +65,6 @@ export const SessionProvider = ({ children }) => {
 
 export const useSessionUser = () => {
   const { user } = useContext(SessionContext);
-  console.log(user);
   return user;
 };
 
