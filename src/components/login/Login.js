@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useLogin } from '../../hooks/getAuth';
-
 import './Login.scss';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { getUserLogout } from '../../service/fetchLogout';
+import { useHasSession } from '../../hooks/getAuth';
 
 export default function UserLogin() {
-    const history = useHistory();
+  const history = useHistory();
+  const authenticated = useHasSession();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, authError } = useLogin();
@@ -20,7 +21,7 @@ export default function UserLogin() {
     history.push('/');
   };
   
-  if(document.cookie.split(';').filter((item) => item.includes('session=')).length) {
+  if(authenticated) {
     return (
       <>
         <section>
