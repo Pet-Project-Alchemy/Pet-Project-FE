@@ -8,21 +8,23 @@ import './UserList.scss';
 
 const UserList = ({ match }) => {
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
-  if (loading)
+  if(loading)
     return (
       <div className='spinner'>
         <div className='bounce1'></div>
         <div className='bounce2'></div>
       </div>
     );
+
 if (userZipcode.length <= 1) return <p className='error'>Your the first one in this zipcode, check back soon</p>;
 
 
   const userList = userZipcode.map(user => {
+
     return (
       <>
         <div className='container'>
-          <Link className='Link' to={`/message/${user._id}`}>
+          <Link className='Link' to={`/chat/${user._id}`}>
             <UserCard
               key={user._id}
               firstName={user.firstName}

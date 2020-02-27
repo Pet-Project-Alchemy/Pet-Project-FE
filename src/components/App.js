@@ -3,11 +3,13 @@ import Signup from './signup/Signup';
 import Login from './login/Login';
 import Home from './home/Home';
 import Nav from './nav/Nav';
-// import ExplorePage from './testimonials/ExplorePage'
 import UserList from './user/UsersList';
-import AboutUs from './aboutUs/AboutUs';
+import PrivateRoute from '../components/private-public/PrivateRoute';
 import { SessionProvider } from '../hooks/getAuth';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ExplorePage from '../components/testimonials/ExplorePage';
+import Chat from './chat/Chat';
+import AboutUs from './aboutUs/AboutUs';
 
 export default function App() {
   return (
@@ -19,10 +21,11 @@ export default function App() {
             <Route exact path='/' component={Home} />
             <Route path='/signup' component={Signup} />
             <Route path='/login' component={Login} />
-            <Route path='/about' component={AboutUs} />
-            {/* <Route path='/explore' component={ExplorePage} /> */}
-            <Route path='/messages/:id' component={Login} />
+            <PrivateRoute path='/explore' component={ExplorePage} />
+            <Route path='/messages/:id' component={Chat} />
             <Route path='/zipcode/:zipcode' component={UserList} />
+            <Route path='/chat/:receiverId' component={Chat} />
+            <Route path='/about' component={AboutUs} />
           </Switch>
         </SessionProvider>
       </Router>

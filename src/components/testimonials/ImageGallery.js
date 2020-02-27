@@ -41,14 +41,14 @@ export default function ImageGallery() {
         'https://www.google.com/maps/place/Laurelhurst+Park/@45.5211073,-122.6294081,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a0eac4eeb42d:0xa26df736588d055e!8m2!3d45.5211073!4d-122.6272194',
       address: 'SE Cesar E Chavez Blvd & Stark St, Portland, OR 97214'
     },
-    {
-      image: alberta,
-      name: 'Alberta Dog Park',
-      // website: 'http://www.luckylab.com/',
-      addressLink:
-        'https://www.google.com/maps/place/Alberta+Park/@45.5644753,-122.6472932,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a6e3d71a4269:0x779c416cabef73d5!8m2!3d45.5644753!4d-122.6451045',
-      address: '1905 NE Killingsworth St, Portland, OR 97211'
-    },
+    // {
+    //   image: alberta,
+    //   name: 'Alberta Dog Park',
+    //   // website: 'http://www.luckylab.com/',
+    //   addressLink:
+    //     'https://www.google.com/maps/place/Alberta+Park/@45.5644753,-122.6472932,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a6e3d71a4269:0x779c416cabef73d5!8m2!3d45.5644753!4d-122.6451045',
+    //   address: '1905 NE Killingsworth St, Portland, OR 97211'
+    // },
     {
       image: lucky,
       name: 'Lucky Labrador Beer Hall',
@@ -140,22 +140,22 @@ export default function ImageGallery() {
 
   return (
     <>
-      <h1>Suggestions on where to meet?</h1>
       <div className='container'>
+        <h1>Suggestions on where to meet?</h1>
         <div className='main'>
           <img className='main-image' src={images[activeIndex].image} />
-          <h2>{images[activeIndex].name}</h2>
-          <a  href={images[activeIndex].addressLink}>
+          <h2 className='font'>{images[activeIndex].name}</h2>
+          <a className='button font' href={images[activeIndex].addressLink}>
             Directions
           </a>
-          <a  href={images[activeIndex].website}>
+          <a className='button font' href={images[activeIndex].website}>
             Website
           </a>
-          <p>{images[activeIndex].address}</p>
+          <p className='font'>{images[activeIndex].address}</p>
         </div>
 
         <div className='grid'>
-          <ul>{thumbnails}</ul>
+          <ul className='thumbnails'>{thumbnails}</ul>
         </div>
       </div>
     </>

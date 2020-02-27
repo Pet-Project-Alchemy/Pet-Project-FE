@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useLogin } from '../../hooks/getAuth';
+
 import './Login.scss';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { getUserLogout } from '../../service/fetchLogout';
 
 export default function UserLogin() {
+    const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, authError } = useLogin();
@@ -12,6 +15,21 @@ export default function UserLogin() {
     event.preventDefault();
     login(email, password);
   };
+  const handleClick = () => {
+    getUserLogout();
+    history.push('/');
+  };
+  
+  if(document.cookie.split(';').filter((item) => item.includes('session=')).length) {
+    return (
+      <>
+        <section>
+          <button onClick={handleClick}>Log Out</button>
+        </section>
+      </>
+    );
+  }
+
 
   return (
     <>
@@ -50,11 +68,10 @@ export default function UserLogin() {
                     Password
                   </label>
                 </div>
-                <Link to={'/zipcode/:zipcode'}>
-                  <div className='Loginform__group'>
-                    <button className='Loginsubmit'>Submit</button>
-                  </div>
-                </Link>
+
+                <div className='form__group'>
+                  <button className='submit'>Submit</button>
+                </div>
               </form>
             </div>
           </div>

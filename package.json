@@ -7,6 +7,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>src/setupTests.js"
     ],
+    "transformIgnorePatterns": [
+      "node_modules/react-socket-io-hooks/"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
@@ -16,21 +19,25 @@
     }
   },
   "scripts": {
-    "test": "jest --verbose --updateSnapshot",
+    "test": "jest --verbose --updateSnapshot --passWithNoTests",
     "test:watch": "npm run test -- --watch",
     "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
     "build": "webpack -p --devtool source-map",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "keywords": [],
+  "proxy": "http://localhost:7891",
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "postcss-mixins": "^6.2.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-icons": "^3.9.0",
     "react-router-dom": "^5.1.2",
-    "react-icons": "^3.9.0"
+    "react-socket-io-hooks": "^0.1.0",
+    "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
