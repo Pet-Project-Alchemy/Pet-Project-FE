@@ -20,5 +20,4 @@ export const HistoryList = () => {
       </div>
     </>
   );
-  return <ul className='historyUl'>{historyArray}</ul>;
 };
