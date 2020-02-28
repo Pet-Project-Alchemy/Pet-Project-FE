@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
-import { useLogin } from '../../hooks/getAuth';
-import './Login.scss';
 import { useHistory } from 'react-router-dom';
-import { getUserLogout } from '../../service/fetchLogout';
-import { useHasSession } from '../../hooks/getAuth';
+import { useLogin, useLogOut, useHasSession, useUserNull } from '../../hooks/getAuth';
+import './Login.scss';
 
 export default function UserLogin() {
-  const history = useHistory();
   const authenticated = useHasSession();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, authError } = useLogin();
-
+  const { logout } = useLogOut();
+  const history = useHistory();
+  const setUserNull = useUserNull();
+  
   const handleSubmit = event => {
     event.preventDefault();
     login(email, password);
   };
   const handleClick = () => {
-    getUserLogout();
+    logout();
+    setUserNull();
     history.push('/');
+
   };
   
   if(authenticated) {
