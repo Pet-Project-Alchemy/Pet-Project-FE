@@ -36,7 +36,7 @@
     display: block;
     font-size: 7rem;
     font-weight: 600;
-    letter-spacing: .5rem;
+    letter-spacing: 0.5rem;
     animation: moveInLeft 1s ease-out;
   }
   &__sub {
@@ -45,14 +45,14 @@
     font-size: 3rem;
 
     font-weight: 600;
-    letter-spacing: .4rem;
+    letter-spacing: 0.4rem;
     animation: moveInRight 1s ease-in;
   }
 }
 
-  .section__title {
-    color: $color-darkgrey;
-    font-size: 4rem;
+.section__title {
+  color: $color-darkgrey;
+  font-size: 4rem;
   padding-top: 2rem;
   text-align: center;
 }
