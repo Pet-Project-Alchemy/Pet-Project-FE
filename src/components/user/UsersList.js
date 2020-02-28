@@ -55,7 +55,6 @@ const UserList = ({ match }) => {
   return (
     <>
       <p className='otherUsers'>Hello {user.firstName}, these are the Pet Pals in {match.params.zipcode}</p>;
-      <br />
       <ul className='ulUserList'>{userList}</ul>
     </>
   );
