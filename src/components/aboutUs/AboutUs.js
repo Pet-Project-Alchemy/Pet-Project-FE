@@ -127,7 +127,9 @@ const AboutUs = () => {
           </div>
           <h3 className='about__name'>Isla</h3>
           <div className='about__info'>
-            I am an adorable puppy, who sparked life into this project.
+            I live for treats and being petted! Most of the time I would
+            endlessly chase the ball, unless of course I see a squirrel. I love
+            long runs on the beach at sunset.
           </div>
         </article>
       </ul>
