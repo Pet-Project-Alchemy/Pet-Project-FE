@@ -26,7 +26,7 @@ const UserCard = ({
           </figcaption>
           <img
             className='dogImg'
-            src={dogImg ? dogImg : defaultDogImage.png}
+            src={dogImg ? dogImg : defaultDogImage}
             // style={{ background: `linear-gradient(to bottom right, color: rgb(122,22,444), color: rgb(233,233,233)), url(${dogImg ? dogImg : defaultDogImage.png})` }}
           />
           <figcaption>
