@@ -3,6 +3,8 @@ import './AboutUs.scss';
 import eve from '../assets/aboutUs/eveisla.png';
 import nikki from '../assets/aboutUs/nikki.png';
 import nikkisato from '../assets/aboutUs/nikki copy-tiny.png';
+import zak from '../assets/aboutUs/zak.jpg';
+import sam from '../assets/aboutUs/sam-sterns.jpg';
 
 const AboutUs = () => {
   return (
@@ -59,7 +61,7 @@ const AboutUs = () => {
 
         <article className='about'>
           <div className='img__container'>
-            <img className='about__image' src={eve} alt='eve picture' />
+            <img className='about__image' src={zak} alt='eve picture' />
           </div>
           <h3 className='about__name'>Zak Hyslin</h3>
           <div className='about__info'>
@@ -104,7 +106,7 @@ const AboutUs = () => {
         </article>
         <article className='about'>
           <div className='img__container'>
-            <img className='about__image' src={eve} alt='eve picture' />
+            <img className='about__image' src={sam} alt='eve picture' />
           </div>
           <h3 className='about__name'>Sam Sterns</h3>
           <div className='about__info'>
