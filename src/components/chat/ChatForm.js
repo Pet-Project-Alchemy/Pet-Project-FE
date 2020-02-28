@@ -3,7 +3,6 @@ import { useEmitEvent } from 'react-socket-io-hooks';
 // import { useSessionUser } from '../../hooks/getAuth';
 
 export const ChatForm = () => {
-
   const [message, setMessage] = useState('');
 
   const sendMessage = useEmitEvent('sendMessage');
@@ -24,7 +23,6 @@ export const ChatForm = () => {
       <button className='message__button' id="submit">Send</button>
     </form>
   );
-
 }; 
 
 
