@@ -1,0 +1,84 @@
+@import '../abstract/base.scss';
+@import '../abstract/variables.scss';
+
+.container {
+  max-width: 40%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  .img {
+    object-fit: contain;
+    width: 100%;
+    filter: grayscale(1);
+    border-radius: 0.5rem;
+  }
+  .main-image {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+    width: 100%;
+  }
+
+  .font {
+    font-size: 2rem;
+    padding: 1.5rem;
+    color: $color-primary;
+  }
+
+  .link-a {
+    font-size: 2rem;
+    padding: 1.5rem;
+    color: $color-primary-white;
+  }
+}
+
+.thumbnails {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: auto;
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.button {
+  text-decoration: none;
+  color: $color-darkgrey;
+  transition: all 0.5s ease-in;
+}
+
+.button:hover {
+  color: $color-primary;
+}
+
+@media (max-width: 650px) {
+  .container {
+    max-width: 100%;
+    .main-image {
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      height: 20rem;
+      width: 100%;
+      border: none;
+    }
+
+    .image-container {
+      overflow: hidden;
+      position: relative;
+      background-color: $color-primary-white;
+      margin: auto;
+      height: 20%;
+    }
+  }
+}
