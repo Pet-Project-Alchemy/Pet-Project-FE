@@ -41,10 +41,9 @@ const AboutUs = () => {
           </div>
           <h3 className='about__name'>Nikki Sato</h3>
           <div className='about__info'>
-            I am a huge lover of Front End Design / Development! I loved
-            combining my creative side with a dash of coding. I&apos;m also a
-            local portland photography you can catch me wandering around
-            portland catching reflections.
+            Full Stack Developer with a huge lover of Front End
+            Design/Development! I loved combining my creative side with a dash
+            of coding.
             <div className='social-link'>
               <a
                 className='links'
