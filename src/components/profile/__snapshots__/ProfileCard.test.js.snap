@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileCard component renders ProfileCard 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card__side card__side--front"
+  >
+    <div
+      className="card__picture card__picture--1"
+    >
+      <div
+        className="card__picture card__img"
+      >
+        <img
+          className="userImg"
+          src="/path/image"
+        />
+        <figcaption>
+          <span
+            className="card__heading-span card__heading-span--1"
+          >
+             &
+          </span>
+        </figcaption>
+        <section
+          className="dogImg"
+          style={
+            Object {
+              "backgroundImage": "url(undefined)",
+            }
+          }
+        />
+        <figcaption>
+          <span
+            className="card__heading-span card__heading-span--2"
+          >
+             
+          </span>
+        </figcaption>
+      </div>
+    </div>
+    <div
+      className="card__details"
+    >
+      <ul>
+        <li>
+          I can help 
+        </li>
+        <li>
+          I need help 
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="card__side card__side--back card__side--back-1"
+  >
+    <div
+      className="card__cta"
+    >
+      <div
+        className="card__bio-box"
+      >
+        <p
+          className="card__bio-text"
+        />
+        <p
+          className="card__bio-text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders Header 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="header__logo-box"
+  >
+    <img
+      alt="dog-log0"
+      className="header__logo"
+      src="/path/image"
+    />
+  </div>
+  <div
+    className="header__text-box"
+  >
+    <h1
+      className="heading__primary"
+    >
+      <span
+        className="heading__primary-main"
+      >
+         Dog Out
+      </span>
+      <span
+        className="heading__primary-sub"
+      >
+        outside
+      </span>
+    </h1>
+  </div>
+</header>
+`;

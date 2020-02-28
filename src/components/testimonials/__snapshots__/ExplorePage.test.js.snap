@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExplorePage component renders ExplorePage 1`] = `
+<Fragment>
+  <div
+    className="explore-page"
+  >
+    <Testimonials />
+    <ImageGallery />
+  </div>
+</Fragment>
+`;
