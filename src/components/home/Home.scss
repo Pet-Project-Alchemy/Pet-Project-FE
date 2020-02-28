@@ -5,65 +5,62 @@
 .header {
   height: 95vh;
   .bg-video {
-   filter: grayscale(1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
-  
-  &__content {
-width: 100%;
-height: 100%;
-object-fit: cover;
+    filter: grayscale(1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+
+    &__content {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-}
-  
+
   &__text-box {
     position: absolute;
     top: 13%;
-    left: 50%;
+    left: 28%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
   }
 }
 
 .heading-primary {
-  
   &__sub--main {
-    color: $color-primary-white;
+    color: $color-black;
     display: block;
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 2rem;
+    font-size: 7rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
     animation: moveInLeft 1s ease-out;
   }
   &__sub {
     display: block;
-    color: $color-primary-white;
-    font-size: 2rem;
-
-    font-weight: 700;
-    letter-spacing: 1.75rem;
+    color: $color-black;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.4rem;
     animation: moveInRight 1s ease-in;
   }
 }
 
-  .section__title {
-    color: $color-darkgrey;
-    font-size: 4rem;
-  padding-top: 2.5rem;
+.section__title {
+  color: $color-darkgrey;
+  font-size: 4rem;
+  padding-top: 2rem;
   text-align: center;
-  }
+}
 
 .main__container {
   display: flex;
   justify-content: center;
   align-items: center;
   background: $color-black;
-
 
   &--paragraph {
     display: flex;
@@ -80,12 +77,7 @@ object-fit: cover;
     padding: 2rem;
     border-width: 1rem;
     border-style: solid;
-    border-image: linear-gradient(to bottom, $color-primary, rgba(0, 0, 0, 0)) 1 100%;
+    border-image: linear-gradient(to bottom, $color-primary, rgba(0, 0, 0, 0)) 1
+      100%;
   }
 }
-
-
-
-
-
-
