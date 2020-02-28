@@ -227,9 +227,9 @@ export default function UserSignup() {
                     <option disabled selected>
                       What time do you need?
                     </option>
-                    <option value='6am till noon'>6am - noon</option>
-                    <option value='noon til 6pm'>noon - 6pm</option>
-                    <option value='6pm till midnight'>6pm - midnight</option>
+                    <option value='6am-noon'>6am-noon</option>
+                    <option value='noon-6pm'>noon-6pm</option>
+                    <option value='6pm-midnight'>6pm-midnight</option>
                   </select>
                 </div>
                 <div className='form__group'>
@@ -241,11 +241,11 @@ export default function UserSignup() {
                     placeholder='Pick time'
                   >
                     <option disabled selected>
-                      What time can you help?{' '}
+                      What time can you help?
                     </option>
-                    <option value='6am till noon'>6am - noon</option>
-                    <option value='noon til 6pm'>noon - 6pm</option>
-                    <option value='6pm till midnight'>6pm - midnight</option>
+                    <option value='6am-noon'>6am-noon</option>
+                    <option value='noon-6pm'>noon-6pm</option>
+                    <option value='6pm-midnight'>6pm-midnight</option>
                   </select>
                 </div>
 
