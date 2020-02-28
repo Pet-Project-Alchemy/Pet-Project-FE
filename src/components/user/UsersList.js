@@ -27,12 +27,11 @@ const UserList = ({ match }) => {
   if(userZipcode.length <= 1)
     return (
       <p className='error'>
-        Your the first one in this zipcode, check back soon
+        You are the first one in this zipcode, check back soon
       </p>
     );
 
   const userList = userZipcode.map(user => {
-    console.log('A user: ', user);
     
     return (
       <>
@@ -55,7 +54,12 @@ const UserList = ({ match }) => {
   });
   return (
     <>
-      <p className='otherUsers'>Hello, {user.firstName} The pet pals in {match.params.zipcode}</p>;
+      <p className='otherUsers'>
+        Hello {user.firstName}, these are the Pet Pals in {match.params.zipcode}
+        <br /> Click on a profile to messaging with them
+      </p>
+      ;
+      <h2 className='goMessage' />
       <ul className='ulUserList'>{userList}</ul>
     </>
   );

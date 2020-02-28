@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import './Signup.scss';
-import { useSignup } from '../../hooks/getAuth';
+import { useEditUser } from '../../hooks/getAuth';
+import '../signup/Signup.scss';
 
-export default function UserSignup() {
+export default function EditForm({ match }) {
+  const edit = useEditUser();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -10,19 +11,16 @@ export default function UserSignup() {
   const [timeNeeded, setTimeNeeded] = useState('');
   const [timeAvailable, setTimeAvailable] = useState('');
   const [userBio, setUserBio] = useState('');
-  const [userImage, setUserImage] = useState('');
 
   const [dogName, setDogName] = useState('');
   const [dogSize, setDogSize] = useState('');
   const [breed, setBreed] = useState('');
   const [dogBio, setDogBio] = useState('');
-  const [dogImage, setDogImage] = useState('');
 
   const [street, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipcode, setZipcode] = useState('');
-  const signup = useSignup();
 
   const stateFactoryMethod = {
     email: setEmail,
@@ -32,62 +30,47 @@ export default function UserSignup() {
     timeNeeded: setTimeNeeded,
     timeAvailable: setTimeAvailable,
     userBio: setUserBio,
-    userImage: setUserImage,
     dogName: setDogName,
     dogSize: setDogSize,
     breed: setBreed,
     dogBio: setDogBio,
-    dogImage: setDogImage,
     street: setStreet,
     city: setCity,
     state: setState,
     zipcode: setZipcode
   };
-
-  const handleImages = event => {
-    if (event.target.name === 'profileImage') {
-      setUserImage(event.target.files[0]);
-    } else if (event.target.name === 'dogImage') {
-      setDogImage(event.target.files[0]);
-    }
-  };
-
-  const postImages = event => {
-    event.preventDefault();
-    const fd = new FormData();
-    fd.append('dogImage', dogImage);
-    fd.append('profileImage', userImage);
-    fd.append('email', email);
-    fd.append('firstName', firstName);
-    fd.append('lastName', lastName);
-    fd.append('userBio', userBio);
-    fd.append('password', password);
-    fd.append('timeNeeded', timeNeeded);
-    fd.append('timeAvailable', timeAvailable);
-    fd.append('street', street);
-    fd.append('city', city);
-    fd.append('state', state);
-    fd.append('zipcode', zipcode);
-    fd.append('dogName', dogName);
-    fd.append('dogBio', dogBio);
-    fd.append('dogSize', dogSize);
-    fd.append('breed', breed);
-    signup(fd);
-    
-  };
   const handleChange = ({ target }) => {
     stateFactoryMethod[target.name](target.value);
   };
-
+  const handleSubmit = event => {
+    event.preventDefault();
+    edit(match.params.id, {
+      email,
+      password,
+      firstName,
+      timeNeeded,
+      lastName,
+      timeAvailable,
+      userBio,
+      street,
+      city,
+      state,
+      zipcode,
+      dogName,
+      dogSize,
+      breed,
+      dogBio,
+    });
+  };
   return (
     <>
       <section className='section-signup'>
         <div className='grid'>
           <div className='signup'>
             <div className='signup__form'>
-              <form onSubmit={postImages} className='form'>
+              <form onSubmit={handleSubmit} className='form'>
                 <div className='title'>
-                  <h2 className='heading'>Sign up!</h2>
+                  <h2 className='heading'>Edit Your Profile</h2>
                 </div>
                 <div className='form__group'>
                   <input
@@ -106,15 +89,13 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <input
-                    type='password'
-                    id='password'
                     aria-label='password'
                     aria-required='true'
                     className='form__input'
                     value={password}
                     name='password'
                     onChange={handleChange}
-                    placeholder='Password'
+                    placeholder='******'
                   />
                   <label htmlFor='password' className='form__label'>
                     Password
@@ -126,7 +107,7 @@ export default function UserSignup() {
                     value={firstName}
                     name='firstName'
                     onChange={handleChange}
-                    placeholder='Username'
+                    placeholder='Name'
                   />
                   <label htmlFor='firstName' className='form__label'>
                     First Name
@@ -150,10 +131,10 @@ export default function UserSignup() {
                     value={street}
                     name='street'
                     onChange={handleChange}
-                    placeholder='Street Address (only zipcode displayed)'
+                    placeholder='55 Spot way'
                   />
                   <label htmlFor='street' className='form__label'>
-                    Street Address (We only display your zipcode)
+                    Street Address
                   </label>
                 </div>
                 <div className='form__group'>
@@ -162,7 +143,7 @@ export default function UserSignup() {
                     value={city}
                     name='city'
                     onChange={handleChange}
-                    placeholder='SpotCity'
+                    placeholder='RoverCity'
                   />
                   <label htmlFor='city' className='form__label'>
                     City
@@ -186,7 +167,7 @@ export default function UserSignup() {
                     value={zipcode}
                     name='zipcode'
                     onChange={handleChange}
-                    placeholder='Zipcode'
+                    placeholder='55555'
                   />
                   <label htmlFor='zipcode' className='form__label'>
                     Zipcode
@@ -224,12 +205,9 @@ export default function UserSignup() {
                     onChange={handleChange}
                     placeholder='Pick time'
                   >
-                    <option disabled selected>
-                      What time do you need?
-                    </option>
-                    <option value='6am-noon'>6am-noon</option>
-                    <option value='noon-6pm'>noon-6pm</option>
-                    <option value='6pm-midnight'>6pm-midnight</option>
+                    <option value='6am till noon'>6am till noon</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
                   </select>
                 </div>
                 <div className='form__group'>
@@ -240,12 +218,9 @@ export default function UserSignup() {
                     onChange={handleChange}
                     placeholder='Pick time'
                   >
-                    <option disabled selected>
-                      What time can you help?
-                    </option>
-                    <option value='6am-noon'>6am-noon</option>
-                    <option value='noon-6pm'>noon-6pm</option>
-                    <option value='6pm-midnight'>6pm-midnight</option>
+                    <option value='6am till noon'>6am till noon</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
+                    <option value='noon til 6pm'>noon til 6pm</option>
                   </select>
                 </div>
 
@@ -257,9 +232,6 @@ export default function UserSignup() {
                     onChange={handleChange}
                     placeholder='Pick time'
                   >
-                    <option disabled selected>
-                      How big is your Dog?{' '}
-                    </option>
                     <option value='XS'>XS</option>
                     <option value='S'>S</option>
                     <option value='M'>M</option>
@@ -269,7 +241,6 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <textarea
-                    id='textarea'
                     className='form__input'
                     name='userBio'
                     value={userBio}
@@ -282,7 +253,6 @@ export default function UserSignup() {
                 </div>
                 <div className='form__group'>
                   <textarea
-                    id='textarea2'
                     className='form__input'
                     name='dogBio'
                     value={dogBio}
@@ -293,31 +263,8 @@ export default function UserSignup() {
                     Tell us about best friend
                   </label>
                 </div>
-
                 <div className='form__group'>
-                  <input
-                    type='file'
-                    name='profileImage'
-                    className='form__input'
-                    onChange={handleImages}
-                  />
-                  <label htmlFor='userImage' className='form__label'>
-                    Your Photo
-                  </label>
-                </div>
-                <div className='form__group'>
-                  <input
-                    type='file'
-                    name='dogImage'
-                    className='form__input'
-                    onChange={handleImages}
-                  />
-                  <label htmlFor='dogImage' className='form__label'>
-                    Dog Photo
-                  </label>
-                </div>
-                <div className='form__group'>
-                  <button className='submit'>Submit</button>
+                  <button className='submit' >Submit</button>
                 </div>
               </form>
             </div>

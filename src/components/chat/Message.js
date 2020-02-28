@@ -1,17 +1,10 @@
 import React from 'react';
-
-const Message = ({ senderId, text, url }) => {
-
-  // turn id into actual name
-    
- 
+const Message = ({ senderId, sender, receiverId, text }) => {
   return (
     <div>
-      <p>{senderId}</p>
-      <p>{text}</p>
-      <p>{url}</p>
+      {/* <img src={image} /> */}
+      <p className={senderId !== sender._id ? 'white' : 'red'}>{text}</p>
     </div>
   );
-}
-;
+};
 export default Message;
