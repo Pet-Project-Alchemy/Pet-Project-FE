@@ -35,7 +35,6 @@ const UserList = ({ match }) => {
     
     return (
       <>
-        <h2>Click on a profile to open up messaging with them</h2>
         <Link className='LinkUserList' to={`/chat/${user._id}`}>
           <UserCard
             key={user._id}
@@ -55,7 +54,12 @@ const UserList = ({ match }) => {
   });
   return (
     <>
-      <p className='otherUsers'>Hello {user.firstName}, these are the Pet Pals in {match.params.zipcode}</p>;
+      <p className='otherUsers'>
+        Hello {user.firstName}, these are the Pet Pals in {match.params.zipcode}
+        <br /> Click on a profile to messaging with them
+      </p>
+      ;
+      <h2 className='goMessage' />
       <ul className='ulUserList'>{userList}</ul>
     </>
   );

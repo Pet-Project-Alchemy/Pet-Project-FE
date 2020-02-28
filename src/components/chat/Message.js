@@ -1,7 +1,5 @@
 import React from 'react';
-
 const Message = ({ senderId, sender, receiverId, text }) => {
- 
   return (
     <div>
       {/* <img src={image} /> */}

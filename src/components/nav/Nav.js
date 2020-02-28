@@ -42,6 +42,11 @@ const Nav = () => {
                 About Us
                 </NavLink>
               </li>
+              <li className='navigation__item'>
+                <NavLink to='/' className='navigation__link' onClick={() => setOpen(!open)}>
+                Home
+                </NavLink>
+              </li>
               {/* <li className='navigation__item'>
               <NavLink to='/about' className='navigation__link' onClick={() => setOpen(!open)}>
                 About Devs
