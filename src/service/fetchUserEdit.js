@@ -1,5 +1,4 @@
 export const getUsersandEditThem = (id, data) => {
-  console.log(data);
   return fetch(`http://localhost:7890/api/v1/auth/profile/${id}`, {
     method: 'PATCH',
     credentials: 'include',
