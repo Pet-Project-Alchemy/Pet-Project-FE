@@ -9,7 +9,6 @@ const Messages = () => {
   const socket = useSocket();
   const messages = useSocketState();
   const sender = useSessionUser();
-  const sender = useSessionUser();
   const { receiverId } = useParams();
   const join = useEmitEvent('join');
   useEffect(() => {
