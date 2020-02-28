@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 
 const Chat = () => {
   return (
-    <SocketProvider uri="http://localhost:7890" 
+    <SocketProvider uri="https://pet-project-be.herokuapp.com" 
       reducer={reducer}
       initialState={[]} >
       <Messages />
