@@ -2,9 +2,9 @@ import React from 'react';
 import './AboutUs.scss';
 import eve from '../assets/aboutUs/eveisla.png';
 import nikki from '../assets/aboutUs/nikki.png';
-import nikkisato from '../assets/aboutUs/nikki copy-tiny.png';
 import zak from '../assets/aboutUs/zak.jpg';
 import sam from '../assets/aboutUs/sam-sterns.jpg';
+import caleb from '../assets/aboutUs/caleb.jpeg';
 
 const AboutUs = () => {
   return (
@@ -84,13 +84,11 @@ const AboutUs = () => {
 
         <article className='about'>
           <div className='img__container'>
-            <img className='about__image' src={eve} alt='eve picture' />
+            <img className='about__image' src={caleb} alt='eve picture' />
           </div>
           <h3 className='about__name'>Caleb Pendergraft</h3>
           <div className='about__info'>
-            I am a software developer who is obsessed with her dog in my free
-            time, I find new ways to spoil her, or you can find me around a pool
-            table.
+          Caleb is from Portland, Oregon. When not learning to code he can be found walking his dog around Columbia Park, listening to history podcasts, or having lively arguments with his roommate
             <div className='social-link'>
               <a
                 className='links'
