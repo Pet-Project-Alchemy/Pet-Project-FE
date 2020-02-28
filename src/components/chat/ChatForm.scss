@@ -1,0 +1,11 @@
+@import '../abstract/base.scss';
+@import '../abstract/variables.scss';
+
+
+
+.messageForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}

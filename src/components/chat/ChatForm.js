@@ -18,7 +18,7 @@ export const ChatForm = () => {
   };
 
   return (
-    <form className='messageForm'autoComplete="off" onSubmit={handleSubmit}id="message-form">
+    <form className='messageForm' autoComplete="off" onSubmit={handleSubmit}id="message-form">
       <label name="message__label">Message:</label>
       <input className='message__input' onChange={handleChange} value={message} type="text" name="message" required autoComplete="off"></input>
       <button className='message__button' id="submit">Send</button>
