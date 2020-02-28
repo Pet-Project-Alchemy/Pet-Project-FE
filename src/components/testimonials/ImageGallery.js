@@ -150,7 +150,6 @@ export default function ImageGallery() {
           </a>
           <p className='font'>{images[activeIndex].address}</p>
         </div>
-
         <div className='grid'>
           <ul className='thumbnails img'>{thumbnails}</ul>
         </div>
