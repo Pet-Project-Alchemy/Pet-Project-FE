@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './HistoryItem.scss';
 import { Link } from 'react-router-dom';
@@ -13,4 +14,5 @@ const HistoryItem = ({ history }) => {
     </>
   );
 };
+ 
 export default HistoryItem;
