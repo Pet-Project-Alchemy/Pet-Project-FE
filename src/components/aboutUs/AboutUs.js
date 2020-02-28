@@ -27,7 +27,6 @@ const AboutUs = () => {
               >
                 Linkedin
               </a>
-
               <a className='links' href='https://www.github.com/evestockstill'>
                 Github
               </a>
