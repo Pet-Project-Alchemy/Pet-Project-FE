@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProfileCard from './ProfileCard';
-// import { useUserProfile } from '../../hooks/getUserProfile';
+import { Link } from 'react-router-dom';
 import { useSessionUser } from '../../hooks/getAuth';
-import './ProfilePage.scss';
-// import { Link } from 'react-router-dom';
 import './ProfilePage.scss';
 
 const ProfilePage = () => {
-  const user = useSessionUser();
+  const user = useSessionUser();  
   if(!user){
     return null;
   }
+
+
   return (
     <>
       <p className='profileTitle'>Welcome{user.firstName}and{user.dogName}</p>
@@ -27,6 +27,11 @@ const ProfilePage = () => {
           bio={user.bio}
         />
       </article>
+      <div className='profilePageDiv'>
+        <Link to={`/editform/${user._id}`}>
+          <button>Edit</button>
+        </Link>
+      </div>
     </>
   );
 };
