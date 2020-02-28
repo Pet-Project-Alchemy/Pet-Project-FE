@@ -13,7 +13,7 @@ const Messages = () => {
   const { receiverId } = useParams();
   const join = useEmitEvent('join');
   useEffect(() => {
-    if (socket.connected !== undefined && sender)
+    if(socket.connected !== undefined && sender)
       join({ senderId: sender._id, receiverId });
   }, [socket.connected, sender]);
   const messagesArray = messages.map(message => {
