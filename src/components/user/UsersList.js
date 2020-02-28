@@ -35,6 +35,7 @@ const UserList = ({ match }) => {
     
     return (
       <>
+        <h2>Click on a profile to open up messaging with them</h2>
         <Link className='LinkUserList' to={`/chat/${user._id}`}>
           <UserCard
             key={user._id}
