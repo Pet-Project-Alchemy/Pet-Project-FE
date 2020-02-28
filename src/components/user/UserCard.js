@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
 import defaultUserImg from '../assets/profile.png';
+import defaultDogImage from '../assets/dog.png';
 
 const UserCard = ({
   firstName,
@@ -20,12 +21,13 @@ const UserCard = ({
           <img className='userImg' src={userImg ? userImg : defaultUserImg} />
           <figcaption>
             <span className='card__heading-span card__heading-span--1'>
-              {firstName}&nbsp;&
+              {firstName}
             </span>
           </figcaption>
-          <section
+          <img
             className='dogImg'
-            style={{ backgroundImage: `url(${dogImg})` }}
+            src={dogImg ? dogImg : defaultDogImage}
+            // style={{ background: `linear-gradient(to bottom right, color: rgb(122,22,444), color: rgb(233,233,233)), url(${dogImg ? dogImg : defaultDogImage.png})` }}
           />
           <figcaption>
             <span className='card__heading-span card__heading-span--2'>

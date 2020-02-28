@@ -2,15 +2,14 @@
 @import '../abstract/variables.scss';
 
 .card {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 38rem;
+  height: 40rem;
 
   &__side {
-    height: 38rem;
+    height: 40rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -37,7 +36,7 @@
       
     ) ,
     url(../assets/sidePaw.png) center;
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
   
   border-radius: 3px;
       }
@@ -52,9 +51,9 @@
   }
 
   &__picture {
-    height: 23rem;
+    height: 27rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    background-clip: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    background-clip: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
@@ -63,68 +62,53 @@
         url(../assets/dog.png)
     }
   }
-  &__heading {
-    font-size: 2.8rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: left;
-    color: $color-primary-white;
-    position: absolute;
-    top: 1rem;
-    right: rem;
-    width: 75%;
-  }
+ 
   &__heading-span {
     padding: 1rem;
     text-transform: capitalize;
+    color: $color-black;
     
   }
   &__heading-span--2 {
    text-transform: capitalize;
   }
   &__details {
-    padding: 3rem;
+    padding: 2rem;
     ul {
       list-style: none;
       width: 80%;
-      margin: 0 auto;
+      margin: 1rem auto;
       li {
         text-align: center;
         font-size: 1.5rem;
-        padding: 1rem;
+        padding: .4rem;
+        color: $color-black;
+       
         &:not(:last-child) {
           border-bottom: 1px solid $color-grey-med;
         }
       }
     }
   }
-  &__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    text-align: center;
-  }
-  &__bio-box {
-    text-align: center;
-    color: $color-primary-white;
-    margin-bottom: 5rem;
-  }
+  
   &__bio-text {
     font-size: 1.4rem;
     text-transform: uppercase;
     color: black;
+    line-height: 1.5;
   }
   
 }
-.userImg {
+.userImg, .dogImg {
+  filter: grayscale(1);
+  opacity: .8;
   top: 2.5rem;
   left: 2.5rem;
   margin: 1rem .5rem 0 1rem;
-  height: 6rem;
-  width: 6rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
 }
+
 
 
