@@ -5,6 +5,7 @@ import nikki from '../assets/aboutUs/nikki.png';
 import zak from '../assets/aboutUs/zak.jpg';
 import sam from '../assets/aboutUs/sam-sterns.jpg';
 import caleb from '../assets/aboutUs/caleb.jpeg';
+import isla from '../assets/aboutUs/IMG_3259 copy.jpg';
 
 const AboutUs = () => {
   return (
@@ -123,7 +124,7 @@ const AboutUs = () => {
         </article>
         <article className='about'>
           <div className='img__container'>
-            <img className='about__image' src={eve} alt='eve picture' />
+            <img className='about__image' src={isla} alt='eve picture' />
           </div>
           <h3 className='about__name'>Isla</h3>
           <div className='about__info'>
