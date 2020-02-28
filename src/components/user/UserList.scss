@@ -54,11 +54,15 @@
   margin-top: 4rem;
 }
 .otherUsers {
-  display: flex;
-  justify-content: center;
   font-size: 3rem;
   padding: .5rem;
   margin-top: 4rem;
+  text-align: center;
+}
+.messageInfo {
+  font-size: 2rem;
+  padding: .5rem;
+  text-align: center;
 }
   
 .LinkUserList {
@@ -81,7 +85,7 @@
 @media screen and (min-width: 780px) {
   .ulUserList {
     width: 85vw;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 1140px) {

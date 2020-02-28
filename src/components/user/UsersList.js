@@ -52,8 +52,11 @@ const UserList = ({ match }) => {
   return (
     <>
       <p className='otherUsers'>
-        Hello {user.firstName}, these are the Pet Pals in {match.params.zipcode}
-        <br /> Click on a profile to messaging with them
+        Hello {user.firstName}, here are Pet Pals in {match.params.zipcode}
+        <br /> 
+      </p>
+      <p className='messageInfo'>
+        Click on a profile to messaging with them
       </p>
       ;
       <h2 className='goMessage' />

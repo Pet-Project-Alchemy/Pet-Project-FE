@@ -1,0 +1,25 @@
+@import '../abstract/base.scss';
+@import '../abstract/variables.scss';
+
+
+.message__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11rem;
+  height: 20%;
+
+
+    .messageArray {
+    display: flex;
+    border-radius: 1rem;
+    justify-content: center;
+   height: 20%;
+    width: auto;
+    text-align: center;
+    // background: $color-primary;
+    overflow: hidden;
+}
+}
+
+
