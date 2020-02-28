@@ -65,9 +65,8 @@ const AboutUs = () => {
           </div>
           <h3 className='about__name'>Zak Hyslin</h3>
           <div className='about__info'>
-            I am a software developer who is obsessed with her dog in my free
-            time, I find new ways to spoil her, or you can find me around a pool
-            table.
+            Zak is a software developer who enjoys the Oregon coast and
+            competing on Codesignal in his spare time.
             <div className='social-link'>
               <a
                 className='links'
@@ -88,7 +87,9 @@ const AboutUs = () => {
           </div>
           <h3 className='about__name'>Caleb Pendergraft</h3>
           <div className='about__info'>
-          Caleb is from Portland, Oregon. When not learning to code he can be found walking his dog around Columbia Park, listening to history podcasts, or having lively arguments with his roommate
+            Caleb is from Portland, Oregon. When not learning to code he can be
+            found walking his dog around Columbia Park, listening to history
+            podcasts, or having lively arguments with his roommate.
             <div className='social-link'>
               <a
                 className='links'
@@ -132,7 +133,7 @@ const AboutUs = () => {
           </div>
           <h3 className='about__name'>Isla</h3>
           <div className='about__info'>
-            I am an adorable puppy, who sparked life into this project
+            I am an adorable puppy, who sparked life into this project.
           </div>
         </article>
       </ul>
