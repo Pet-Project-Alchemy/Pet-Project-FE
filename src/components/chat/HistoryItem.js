@@ -1,12 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const HistoryItem = ({ userName }) => {
-    
+const HistoryItem = ({ history }) => {
   return (
-    <ul>
-      <li>{userName}</li>
-    </ul>
+    <li>
+      <Link to={`/chat/${history._id}`}>{history.userName}</Link>
+    </li>
   );
 };
-
 export default HistoryItem;

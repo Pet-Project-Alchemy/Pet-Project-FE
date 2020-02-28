@@ -8,21 +8,17 @@ export const HistoryList = () => {
   useEffect(() => {
     getConversations()
       .then(conversations => {
-        console.log(conversations);
         setHistories(conversations);
       });
   }, []);
-
   const historyArray = histories.map(history => {
+    
     return <HistoryItem 
       key={history._id}
-      userName={history.firstName}
+      history={history}
     />;
   });
-
   return (
     <ul>{historyArray}</ul>
   );
-
-}
-;
+};
