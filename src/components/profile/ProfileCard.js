@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ProfileCard.scss';
 import defaultUserImg from '../assets/profile.png';
+import defaultDogImage from '../assets/dog.png';
+
 
 const ProfileCard = ({
   firstName,
@@ -14,48 +16,42 @@ const ProfileCard = ({
   dogBio
 }) => {
   return (
-    <div className='card'>
-      <div className='card__side card__side--front'>
-        <div className='card__picture card__picture--1'>
-          <div className='card__picture card__img'>
+    <div className='ProfileCard'>
+      <div className='ProfileCard__side ProfileCard__side--front'>
+        <div className='ProfileCard__picture ProfileCard__picture--1'>
+          <div className='ProfileCard__picture ProfileCard__img'>
             <img className='userImg' src={userImg ? userImg : defaultUserImg} />
             <figcaption>
-              <span className='card__heading-span card__heading-span--1'>
-                {firstName}&nbsp;&
+              <span className='ProfileCard__heading-span ProfileCard__heading-span--1'>
+                {firstName}
               </span>
             </figcaption>
-            <section
-              className='dogImg'
-              style={{ backgroundImage: `url(${dogImg})` }}
-            />
+            <img className='dogImg' src={dogImg ? dogImg : defaultDogImage} />
             <figcaption>
-              <span className='card__heading-span card__heading-span--2'>
+              <span className='ProfileCard__heading-span ProfileCard__heading-span--2'>
                 {dogName}&nbsp;
               </span>
             </figcaption>
           </div>
         </div>
-        <div className='card__details'>
+        <div className='ProfileCard__details'>
           <ul>
             <li>I can help {timeAvailable}</li>
             <li>I need help {timeNeeded}</li>
           </ul>
         </div>
       </div>
-      <div className='card__side card__side--back card__side--back-1'>
-        <div className='card__cta'>
-          <div className='card__bio-box'>
-            <p className='card__bio-text'>{bio}</p>
-            <p className='card__bio-text'>{dogBio}</p>
+      <div className='ProfileCard__side ProfileCard__side--back ProfileCard__side--back-1'>
+        <div className='ProfileCard__cta'>
+          <div className='ProfileCard__bio-box'>
+            <p className='ProfileCard__bio-text'>{bio}</p>
+            <p className='ProfileCard__bio-text'>{dogBio}</p>
           </div>
         </div>
       </div>
     </div>
   );
 };
-  
-
-  
 
 ProfileCard.propTypes = {
   firstName: PropTypes.string.isRequired,

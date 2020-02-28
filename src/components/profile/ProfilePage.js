@@ -14,7 +14,7 @@ const ProfilePage = () => {
 
   return (
     <>
-      <p className='profileTitle'>Welcome{user.firstName}and{user.dogName}</p>
+      <p className='profileTitle'>Welcome {user.firstName} and {user.dog[0].name}</p>
       <article key={user._id}>
         <ProfileCard
           key={user._id}
@@ -29,7 +29,7 @@ const ProfilePage = () => {
       </article>
       <div className='profilePageDiv'>
         <Link to={`/editform/${user._id}`}>
-          <button>Edit</button>
+          <button className='editBtn'>Edit</button>
         </Link>
       </div>
     </>

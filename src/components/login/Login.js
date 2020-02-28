@@ -73,7 +73,7 @@ export default function UserLogin() {
                 </div>
 
                 <div className='form__group'>
-                  <button className='submit'>Submit</button>
+                  <button className='Loginsubmit'>Submit</button>
                 </div>
               </form>
             </div>
