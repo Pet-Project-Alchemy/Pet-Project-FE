@@ -1,0 +1,17 @@
+@import '../abstract/base.scss';
+@import '../abstract/variables.scss';
+
+
+.historyTitle {
+    color: $color-primary;
+}
+.historyUl {
+   
+     height: 20rem;
+     width: 30rem;
+     margin: 1rem auto 3rem auto;
+   color: blue;
+   background: $color-black-clear;
+   border: 4px solid $color-primary;
+   border-radius: 1rem;
+}

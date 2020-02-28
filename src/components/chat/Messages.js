@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react';
 import { useSocketState, useEmitEvent } from 'react-socket-io-hooks';
 import Message from './Message';
+import './Messages.scss';
 import { useSessionUser } from '../../hooks/getAuth';
 import { useParams } from 'react-router-dom';
 import { useSocket } from 'react-socket-io-hooks';
 const Messages = () => {
   const socket = useSocket();
   const messages = useSocketState();
- 
+
   const sender = useSessionUser();
- 
+
   const { receiverId } = useParams();
   const join = useEmitEvent('join');
   useEffect(() => {
@@ -29,8 +30,10 @@ const Messages = () => {
     );
   });
   return (
-    <div>
-      <p>{messagesArray}</p>
+    <div className='message__container'>
+      <div className='messageArray'>
+        <p className='messageParagraph'>{messagesArray}</p>
+      </div>
     </div>
   );
 };

@@ -3,9 +3,56 @@
 
 
 
-.messageForm {
-    display: flex;
+// .messageForm {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: red;
+// }
+
+.formDiv {
+  display: flex;
+  padding: 2rem;
     justify-content: center;
     align-items: center;
-    color: red;
+    margin-bottom: 1rem;
+}
+    .message__label {
+       font-size: 2rem; 
+       padding-right: 1rem;
+       color: transparent;
+    }
+.message__button {
+  background: transparent;
+  font-size: 2rem;
+  color: $color-primary;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 5px 1px $color-black-med;
+  padding: 0.5rem;
+  margin: 1rem 0 0 23rem;
+  transition: all 1s ease;
+  &:hover {
+      background: transparent;
+      color: $user1;
+
+  }
+}
+.message__input {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    padding: 0.7rem 1.7rem;
+    border-radius: 2px;
+    background: $color-primary;
+    width: 29rem;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+    }
+
 }
