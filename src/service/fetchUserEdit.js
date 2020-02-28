@@ -1,5 +1,5 @@
 export const getUsersandEditThem = (id, data) => {
-  return fetch(`http://localhost:7890/api/v1/auth/profile/${id}`, {
+  return fetch(`https://pet-project-be.herokuapp.com/api/v1/auth/profile/${id}`, {
     method: 'PATCH',
     credentials: 'include',
     headers: {

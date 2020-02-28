@@ -1,6 +1,6 @@
 export const getUsersViaZipcode = (zipcode) => {
   return fetch(
-    `http://localhost:7890/api/v1/auth/zipcode/${zipcode}`,
+    `https://pet-project-be.herokuapp.com/api/v1/auth/zipcode/${zipcode}`,
     {
       method: 'GET',
       headers: {
