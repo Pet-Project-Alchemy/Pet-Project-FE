@@ -5,7 +5,6 @@ import nikki from '../assets/aboutUs/nikki.png';
 import zak from '../assets/aboutUs/zak.jpg';
 import sam from '../assets/aboutUs/sam-sterns.jpg';
 import caleb from '../assets/aboutUs/caleb.jpeg';
-
 const AboutUs = () => {
   return (
     <>
@@ -134,5 +133,4 @@ const AboutUs = () => {
     </>
   );
 };
-
 export default AboutUs;

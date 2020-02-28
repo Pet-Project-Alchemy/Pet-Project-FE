@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useEditUser } from '../../hooks/getAuth';
 import '../signup/Signup.scss';
-
 export default function EditForm({ match }) {
   const edit = useEditUser();
   const [email, setEmail] = useState('');
@@ -11,17 +10,14 @@ export default function EditForm({ match }) {
   const [timeNeeded, setTimeNeeded] = useState('');
   const [timeAvailable, setTimeAvailable] = useState('');
   const [userBio, setUserBio] = useState('');
-
   const [dogName, setDogName] = useState('');
   const [dogSize, setDogSize] = useState('');
   const [breed, setBreed] = useState('');
   const [dogBio, setDogBio] = useState('');
-
   const [street, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipcode, setZipcode] = useState('');
-
   const stateFactoryMethod = {
     email: setEmail,
     password: setPassword,
@@ -223,7 +219,6 @@ export default function EditForm({ match }) {
                     <option value='noon til 6pm'>noon til 6pm</option>
                   </select>
                 </div>
-
                 <div className='form__group'>
                   <label htmlFor='dogSize'></label>
                   <select

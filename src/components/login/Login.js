@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useLogin, useLogOut, useHasSession, useUserNull } from '../../hooks/getAuth';
 import './Login.scss';
-
 export default function UserLogin() {
   const authenticated = useHasSession();
   const [email, setEmail] = useState('');
@@ -11,7 +10,6 @@ export default function UserLogin() {
   const { logout } = useLogOut();
   const history = useHistory();
   const setUserNull = useUserNull();
-  
   const handleSubmit = event => {
     event.preventDefault();
     login(email, password);
@@ -21,7 +19,6 @@ export default function UserLogin() {
     setUserNull();
     history.push('/');
   };
-  
   if(authenticated) {
     return (
       <>
@@ -31,7 +28,6 @@ export default function UserLogin() {
       </>
     );
   }
-
   return (
     <>
       <section className='section-Login'>

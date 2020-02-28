@@ -3,7 +3,6 @@ import { SocketProvider } from 'react-socket-io-hooks';
 import Messages from './Messages'; 
 import { ChatForm } from './ChatForm';
 import { HistoryList } from './HistoryList';
-
 const reducer = (state, action) => {
   switch(action.type){
     case 'message':
@@ -14,7 +13,6 @@ const reducer = (state, action) => {
       return state;
   }
 };
-
 const Chat = () => {
   return (
     <SocketProvider uri="http://localhost:7890" 

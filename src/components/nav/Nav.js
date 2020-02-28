@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSessionUser } from '../../hooks/getAuth';
 import './Nav.scss';
-
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const user = useSessionUser();

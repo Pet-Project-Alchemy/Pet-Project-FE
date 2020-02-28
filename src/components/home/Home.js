@@ -2,7 +2,6 @@ import React from 'react';
 import './Home.scss';
 import mp4 from '../assets/its-clark.mp4';
 import webm from '../assets/its-clark.webm';
-
 const Header = () => {
   return (
     <>
@@ -22,7 +21,6 @@ const Header = () => {
             </h1>
           </div>
         </header>
-
         <section className='section__main'>
           <h3 className='section__title'>Learn More</h3>
           <div className='main__container'>
@@ -39,5 +37,4 @@ const Header = () => {
     </>
   );
 };
-
 export default Header;
