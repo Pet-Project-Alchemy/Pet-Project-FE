@@ -28,7 +28,7 @@ const ProfilePage = () => {
         />
       </article>
       <div className='profilePageDiv'>
-        <Link to={`/editForm/${user._id}`}>
+        <Link to={`/editform/${user._id}`}>
           <button>Edit</button>
         </Link>
       </div>
