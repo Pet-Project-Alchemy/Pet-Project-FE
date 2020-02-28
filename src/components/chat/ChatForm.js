@@ -41,6 +41,6 @@ export const ChatForm = () => {
       </form>
     </div>
   );
-
+  
 };
-}; 
+
