@@ -1,22 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProfileCard from './ProfileCard';
+import { Link } from 'react-router-dom';
 import { useSessionUser } from '../../hooks/getAuth';
-import { useUserDelete } from '../../hooks/GetDeleteUsers';
 import './ProfilePage.scss';
 
 const ProfilePage = () => {
-  const userDelete = useUserDelete();
   const user = useSessionUser();  
   if(!user){
     return null;
   }
-  const handleDelete = () => {
-    userDelete(user._id);
-  };
-  const handleEdit = () => {
-    console.log('placeholder');
-  };
+
 
   return (
     <>
@@ -33,16 +27,11 @@ const ProfilePage = () => {
           bio={user.bio}
         />
       </article>
-      
-      
-      
-      
-      <button onClick={handleEdit}>Edit Profile</button>
-      
-      
-      
-      
-      <button onClick={handleDelete}>DELETE PROFILE</button>
+      <div className='profilePageDiv'>
+        <Link to={`/editForm/${user._id}`}>
+          <button>Edit</button>
+        </Link>
+      </div>
     </>
   );
 };

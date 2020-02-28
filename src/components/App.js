@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ExplorePage from '../components/testimonials/ExplorePage';
 import Chat from './chat/Chat';
 import AboutUs from './aboutUs/AboutUs';
+import EditForm from './editForm/EditForm';
 export default function App() {
   return (
     <>
@@ -23,6 +24,7 @@ export default function App() {
             <Route path='/login' component={Login} />
             <Route path='/explore' component={ExplorePage} />
             <PrivateRoute path='/profile' component={ProfilePage} />
+            <PrivateRoute path='/editForm/:id' component={EditForm} />
             <PrivateRoute path='/messages/:id' component={Chat} />
             <PrivateRoute path='/zipcode/:zipcode' component={UserList} />
             <PrivateRoute path='/chat/:receiverId' component={Chat} />

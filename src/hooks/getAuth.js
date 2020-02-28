@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { getUserLogin } from '../service/fetchLogin';
 import { fetchVerify } from '../service/fetchVerify';
 import { fileUpload } from '../service/postImage';
+import { getUsersandEditThem } from '../service/fetchUserEdit';
 
 const SessionContext = createContext();
 
@@ -53,10 +54,25 @@ export const SessionProvider = ({ children }) => {
         setLoading(false);
       });
   };
+  const editUser = (id, data) => {
+
+    setLoading(true);
+    getUsersandEditThem(id, data)
+      .then(user => {
+        setUser(user);
+        setLoading(false);
+        history.push('/');
+      })
+      .catch(err => {
+        setAuthError(err.message);  
+        setLoading(false);
+      });
+  
+  };
 
   return (
     <SessionContext.Provider
-      value={{ user, login, authError, signup, loading }}
+      value={{ user, login, editUser, authError, signup, loading }}
     >
       {children}
     </SessionContext.Provider>
@@ -86,6 +102,12 @@ export const useSignup = () => {
   const { signup } = useContext(SessionContext);
   return signup;
 };
+
+export const useEditUser = () => {
+  const { editUser } = useContext(SessionContext);
+  return editUser;
+};
+
 
 export const useSessionLoading = () => {
   const { loading } = useContext(SessionContext);
