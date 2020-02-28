@@ -24,8 +24,8 @@ export default function UserLogin() {
   if(authenticated) {
     return (
       <>
-        <section>
-          <button onClick={handleClick}>Log Out</button>
+        <section className='logout'>
+          <button className= 'logoutButton' onClick={handleClick}>Log Out</button>
         </section>
       </>
     );

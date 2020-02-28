@@ -21,7 +21,7 @@ const UserCard = ({
           <img className='userImg' src={userImg ? userImg : defaultUserImg} />
           <figcaption>
             <span className='card__heading-span card__heading-span--1'>
-              {firstName}&nbsp;&
+              {firstName}
             </span>
           </figcaption>
           <img
