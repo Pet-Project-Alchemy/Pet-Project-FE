@@ -9,7 +9,6 @@ export const useUserProfile = id => {
     setLoading(true);
     getUserProfile(id)
       .then(resObject => {
-        console.log(resObject);
         setUserProfile(resObject);
       })
       .finally(() => setLoading(false));

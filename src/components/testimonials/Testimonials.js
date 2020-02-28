@@ -5,12 +5,11 @@ export default function Testimonials() {
   return (
     <>
       <div className='wrapper'>
-        {/* <h1 className="testimonials-center">Testimonials</h1> */}
         <div className='speechbubble'>
           <p className='testimonials-p'>
             "I work nights, and most dog-walking services end at 6. I am so
             happy to know that Spot gets his chance to go potty"
-            <span className='username'>Karen </span>
+            <span className='username'>Karen</span>
           </p>
         </div>
         <div className='speechbubble'>

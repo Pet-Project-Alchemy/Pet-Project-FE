@@ -53,7 +53,6 @@ const UserCard = ({
     </div>
   </div>
 );
-
 UserCard.propTypes = {
   firstName: PropTypes.string.isRequired,
   dogName: PropTypes.string.isRequired,
