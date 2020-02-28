@@ -37,21 +37,21 @@
   max-width: 95%;
 }
 .section-Login {
-  width: 90%;
+  width: 88%;
   margin: 1rem auto;
 }
 .Login {
   margin-top: 2.5rem;
-  height: 100rem;
+  height: 70rem;
   background: linear-gradient(
       99deg,
       rgba($color-primary, 1) 0%,
       rgba($color-primary, 1) 20%,
-      rgba($color-black-clear, .4) 50%,
+      rgba($color-black-clear, .4) 35%,
+      rgba($color-black-clear, .1) 50%,
       transparent 50%
     ),
     url(../assets/calebsm.png);
-  background-size: cover;
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit minmax(24rem auto));
@@ -116,10 +116,32 @@
     font-size: 2rem;
     box-shadow: 1px 1px 5px 1px $color-black-med;
     padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: all 1s ease;
+    &:hover {
+      background: transparent;
+     
+    }
   }
 }
 .logout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 10rem;
+}
+.logoutButton {
+  font-size: 4rem;
+  color: $color-primary;
+  background: transparent;
+  outline: none;
+  border: none;
+  transition: all 1s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: transparent;
+    color: $color-red;
+  }
 }
