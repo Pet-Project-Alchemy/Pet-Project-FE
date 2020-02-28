@@ -1,6 +1,6 @@
 export const fetchVerify = (body) => {
   return fetch(
-    'http://localhost:7890/api/v1/auth/verify', {
+    'https://pet-project-be.herokuapp.com/api/v1/auth/verify', {
       method: 'GET',
       credentials: 'include',
       headers: {
