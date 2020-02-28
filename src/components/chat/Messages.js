@@ -7,7 +7,9 @@ import { useSocket } from 'react-socket-io-hooks';
 const Messages = () => {
   const socket = useSocket();
   const messages = useSocketState();
+ 
   const sender = useSessionUser();
+ 
   const { receiverId } = useParams();
   const join = useEmitEvent('join');
   useEffect(() => {
