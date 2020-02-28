@@ -11,7 +11,6 @@ const ProfilePage = () => {
     return null;
   }
 
-
   return (
     <>
       <p className='profileTitle'>Welcome {user.firstName} and {user.dog[0].name}</p>

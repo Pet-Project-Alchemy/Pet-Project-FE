@@ -1,18 +1,12 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
 
-
-
-// .messageForm {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background: red;
-// }
-
 .formDiv {
   display: flex;
   padding: 2rem;
+
+.messageForm {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;

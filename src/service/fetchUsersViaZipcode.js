@@ -3,7 +3,6 @@ export const getUsersViaZipcode = (zipcode) => {
     `http://localhost:7890/api/v1/auth/zipcode/${zipcode}`,
     {
       method: 'GET',
-      
       headers: {
         origin: null
       },

@@ -13,7 +13,6 @@ export const HistoryList = () => {
   const historyArray = histories.map(history => {
     return <HistoryItem key={history._id} history={history} />;
   });
-
   return (
     <>
       <div className='ulDiv'>
@@ -21,4 +20,5 @@ export const HistoryList = () => {
       </div>
     </>
   );
+  return <ul className='historyUl'>{historyArray}</ul>;
 };

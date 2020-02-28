@@ -8,15 +8,13 @@ import './UserList.scss';
 import { useSessionUser } from '../../hooks/getAuth';
 
 const UserList = ({ match }) => {
-
   const user = useSessionUser();
-  if(!user){
+  if (!user) {
     return null;
   }
 
-
   const { userZipcode, loading } = useUsersViaZipcode(match.params.zipcode);
-  if(loading)
+  if (loading)
     return (
       <div className='spinner'>
         <div className='bounce1'></div>
@@ -24,7 +22,7 @@ const UserList = ({ match }) => {
       </div>
     );
 
-  if(userZipcode.length <= 1)
+  if (userZipcode.length <= 1)
     return (
       <p className='error'>
         You are the first one in this zipcode, check back soon
@@ -32,7 +30,6 @@ const UserList = ({ match }) => {
     );
 
   const userList = userZipcode.map(user => {
-    
     return (
       <>
         <Link className='LinkUserList' to={`/chat/${user._id}`}>
@@ -67,7 +64,6 @@ const UserList = ({ match }) => {
     </>
   );
 };
-
 UserList.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({

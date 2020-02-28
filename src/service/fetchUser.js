@@ -3,7 +3,6 @@ export const getUserProfile = id => {
     `http://localhost:7890/api/v1/auth/zipcode/${id}`,
     {
       method: 'GET',
-
       headers: {
         origin: null
       }

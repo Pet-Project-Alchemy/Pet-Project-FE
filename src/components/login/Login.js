@@ -20,7 +20,6 @@ export default function UserLogin() {
     logout();
     setUserNull();
     history.push('/');
-
   };
   
   if(authenticated) {
@@ -32,7 +31,6 @@ export default function UserLogin() {
       </>
     );
   }
-
 
   return (
     <>
@@ -71,7 +69,6 @@ export default function UserLogin() {
                     Password
                   </label>
                 </div>
-
                 <div className='form__group'>
                   <button className='Loginsubmit'>Submit</button>
                 </div>
