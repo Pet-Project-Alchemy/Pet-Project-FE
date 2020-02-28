@@ -1,9 +1,27 @@
 @import '../abstract/base.scss';
+@import '../abstract/variables.scss';
 
-
+.messageOutput{
+    padding: .1rem;
+}
 .red {
-    color: red;
+    color: $color-black;
+    padding: .6rem 2rem;
+    background: $color-darkgrey;
+    font-size: 2rem;
 }
 .white {
-    color: blue;
+    padding: .6rem 2rem;
+    color: $user1;
+    background: $color-primary;
+    font-size: 2rem;
+}
+.senderImage {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    filter: grayscale(1);
+}
+.spanImage {
+    padding-right: 1rem;
 }

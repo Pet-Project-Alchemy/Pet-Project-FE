@@ -26,8 +26,7 @@ export const SessionProvider = ({ children }) => {
         setLoading(false);
       });
   }, []);
-  const signup = (formData) => {
-
+  const signup = formData => {
     setLoading(true);
     fileUpload(formData)
       .then(user => {
@@ -40,7 +39,6 @@ export const SessionProvider = ({ children }) => {
         setLoading(false);
       });
   };
-
   const login = (email, password) => {
     setLoading(true);
     setAuthError(null);
@@ -56,7 +54,6 @@ export const SessionProvider = ({ children }) => {
       });
   };
   const editUser = (id, data) => {
-
     setLoading(true);
     getUsersandEditThem(id, data)
       .then(user => {
@@ -65,14 +62,11 @@ export const SessionProvider = ({ children }) => {
         history.push('/');
       })
       .catch(err => {
-        setAuthError(err.message);  
+        setAuthError(err.message);
         setLoading(false);
       });
-  
   };
-
   const logout = () => {
-
     setLoading(true);
     getUserLogout()
       .then(user => {
@@ -81,7 +75,7 @@ export const SessionProvider = ({ children }) => {
         history.push('/');
       })
       .catch(err => {
-        setAuthError(err.message);  
+        setAuthError(err.message);
         setLoading(false);
       });
   };
@@ -92,7 +86,16 @@ export const SessionProvider = ({ children }) => {
 
   return (
     <SessionContext.Provider
-      value={{ user, login, logout, setUserNull, editUser, authError, signup, loading }}
+      value={{
+        user,
+        login,
+        logout,
+        setUserNull,
+        editUser,
+        authError,
+        signup,
+        loading
+      }}
     >
       {children}
     </SessionContext.Provider>

@@ -53,13 +53,14 @@ export default function ImageGallery() {
       address: '1905 NE Killingsworth St, Portland, OR 97211'
     },
     {
-      image: lucky,
-      name: 'Lucky Labrador Beer Hall',
-      website: 'http://www.luckylab.com/',
+      image: tinShed,
+      name: 'Tin Shed Garden Cafe',
+      website: 'http://tinshedgardencafe.com/',
       addressLink:
-        'https://www.google.com/maps/place/Lucky+Labrador+Beer+Hall/@45.5337194,-122.69175,17z/data=!3m1!4b1!4m5!3m4!1s0x549509e35233394f:0x7834494ec39a0d89!8m2!3d45.5337194!4d-122.69175',
-      address: '1945 NW Quimby St Portland, OR'
+        'https://www.google.com/maps/place/Tin+Shed+Garden+Cafe/@45.558964,-122.6508761,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a71f3ac8759b:0x1eb070bdecf8f04b!8m2!3d45.558964!4d-122.6508761',
+      address: '1438 NE Alberta St Portland, OR 97211'
     },
+
     {
       image: java,
       name: 'Java Hound Coffee Bar',
@@ -68,6 +69,7 @@ export default function ImageGallery() {
         'https://www.google.com/maps/place/Java+Hound+Coffee+Bar/@45.527235,-122.6983078,15z/data=!4m2!3m1!1s0x0:0xd06198ef5fd2b3cc?sa=X&ved=2ahUKEwig6J66_OPnAhViHjQIHYaZAyAQ_BIwC3oECA0QCA',
       address: '610 NW 23rd Ave Portland, OR'
     },
+
     {
       image: rambler,
       name: 'The Rambler',
@@ -100,13 +102,14 @@ export default function ImageGallery() {
         'https://www.google.com/maps/place/Marthas/@45.5187614,-122.6523241,15z/data=!4m2!3m1!1s0x0:0xa7dbf1a8b0b778ca?sa=X&ved=2ahUKEwjSxbGn9OPnAhUPHzQIHejTCMYQ_BIwDHoECBIQCA',
       address: '1300 SE Stark St Portland, OR 97214'
     },
+
     {
-      image: tinShed,
-      name: 'Tin Shed Garden Cafe',
-      website: 'http://tinshedgardencafe.com/',
+      image: lucky,
+      name: 'Lucky Labrador Beer Hall',
+      website: 'http://www.luckylab.com/',
       addressLink:
-        'https://www.google.com/maps/place/Tin+Shed+Garden+Cafe/@45.558964,-122.6508761,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a71f3ac8759b:0x1eb070bdecf8f04b!8m2!3d45.558964!4d-122.6508761',
-      address: '1438 NE Alberta St Portland, OR 97211'
+        'https://www.google.com/maps/place/Lucky+Labrador+Beer+Hall/@45.5337194,-122.69175,17z/data=!3m1!4b1!4m5!3m4!1s0x549509e35233394f:0x7834494ec39a0d89!8m2!3d45.5337194!4d-122.69175',
+      address: '1945 NW Quimby St Portland, OR'
     },
     {
       image: pizza,
@@ -147,7 +150,6 @@ export default function ImageGallery() {
           </a>
           <p className='font'>{images[activeIndex].address}</p>
         </div>
-
         <div className='grid'>
           <ul className='thumbnails img'>{thumbnails}</ul>
         </div>

@@ -1,9 +1,8 @@
 export const getUserProfile = id => {
   return fetch(
-    `http://localhost:7890/api/v1/auth/zipcode/${id}`,
+    `https://pet-project-be.herokuapp.com/api/v1/auth/zipcode/${id}`,
     {
       method: 'GET',
-
       headers: {
         origin: null
       }

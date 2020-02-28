@@ -50,8 +50,8 @@
   text-transform: capitalize;
   justify-content: center;
   font-size: 3rem;
-  padding: .5rem;
-  margin-top: 4rem;
+  padding: .2rem;
+  margin-top: 2rem;
 }
   
 .LinkUserList {
@@ -66,14 +66,28 @@
 }
 @media screen and (min-width: 550px) {
   .ulUserList {
-    display: grid;
+    // display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.5rem;
   }
 }
 .profilePageDiv {
-  margin-left: 500px;
+ display: flex;
+ justify-content: center;
 }
+.editBtn {
+  font-size: 2.5rem;
+  color: $color-primary;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease;
 
+  &:hover {
+    background: transparent;
+    color: $color-red;
+  }
+}
 
 

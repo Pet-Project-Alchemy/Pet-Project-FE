@@ -27,14 +27,12 @@ const AboutUs = () => {
               >
                 Linkedin
               </a>
-
               <a className='links' href='https://www.github.com/evestockstill'>
                 Github
               </a>
             </div>
           </div>
         </article>
-
         <article className='about'>
           <div className='img__container'>
             <img className='about__image' src={nikki} alt='nikki picture' />
@@ -57,7 +55,6 @@ const AboutUs = () => {
             </div>
           </div>
         </article>
-
         <article className='about'>
           <div className='img__container'>
             <img className='about__image' src={zak} alt='eve picture' />
@@ -79,7 +76,6 @@ const AboutUs = () => {
             </div>
           </div>
         </article>
-
         <article className='about'>
           <div className='img__container'>
             <img className='about__image' src={caleb} alt='eve picture' />
@@ -125,7 +121,6 @@ const AboutUs = () => {
             </div>
           </div>
         </article>
-
         <article className='about'>
           <div className='img__container'>
             <img className='about__image' src={eve} alt='eve picture' />
