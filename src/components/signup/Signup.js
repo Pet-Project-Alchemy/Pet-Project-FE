@@ -150,7 +150,7 @@ export default function UserSignup() {
                     value={street}
                     name='street'
                     onChange={handleChange}
-                    placeholder='Street Address (only zipcode displayed)'
+                    placeholder='Street Address'
                   />
                   <label htmlFor='street' className='form__label'>
                     Street Address (We only display your zipcode)
@@ -198,7 +198,7 @@ export default function UserSignup() {
                     value={dogName}
                     name='dogName'
                     onChange={handleChange}
-                    placeholder='spot'
+                    placeholder='Spot'
                   />
                   <label htmlFor='dogName' className='form__label'>
                     Dogs name
