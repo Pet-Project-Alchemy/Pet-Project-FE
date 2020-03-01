@@ -43,10 +43,8 @@
     ) ,
     url(../assets/dogPhoto/sidePaw.png) center;
   padding: 3rem 0rem;
-  
   border-radius: 3px;
       }
-      
     }
   }
   &:hover &__side--front {
@@ -81,8 +79,7 @@
   }
   &__heading-span {
     padding: 1rem;
-    text-transform: capitalize;
-    
+    text-transform: capitalize; 
   }
   &__heading-span--2 {
    text-transform: capitalize;
@@ -114,7 +111,6 @@
     text-transform: uppercase;
     color: black;
   }
-  
 }
 .userImg {
   top: 2.5rem;

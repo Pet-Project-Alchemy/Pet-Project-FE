@@ -4,7 +4,6 @@ import './ProfileCard.scss';
 import defaultUserImg from '../assets/dogPhoto/profile.png';
 import defaultDogImage from '../assets/dogPhoto/dog.png';
 
-
 const ProfileCard = ({
   firstName,
   dogName,

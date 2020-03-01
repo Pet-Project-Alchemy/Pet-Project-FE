@@ -64,12 +64,14 @@ margin-left: 20rem;
   margin: 3.4rem auto;
   padding: 1rem 0;
 }
+
 .about__name {
     text-transform: uppercase;
     margin-top: .5rem;
     color: $color-black;
     text-align: center;
   }
+
 @media screen and (min-width: 550px) {
   .AboutUl {
     display: grid;
