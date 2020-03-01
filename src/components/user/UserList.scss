@@ -71,18 +71,31 @@
   padding: 0.8rem 0.3rem 1rem 0.3rem;
 }
 .ulUserList {
-  width: 60vw;
+  width: 55vw;
   margin: 3.4rem auto;
   padding: 1rem 0;
 }
 @media screen and (min-width: 550px) {
   .ulUserList {
     display: grid;
+    width: 60vw;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.5rem;
   }
 }
+@media screen and (min-width: 680px) {
+  .ulUserList {
+    width: 65vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (min-width: 780px) {
+  .ulUserList {
+    width: 73vw;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 980px) {
   .ulUserList {
     width: 85vw;
     grid-template-columns: repeat(3, 1fr);
@@ -90,7 +103,8 @@
 }
 @media screen and (min-width: 1140px) {
   .ulUserList {
-    grid-template-columns: repeat(5, 1fr);
+     width: 90vw;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
