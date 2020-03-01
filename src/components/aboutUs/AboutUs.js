@@ -10,7 +10,7 @@ import isla from '../assets/aboutUs/isla33.jpg';
 const AboutUs = () => {
   return (
     <>
-        <h2 className='aboutTitle'>Meet the pack</h2>
+      <h2 className='aboutTitle'>Meet the pack</h2>
       <div className='about__container'>
         <ul className='AboutUl'>
           <article className='about'>
@@ -19,7 +19,9 @@ const AboutUs = () => {
             </div>
             <h3 className='about__name'>Eve Stockstill</h3>
             <div className='about__info'>
-              I am a software developer who is interested in front end design. I enjoy spoiling my dog, camping and cooking. You can also find me out shooting pool on league nights.
+              I am a software developer who is interested in front end design. I
+              enjoy spoiling my dog, camping and cooking. You can also find me
+              out shooting pool on league nights.
               <div className='social-link'>
                 <a
                   className='links'
