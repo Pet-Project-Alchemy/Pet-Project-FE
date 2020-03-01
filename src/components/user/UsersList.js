@@ -56,7 +56,7 @@ const UserList = ({ match }) => {
         <br /> 
       </p>
       <p className='messageInfo'>
-        Click on a profile to messaging with them
+        Click on a profile to message them
       </p>
       ;
       <h2 className='goMessage' />

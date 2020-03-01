@@ -45,9 +45,9 @@ export default function UserSignup() {
   };
 
   const handleImages = event => {
-    if (event.target.name === 'profileImage') {
+    if(event.target.name === 'profileImage') {
       setUserImage(event.target.files[0]);
-    } else if (event.target.name === 'dogImage') {
+    } else if(event.target.name === 'dogImage') {
       setDogImage(event.target.files[0]);
     }
   };
@@ -153,7 +153,7 @@ export default function UserSignup() {
                     placeholder='Street Address'
                   />
                   <label htmlFor='street' className='form__label'>
-                    Street Address (We only display your zipcode)
+                    Street Address 
                   </label>
                 </div>
                 <div className='form__group'>
