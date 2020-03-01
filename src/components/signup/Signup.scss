@@ -80,7 +80,7 @@
   display: grid;
   margin-left: 10rem;
   @include respond(phone) {
-    margin-left: 5rem;
+    margin-left: 4rem;
   }
   &__group:not(:last-child) {
     margin-bottom: 0.7rem;
