@@ -153,7 +153,7 @@ export default function UserSignup() {
                     placeholder='Street Address'
                   />
                   <label htmlFor='street' className='form__label'>
-                    Street Address (We only display your zipcode)
+                    Street Address 
                   </label>
                 </div>
                 <div className='form__group'>
