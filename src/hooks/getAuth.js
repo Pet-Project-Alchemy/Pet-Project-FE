@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { createContext, useEffect, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { getUserLogin } from '../service/fetchLogin';
