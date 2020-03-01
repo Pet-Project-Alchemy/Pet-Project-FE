@@ -45,9 +45,9 @@ export default function UserSignup() {
   };
 
   const handleImages = event => {
-    if (event.target.name === 'profileImage') {
+    if(event.target.name === 'profileImage') {
       setUserImage(event.target.files[0]);
-    } else if (event.target.name === 'dogImage') {
+    } else if(event.target.name === 'dogImage') {
       setDogImage(event.target.files[0]);
     }
   };

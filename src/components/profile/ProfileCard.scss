@@ -41,7 +41,7 @@
       transparent 80%, 
       
     ) ,
-    url(../assets/sidePaw.png) center;
+    url(../assets/dogPhoto/sidePaw.png) center;
   padding: 3rem 0rem;
   
   border-radius: 3px;
@@ -65,7 +65,7 @@
 
     &--1 {
       background: linear-gradient(to bottom right, $color-primary, $color-black-clear),
-        url(../assets/dog.png)
+        url(../assets/dogPhoto/dog.png)
     }
   }
   &__heading {

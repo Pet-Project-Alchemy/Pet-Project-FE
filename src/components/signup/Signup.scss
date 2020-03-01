@@ -2,21 +2,6 @@
 
 @import '../abstract/variables.scss';
 
-$color-primary: rgb(12, 122, 122);
-$color-primary2: rgb(1, 48, 36);
-$color-primary3: rgb(22, 224, 231);
-$color-primary-light: rgb(45, 130, 106);
-$color-primary-light2: rgb(45, 130, 106);
-$color-primary-grey: #777;
-$color-primary-white: #fff;
-$color-black: rgb(0, 0, 0);
-$color-red: rgb(210, 73, 9);
-$color-black-med: rgba(0, 0, 0, 0.418);
-$color-grey-light-1: #f7f7f7;
-$color-grey-med: #eee;
-$color-darkgrey: rgb(206, 200, 200);
-$color-darkgrey-2: rgb(99, 95, 95);
-$color-newGreen: rgb(32, 133, 96);
 .bottom {
   margin-bottom: 4rem;
 }
@@ -58,7 +43,7 @@ $color-newGreen: rgb(32, 133, 96);
       rgba($color-black-clear, 0.2) 50%,
       transparent 50%
     ) ,
-    url('../assets/ISLA.png') ;
+    url('../assets/dogPhoto/ISLA.png') ;
   background-size: cover;
   padding: 1rem 0rem;
   border-radius: 3px;
