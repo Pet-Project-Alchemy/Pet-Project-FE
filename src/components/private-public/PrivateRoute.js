@@ -11,7 +11,6 @@ const PrivateRoute = ({ component, path }) => {
   if(!authenticated && !loading) {
     history.push('/signup');
   }
-
   return <Route path={path} component={component} />;
 };
 
