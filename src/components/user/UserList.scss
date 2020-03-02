@@ -1,5 +1,6 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
 
 
 
@@ -58,11 +59,19 @@
   padding: .5rem;
   margin-top: 4rem;
   text-align: center;
+  @include respond(phone) {
+    margin: 12rem 2rem 1rem 2rem;
+    font-size: 2.5rem;
+   
+  }
 }
 .messageInfo {
   font-size: 2rem;
   padding: .5rem;
   text-align: center;
+  @include respond(phone) {
+   
+  }
 }
   
 .LinkUserList {
@@ -87,6 +96,7 @@
   .ulUserList {
     width: 65vw;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.5rem;
   }
 }
 @media screen and (min-width: 780px) {
