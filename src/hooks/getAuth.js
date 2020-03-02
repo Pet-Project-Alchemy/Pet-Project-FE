@@ -54,6 +54,9 @@ export const SessionProvider = ({ children }) => {
         setLoading(false);
       });
   };
+
+  // this is not the right place for this.
+  // should be a normal service. its not about auth
   const editUser = (id, data) => {
     setLoading(true);
     getUsersandEditThem(id, data)

@@ -15,6 +15,8 @@ import pizza from '../assets/explorePhotos/pizza-jerk.jpg';
 
 export default function ImageGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  // extract this into a service
   const images = [
     {
       image: wallace,

@@ -1,6 +1,7 @@
 import React from 'react';
 import './testimonials.scss';
 
+// make a Testimonial component to remove duplicate code
 export default function Testimonials() {
   return (
     <>

@@ -14,8 +14,8 @@ const request = (path, method, body) => {
     });
 };
 
+// you made these nice functions but never use them
 export const post = (path, body) => request(path, 'POST', body);
 export const get = path => request(path, 'GET');
 export const patch = (path, body) => request(path, 'PATCH', body);
 export const del = path => request(path, 'DELETE');
-

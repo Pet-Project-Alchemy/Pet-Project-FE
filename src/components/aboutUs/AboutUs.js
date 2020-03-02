@@ -7,37 +7,46 @@ import sam from '../assets/aboutUs/sam-sterns.jpg';
 import caleb from '../assets/aboutUs/caleb.jpeg';
 import isla from '../assets/aboutUs/isla33.jpg';
 
+// extract repeated HTML into a component
+const Dev = ({ name, about, linkedin, github }) => (
+  <article className='about'>
+    <div className='img__container'>
+      <img className='about__image' src={eve} alt='eve picture' />
+    </div>
+    <h3 className='about__name'>{name}</h3>
+    <div className='about__info'>
+      {about}
+      <div className='social-link'>
+        <a
+          className='links'
+          href={linkedin}
+        >
+          Linkedin
+        </a>
+        <a
+          className='links'
+          href={github}
+        >
+          Github
+        </a>
+      </div>
+    </div>
+  </article>
+);
 const AboutUs = () => {
   return (
     <>
       <h2 className='aboutTitle'>Meet the pack</h2>
       <div className='about__container'>
         <ul className='AboutUl'>
-          <article className='about'>
-            <div className='img__container'>
-              <img className='about__image' src={eve} alt='eve picture' />
-            </div>
-            <h3 className='about__name'>Eve Stockstill</h3>
-            <div className='about__info'>
-              I am a software developer who is interested in front end design. I
-              enjoy spoiling my dog, camping and cooking. You can also find me
-              out shooting pool on league nights.
-              <div className='social-link'>
-                <a
-                  className='links'
-                  href='https://www.linkedin.com/in/evestockstill/'
-                >
-                  Linkedin
-                </a>
-                <a
-                  className='links'
-                  href='https://www.github.com/evestockstill'
-                >
-                  Github
-                </a>
-              </div>
-            </div>
-          </article>
+          <Dev
+            name="Eve Stockstill"
+            about={`I am a software developer who is interested in front end design. I
+            enjoy spoiling my dog, camping and cooking. You can also find me
+            out shooting pool on league nights.`}
+            linkedin="https://www.linkedin.com/in/evestockstill/"
+            github="https://www.github.com/evestockstill"
+          />
           <article className='about'>
             <div className='img__container'>
               <img className='about__image' src={nikki} alt='nikki picture' />
