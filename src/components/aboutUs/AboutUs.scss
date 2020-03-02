@@ -1,19 +1,20 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
 
-.about__container {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-left: 20rem;
-}
+// .about__container {
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// margin: 2rem auto;
+// }
 .about {
   background: $color-primary;
   border-radius: 1rem;
   padding: 0.6rem;
   height: 29rem;
-  width: 23rem;
-  margin: 5rem 0.5;
+  width: 26rem;
+  margin: 5rem auto;
   text-decoration: none;
   overflow: hidden;
   text-align: center;
@@ -57,19 +58,18 @@ margin-left: 20rem;
   font-size: 4.5rem;
   text-transform: capitalize;
   text-align: center;
-  margin: 2rem 
+  margin: 2rem; 
+  @include respond(phone) {
+    margin-top: 13rem;
+    font-size: 3.7rem;
+  }
 }
 .AboutUl {
-  width: 60vw;
-  margin: 3.4rem auto;
+  width: 70vw;
+  margin: 1rem auto;
   padding: 1rem 0;
 }
-.about__name {
-    text-transform: uppercase;
-    margin-top: .5rem;
-    color: $color-black;
-    text-align: center;
-  }
+
 @media screen and (min-width: 550px) {
   .AboutUl {
     display: grid;

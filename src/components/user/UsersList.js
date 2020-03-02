@@ -52,7 +52,7 @@ const UserList = ({ match }) => {
   return (
     <>
       <p className='otherUsers'>
-        Hello {user.firstName}, here are Pet Pals in {match.params.zipcode}
+        Hello {user.firstName}, your Pet Pals in {match.params.zipcode}
         <br /> 
       </p>
       <p className='messageInfo'>
