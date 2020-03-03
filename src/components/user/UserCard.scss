@@ -1,10 +1,14 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 45rem;
+  @include respond(phone) {
+    height: 40rem;
+  }
   &__side {
     height: 45rem;
     font-size: 2rem;
@@ -17,6 +21,10 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  @include respond(phone) {
+    height: 40rem;
+    font-size: 1.6rem;
+  }
     &--front {
       background-color: $color-primary;
     }
@@ -27,12 +35,15 @@
        background: linear-gradient(
       170deg,
       rgba($color-darkgrey, .6) 0%,
-      rgba($color-darkgrey, .4) 100%,
+      rgba($color-darkgrey, .4) 100%
       transparent 80%, 
     ) ,
-    url(../assets/sidePaw.png) center;
+    url(../assets/dogPhoto/sidePaw.png) center;
   padding: 2rem 0rem;
   border-radius: 3px;
+  @include respond(phone) {
+    display: none;
+  }
       }
     }
   }
@@ -50,7 +61,7 @@
     border-top-right-radius: 3px;
     &--1 {
       background: linear-gradient(to bottom right, $color-primary, $color-black-clear),
-        url(../assets/dog.png)
+        url(../assets/dogPhoto/dog.png)
     }
   }
   &__heading-span {
@@ -88,6 +99,9 @@
     font-size: 1.4rem;
     padding: .5rem;
     color: black;
+    @include respond(phone) {
+    color: transparent;
+  }
   }
 }
 .userImg, .dogImg {
@@ -99,6 +113,10 @@
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
+  @include respond(phone) {
+  height: 8.5rem;
+  width: 8.5rem;
+  }
 }
 
 

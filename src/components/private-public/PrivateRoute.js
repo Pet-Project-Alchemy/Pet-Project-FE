@@ -8,10 +8,9 @@ const PrivateRoute = ({ component, path }) => {
   const authenticated = useHasSession();
   const loading = useSessionLoading();
 
-  if (!authenticated && !loading) {
+  if(!authenticated && !loading) {
     history.push('/signup');
   }
-
   return <Route path={path} component={component} />;
 };
 

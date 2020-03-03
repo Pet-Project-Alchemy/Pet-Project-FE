@@ -1,22 +1,7 @@
-@import '../abstract/base.scss';
+@import "../abstract/base.scss";
+@import "../abstract/mixins.scss";
+@import "../abstract/variables.scss";
 
-@import '../abstract/variables.scss';
-
-$color-primary: rgb(12, 122, 122);
-$color-primary2: rgb(1, 48, 36);
-$color-primary3: rgb(22, 224, 231);
-$color-primary-light: rgb(45, 130, 106);
-$color-primary-light2: rgb(45, 130, 106);
-$color-primary-grey: #777;
-$color-primary-white: #fff;
-$color-black: rgb(0, 0, 0);
-$color-red: rgb(210, 73, 9);
-$color-black-med: rgba(0, 0, 0, 0.418);
-$color-grey-light-1: #f7f7f7;
-$color-grey-med: #eee;
-$color-darkgrey: rgb(206, 200, 200);
-$color-darkgrey-2: rgb(99, 95, 95);
-$color-newGreen: rgb(32, 133, 96);
 .bottom {
   margin-bottom: 4rem;
 }
@@ -57,22 +42,45 @@ $color-newGreen: rgb(32, 133, 96);
       rgba($color-primary, 1) 30%,
       rgba($color-black-clear, 0.2) 50%,
       transparent 50%
-    ) ,
-    url('../assets/ISLA.png') ;
+    ),
+    url("../assets/dogPhoto/ISLA.png");
   background-size: cover;
   padding: 1rem 0rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-
+  @include respond(phone) {
+    background: linear-gradient(
+        100deg,
+        rgba($color-primary, 1) 0%,
+        rgba($color-primary, 1) 20%,
+        rgba($color-primary, 1) 30%,
+        rgba($color-black-clear, 0.2) 50%,
+        transparent 50%
+      ),
+      url("../assets/dogPhoto/islaphoto1.png");
+    padding: 1rem 0rem;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
+  }
   &__form {
     width: 50%;
     padding: 2rem 1rem 2rem 6rem;
+    @include respond(tab-port) {
+      width: 40%;
+    }
+    @include respond(phone) {
+      width: 30%;
+    }
   }
 }
 // form
 .form {
   display: grid;
   margin-left: 10rem;
+  @include respond(phone) {
+    margin-left: 4rem;
+  }
   &__group:not(:last-child) {
     margin-bottom: 0.7rem;
   }
@@ -87,6 +95,18 @@ $color-newGreen: rgb(32, 133, 96);
     width: 77%;
     display: block;
     transition: all 0.3s;
+     @include respond(small-lap) {
+      width: 39rem;
+    }
+     @include respond(tab-port-big) {
+      width: 34rem;
+    }
+    @include respond(tab-port) {
+      width: 30rem;
+    }
+    @include respond(phone) {
+      width: 22rem;
+    }
 
     &:focus {
       outline: none;
@@ -139,10 +159,22 @@ $color-newGreen: rgb(32, 133, 96);
     -webkit-appearance: none;
     appearance: none;
     background-color: $color-black-clear;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A');
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
     background-repeat: no-repeat, repeat;
     background-position: right 0.7em top 50%, 0 0;
     background-size: 1.5em auto, 100%;
+     @include respond(small-lap) {
+      max-width: 100%; 
+    }
+    @include respond(tab-port-big) {
+      width: 100%;
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
+     @include respond(tab-port) {
+      width: 100%;
+    }
 
     &:-ms-expand {
       display: none;

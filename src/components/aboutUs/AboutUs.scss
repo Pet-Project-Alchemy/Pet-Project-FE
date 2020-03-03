@@ -1,19 +1,28 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
 
+// .about__container {
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// margin: 2rem auto;
+// }
 .about {
   background: $color-primary;
   border-radius: 1rem;
   padding: 0.6rem;
-  height: 27rem;
-  width: 20rem;
-  margin: 5rem 0.5;
+  height: 29rem;
+  width: 26rem;
+  margin: 5rem auto;
   text-decoration: none;
   overflow: hidden;
   text-align: center;
 
+  &__info {
+    padding: 1rem 2rem .5rem 2rem;
+  }
   .social-link {
-    display: inline;
     color: $color-black;
     display: flex;
     justify-content: space-around;
@@ -29,8 +38,7 @@
 .about__image {
   filter: grayscale(1);
   width: 15rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-radius: 1rem;
   display: block;
   padding: 0.6rem;
   text-decoration: none;
@@ -45,35 +53,28 @@
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
-  .about_name {
-    text-transform: uppercase;
-    color: $color-primary;
-    background-color: $color-black;
-    text-decoration: none;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 1rem;
-    overflow: hidden;
-    padding: 0.8rem 0.3rem 1rem 0.3rem;
-  }
 }
 .aboutTitle {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
+  text-transform: capitalize;
   text-align: center;
-  margin: 0.5rem 1rem 0.2rem 1rem;
+  margin: 2rem; 
+  @include respond(phone) {
+    margin-top: 13rem;
+    font-size: 3.7rem;
+  }
 }
 .AboutUl {
-  width: 60vw;
-  margin: 3.4rem auto;
+  width: 70vw;
+  margin: 1rem auto;
   padding: 1rem 0;
 }
+
 @media screen and (min-width: 550px) {
   .AboutUl {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5rem;
+    grid-gap: 2.5rem;
   }
 }
 @media screen and (min-width: 780px) {

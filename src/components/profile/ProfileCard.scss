@@ -41,12 +41,10 @@
       transparent 80%, 
       
     ) ,
-    url(../assets/sidePaw.png) center;
+    url(../assets/dogPhoto/sidePaw.png) center;
   padding: 3rem 0rem;
-  
   border-radius: 3px;
       }
-      
     }
   }
   &:hover &__side--front {
@@ -65,7 +63,7 @@
 
     &--1 {
       background: linear-gradient(to bottom right, $color-primary, $color-black-clear),
-        url(../assets/dog.png)
+        url(../assets/dogPhoto/dog.png)
     }
   }
   &__heading {
@@ -81,8 +79,7 @@
   }
   &__heading-span {
     padding: 1rem;
-    text-transform: capitalize;
-    
+    text-transform: capitalize; 
   }
   &__heading-span--2 {
    text-transform: capitalize;
@@ -114,7 +111,6 @@
     text-transform: uppercase;
     color: black;
   }
-  
 }
 .userImg {
   top: 2.5rem;

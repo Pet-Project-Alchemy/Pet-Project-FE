@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './ImageGallery.scss';
-import couch from '../assets/Couch_Park.jpg';
-import wallace from '../assets/wallace-park.jpg';
-import laurelhurst from '../assets/Laurelhurst_Park.jpeg';
-import alberta from '../assets/Alberta_park.jpg';
-import lucky from '../assets/Lucky-Lab.jpg';
-import java from '../assets/Java.jpg';
-import rambler from '../assets/rambler.jpg';
-import victoria from '../assets/victoria.jpg';
-import basecamp from '../assets/Basecamp.jpg';
-import marthas from '../assets/marthas.jpg';
-import tinShed from '../assets/Tin_Shed.jpg';
-import pizza from '../assets/pizza-jerk.jpg';
+import couch from '../assets/explorePhotos/Couch_Park.jpg';
+import wallace from '../assets/explorePhotos/wallace-park.jpg';
+import laurelhurst from '../assets/explorePhotos/Laurelhurst_Park.jpeg';
+import alberta from '../assets/explorePhotos/Alberta_park.jpg';
+import lucky from '../assets/explorePhotos/Lucky-Lab.jpg';
+import java from '../assets/explorePhotos/Java.jpg';
+import rambler from '../assets/explorePhotos/rambler.jpg';
+import victoria from '../assets/explorePhotos/victoria.jpg';
+import basecamp from '../assets/explorePhotos/Basecamp.jpg';
+import marthas from '../assets/explorePhotos/marthas.jpg';
+import tinShed from '../assets/explorePhotos/Tin_Shed.jpg';
+import pizza from '../assets/explorePhotos/pizza-jerk.jpg';
 
 export default function ImageGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -140,7 +140,7 @@ export default function ImageGallery() {
       <div className='container'>
         <h1 className='font'>Suggestions on where to meet?</h1>
         <div className='main'>
-          <img className='main-image img' src={images[activeIndex].image} />
+          <img className='main-image' src={images[activeIndex].image} />
           <h2 className='font'>{images[activeIndex].name}</h2>
           <a className='button link-a' href={images[activeIndex].addressLink}>
             Directions
@@ -151,7 +151,7 @@ export default function ImageGallery() {
           <p className='font'>{images[activeIndex].address}</p>
         </div>
         <div className='grid'>
-          <ul className='thumbnails img'>{thumbnails}</ul>
+          <ul className='thumbnails'>{thumbnails}</ul>
         </div>
       </div>
     </>

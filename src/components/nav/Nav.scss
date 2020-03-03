@@ -17,6 +17,9 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
     text-align: center;
     cursor: pointer;
+    @include respond(phone) {
+    right: 2rem;
+    }
   }
 
   &__background {
@@ -26,6 +29,9 @@
     position: fixed;
     top: 4.5rem;
     right: 5.5rem;
+    @include respond(phone) {
+    right: 2.5rem;
+    }
     background-image: radial-gradient(
       $color-primary,
       $color-black,

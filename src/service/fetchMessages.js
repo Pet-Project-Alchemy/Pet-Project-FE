@@ -9,7 +9,7 @@ export const getMessages = (id) => {
 
 export const getConversations = () => {
   return fetch(
-    'http://localhost:7890/api/v1/messages/', 
+    'https://pet-project-be.herokuapp.com/api/v1/messages/', 
     { credentials: 'include' }
   ).then(res => {
     if(res.ok) return res.json();
