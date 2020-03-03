@@ -57,7 +57,7 @@
         rgba($color-black-clear, 0.2) 50%,
         transparent 50%
       ),
-      url("../assets/dogPhoto/mainIsla.png");
+      url("../assets/dogPhoto/islaphoto1.png");
     padding: 1rem 0rem;
     background-size: cover;
     border-radius: 3px;
@@ -105,7 +105,7 @@
       width: 30rem;
     }
     @include respond(phone) {
-      width: 25rem;
+      width: 22rem;
     }
 
     &:focus {

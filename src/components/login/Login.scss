@@ -1,6 +1,6 @@
 @import '../abstract/base.scss';
-
-@import '../abstract//variables.scss';
+@import '../abstract/mixins.scss';
+@import '../abstract/variables.scss';
 
 
 .bottom {
@@ -52,23 +52,48 @@
       transparent 50%
     ),
     url(../assets/dogPhoto/calebsm.png);
-
+    background-size: cover;
   padding: 2rem;
+
   display: grid;
   grid-template-columns: repeat(auto-fit minmax(24rem auto));
   align-items: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  @include respond(phone) {
+    background: linear-gradient(
+        100deg,
+        rgba($color-primary, 1) 0%,
+        rgba($color-primary, 1) 10%,
+        rgba($color-black-clear, 0.2) 50%,
+        transparent 50%
+      ),
+      url("../assets/dogPhoto/login.png");
+      background-size: cover;
+    padding: 1rem 0rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
     margin-bottom: 25rem;
+     @include respond(tab-port) {
+      width: 40%;
+    }
+    @include respond(phone) {
+      width: 30%;
+    }
   }
 }
 // form
 .Loginform {
   margin-left: 7rem;
+   @include respond(phone) {
+    margin-left: 4rem;
+    margin-top: 35rem;
+  }
   &__group:not(:last-child) {
     margin-bottom: 0.7rem;
   }
@@ -80,9 +105,21 @@
     background: rgba($color-primary-white, 0.3);
     border: 2px solid $color-black-med;
     border-bottom: 3px solid transparent;
-    width: 85%;
+    width: 40rem;
     display: block;
     transition: all 0.3s;
+    @include respond(small-lap) {
+      width: 33rem;
+    }
+     @include respond(tab-port-big) {
+      width: 30rem;
+    }
+    @include respond(tab-port) {
+      width: 27rem;
+    }
+    @include respond(phone) {
+      width: 25rem;
+    }
 
     &:focus {
       outline: none;

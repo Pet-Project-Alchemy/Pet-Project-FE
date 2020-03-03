@@ -1,5 +1,6 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
 
 .wrapper {
   margin-top: 5rem;
@@ -11,15 +12,20 @@
   justify-content: space-evenly;
 
   .speechbubble {
-    margin-top: 10%;
     background-color: $color-darkgrey-2;
     color: $color-darkgrey;
     font-size: 1.5rem;
     line-height: 1.5;
     padding: 2.5rem;
     color: white;
-    margin: 2rem;
+    margin: 3rem auto 1rem auto;
     width: 30rem;
+    @include respond(phone) {
+      font-size: 1.4rem;
+      padding: 1.5rem;
+      height: auto;
+      width: 25.5rem;
+    }
 
     &:nth-child(2n + 2) {
       border-right: 5px solid;
@@ -44,13 +50,11 @@
       font-family: Georgia;
       font-size: 4rem;
       line-height: 0;
-      width: 100%;
       display: inline;
     }
     .username {
       display: inline;
       font-style: italic;
-      float: right;
       &:before {
         content: '- ';
       }
