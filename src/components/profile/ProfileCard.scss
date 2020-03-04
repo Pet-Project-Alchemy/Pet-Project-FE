@@ -1,5 +1,6 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
 
 .ProfileCard {
   display: grid;
@@ -11,11 +12,11 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 42rem;
-  width: 32rem;
+  width: 29rem;
 
   &__side {
     height: 42rem;
-    width: 32rem;
+    width: 29rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -31,7 +32,6 @@
     }
     &--back {
       transform: rotateY(180deg);
-
       &-1 {
         filter: grayscale(1);
        background: linear-gradient(
@@ -110,6 +110,9 @@
     padding: .5rem;
     text-transform: uppercase;
     color: black;
+    @include respond(phone) {
+      color: transparent;
+    }
   }
 }
 .userImg {

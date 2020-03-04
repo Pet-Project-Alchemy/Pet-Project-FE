@@ -2,35 +2,44 @@
 @import '../abstract/variables.scss';
 @import '../abstract/mixins.scss';
 
-// .about__container {
-// display: flex;
-// justify-content: center;
-// align-items: center;
-// margin: 2rem auto;
-// }
+.about__container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 2rem auto;
+}
 .about {
   background: $color-primary;
   border-radius: 1rem;
   padding: 0.6rem;
-  height: 29rem;
-  width: 26rem;
+  height: 43rem;
+  width: 27rem;
   margin: 5rem auto;
+  border-top: 1.5rem solid $color-primary;
   text-decoration: none;
   overflow: hidden;
   text-align: center;
+  &__name {
+    color: $color-black;
+    font-size: 2.3rem;
+    padding: 1.5rem;
+  }
 
   &__info {
-    padding: 1rem 2rem .5rem 2rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    font-size: 1.6rem;
+
   }
   .social-link {
     color: $color-black;
     display: flex;
     justify-content: space-around;
-
+     
     .links {
-      margin: 1rem;
+      margin-top: 1rem;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.7rem;
       color: inherit;
     }
   }
