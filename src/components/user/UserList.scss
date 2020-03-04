@@ -75,44 +75,40 @@
 .LinkUserList {
   color: inherit;
   text-decoration: inherit;
-  padding: 0.8rem 0.3rem 1rem 0.3rem;
+  // padding: 0.8rem 0.3rem 1rem 0.3rem;
 }
 .ulUserList {
-  display: grid;
-  width: 55vw;
-  padding: 1rem;
+  width: 70vw;
+  margin: 3.4rem auto;
+  padding: 1rem 0;
 }
 @media screen and (min-width: 550px) {
   .ulUserList {
     display: grid;
-    width: 55vw;
     grid-template-columns: 1fr 1fr;
-    margin: 2rem;
-  }
-}
-@media screen and (min-width: 680px) {
-  .ulUserList {
-    width: 65vw;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3.5rem;
+    grid-gap: 2.5rem;
+    
   }
 }
 @media screen and (min-width: 780px) {
-  .ulUserList {
-    width: 73vw;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 980px) {
   .ulUserList {
     width: 85vw;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1040px) {
   .ulUserList {
-     width: 90vw;
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media screen and (min-width: 1640px) {
+  .ul {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 

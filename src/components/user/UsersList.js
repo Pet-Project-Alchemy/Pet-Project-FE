@@ -32,20 +32,22 @@ const UserList = ({ match }) => {
   const userList = userZipcode.map(user => {
     return (
       <>
-        <Link className='LinkUserList' to={`/chat/${user._id}`}>
-          <UserCard
-            key={user._id}
-            firstName={user.firstName}
-            dogName={user.dog[0].name}
-            timeNeeded={user.timeNeeded}
-            timeAvailable={user.timeAvailable}
-            zipcode={user.address.zipcode}
-            dogBio={user.dog[0].bio}
-            bio={user.bio}
-            userImg={user.image}
-            dogImg={user.dog[0].img}
-          />
-        </Link>
+        <div>
+          <Link className='LinkUserList' to={`/chat/${user._id}`}>
+            <UserCard
+              key={user._id}
+              firstName={user.firstName}
+              dogName={user.dog[0].name}
+              timeNeeded={user.timeNeeded}
+              timeAvailable={user.timeAvailable}
+              zipcode={user.address.zipcode}
+              dogBio={user.dog[0].bio}
+              bio={user.bio}
+              userImg={user.image}
+              dogImg={user.dog[0].img}
+            />
+          </Link>
+        </div>
       </>
     );
   });
@@ -53,11 +55,9 @@ const UserList = ({ match }) => {
     <>
       <p className='otherUsers'>
         Hello {user.firstName}, your Pet Pals in {match.params.zipcode}
-        <br /> 
+        <br />
       </p>
-      <p className='messageInfo'>
-        Click on a profile to message them
-      </p>
+      <p className='messageInfo'>Click on a profile to message them</p>
       ;
       <h2 className='goMessage' />
       <ul className='ulUserList'>{userList}</ul>

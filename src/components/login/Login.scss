@@ -41,8 +41,8 @@
   margin: 1rem auto;
 }
 .Login {
-  margin-top: 2.5rem;
-  height: 70rem;
+  margin-top: 2rem;
+  height: 65rem;
   background: linear-gradient(
       99deg,
       rgba($color-primary, 1) 0%,
@@ -73,6 +73,7 @@
     padding: 1rem 0rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
+    margin-top: 15rem;
   }
 
   &__form {
@@ -84,6 +85,7 @@
     }
     @include respond(phone) {
       width: 30%;
+      
     }
   }
 }
