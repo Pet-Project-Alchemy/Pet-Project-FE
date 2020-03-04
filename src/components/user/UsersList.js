@@ -32,7 +32,7 @@ const UserList = ({ match }) => {
   const userList = userZipcode.map(user => {
     return (
       <>
-        <div>
+        <div className='userList'>
           <Link className='LinkUserList' to={`/chat/${user._id}`}>
             <UserCard
               key={user._id}
@@ -58,7 +58,6 @@ const UserList = ({ match }) => {
         <br />
       </p>
       <p className='messageInfo'>Click on a profile to message them</p>
-      ;
       <h2 className='goMessage' />
       <ul className='ulUserList'>{userList}</ul>
     </>

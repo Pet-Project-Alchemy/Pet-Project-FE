@@ -68,21 +68,20 @@
   padding: .5rem;
   text-align: center;
   @include respond(phone) {
-   font-size: 1.5rem;
+   font-size: 1.7rem;
   }
 }
   
 .LinkUserList {
   color: inherit;
   text-decoration: inherit;
-  // padding: 0.8rem 0.3rem 1rem 0.3rem;
 }
 .ulUserList {
   width: 70vw;
   margin: 3.4rem auto;
   padding: 1rem 0;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 500px) {
   .ulUserList {
     display: grid;
     grid-template-columns: 1fr 1fr;
