@@ -27,11 +27,10 @@
        background: linear-gradient(
       170deg,
       rgba($color-darkgrey, .6) 0%,
-      rgba($color-darkgrey, .4) 100%
+      rgba($color-darkgrey, .4) 100%,
       transparent 80%, 
     ) ,
-    url(../assets/dogPhoto/sidePaw.png) center;
-
+    url(../assets/sidePaw.png) center;
   padding: 2rem 0rem;
   border-radius: 3px;
       }
@@ -51,7 +50,7 @@
     border-top-right-radius: 3px;
     &--1 {
       background: linear-gradient(to bottom right, $color-primary, $color-black-clear),
-        url(../assets/dogPhoto/dog.png)
+        url(../assets/dog.png)
     }
   }
   &__heading-span {

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
-import defaultUserImg from '../assets/dogPhoto/profile.png';
-import defaultDogImage from '../assets/dogPhoto/dog.png';
+import defaultUserImg from '../assets/profile.png';
+import defaultDogImage from '../assets/dog.png';
 
 const UserCard = ({
   firstName,

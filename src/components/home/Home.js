@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.scss';
-import mp4 from '../assets/dogPhoto/its-clark.mp4';
-import webm from '../assets/dogPhoto/its-clark.webm';
+import mp4 from '../assets/its-clark.mp4';
+import webm from '../assets/its-clark.webm';
 
 const Header = () => {
   return (
