@@ -1,5 +1,7 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
+@import '../abstract/animate.scss';
 
 .container {
   max-width: 40%;
@@ -60,25 +62,25 @@
   color: $color-primary;
 }
 
-@media (max-width: 650px) {
-  .container {
-    max-width: 100%;
-    .main-image {
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      height: 20rem;
-      width: 100%;
-      border: none;
-    }
+// @media (max-width: 650px) {
+//   .container {
+//     max-width: 100%;
+//     .main-image {
+//       overflow: hidden;
+//       position: relative;
+//       display: flex;
+//       justify-content: center;
+//       height: 20rem;
+//       width: 100%;
+//       border: none;
+//     }
 
-    .image-container {
-      overflow: hidden;
-      position: relative;
-      background-color: $color-primary-white;
-      margin: auto;
-      height: 20%;
-    }
-  }
-}
+//     .image-container {
+//       overflow: hidden;
+//       position: relative;
+//       background-color: $color-primary-white;
+//       margin: auto;
+//       height: 20%;
+//     }
+//   }
+// }

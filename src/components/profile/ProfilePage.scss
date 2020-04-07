@@ -1,5 +1,7 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
+@import '../abstract/animate.scss';
 
 .spinner {
   width: 40px;
@@ -64,13 +66,13 @@
   margin: 3.4rem auto;
   padding: 1rem 0;
 }
-@media screen and (min-width: 550px) {
-  .ulUserList {
-    // display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2.5rem;
-  }
-}
+// @media screen and (min-width: 550px) {
+//   .ulUserList {
+//     // display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-gap: 2.5rem;
+//   }
+// }
 .profilePageDiv {
  display: flex;
  justify-content: center;

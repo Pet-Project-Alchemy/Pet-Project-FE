@@ -29,12 +29,12 @@
     @media(max-width: 56.25em) { @content }; //900px
   }
   @if $breakpoint == tab-port-big {
-    @media(max-width: 65.25em) { @content }; //900px
+    @media(max-width: 65.25em) { @content }; //1050px
   }
   @if $breakpoint ==  tab-land{
     @media(max-width: 75em) { @content }; //1200px
   }
-  @if $breakpoint ==  small-lap {
-    @media(min-width: 70em) { @content }; //1800 +
+  @if $breakpoint ==  big-desktop {
+    @media(min-width: 112.5em) { @content }; //1800 +
   }
 }
