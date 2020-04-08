@@ -1,5 +1,5 @@
 @import './variables.scss';
-@import './mixins.scss';
+@import '../abstract/mixins.scss';
 *,
 *::after,
 *::before {
@@ -27,7 +27,7 @@ body {
   box-sizing: border-box;
   background: black;
   color:$color-grey-med;
-  padding: 1rem; 
+  // padding: 1rem; 
   font-family: 'Comfortaa', sans-serif;
 
 }
