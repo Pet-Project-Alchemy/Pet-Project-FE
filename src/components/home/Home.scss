@@ -20,6 +20,9 @@
       height: 100%;
       object-fit: cover;
     }
+    @include respond(phone) {
+      background: url('../assets/dog.png')center/cover;
+    }
   }
 
   &__text-box {
@@ -45,6 +48,7 @@
     @include respond(phone) {
      font-size: 5.7rem;
      margin-top: 3rem;
+     color: $color-primary;
     }
   }
   &__sub {
