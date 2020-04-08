@@ -41,8 +41,8 @@
   margin: 1rem auto;
 }
 .Login {
-  margin-top: 2.5rem;
-  height: 70rem;
+  margin-top: 2rem;
+  height: 65rem;
   background: linear-gradient(
       99deg,
       rgba($color-primary, 1) 0%,
@@ -52,13 +52,29 @@
       transparent 50%
     ),
     url(../assets/dogPhoto/calebsm.png);
-
+    background-size: cover;
   padding: 2rem;
+
   display: grid;
   grid-template-columns: repeat(auto-fit minmax(24rem auto));
   align-items: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  @include respond(phone) {
+    background: linear-gradient(
+        100deg,
+        rgba($color-primary, 1) 0%,
+        rgba($color-primary, 1) 10%,
+        rgba($color-black-clear, 0.2) 50%,
+        transparent 50%
+      ),
+      url("../assets/dogPhoto/login.png");
+      background-size: cover;
+    padding: 1rem 0rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
+    margin-top: 15rem;
+  }
 
   &__form {
     width: 50%;

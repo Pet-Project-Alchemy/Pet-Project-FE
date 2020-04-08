@@ -15,36 +15,33 @@ const AboutUs = () => {
         <ul className='AboutUl'>
           <article className='about'>
             <div className='img__container'>
+            <h3 className='about__name'>Eve Stockstill</h3>
               <img className='about__image' src={eve} alt='eve picture' />
             </div>
-            <h3 className='about__name'>Eve Stockstill</h3>
             <div className='about__info'>
               I am a software developer who is interested in front end design. I
-              enjoy spoiling my dog, camping and cooking. You can also find me
-              out shooting pool on league nights.
-              <div className='social-link'>
-                <a
-                  className='links'
-                  href='https://www.linkedin.com/in/evestockstill/'
-                >
-                  Linkedin
-                </a>
-                <a
-                  className='links'
-                  href='https://www.github.com/evestockstill'
-                >
-                  Github
-                </a>
-              </div>
+              enjoy spoiling my dog, camping and creating vegan soups. You can
+              also find me out shooting pool on league nights.
+            </div>
+            <div className='social-link'>
+              <a
+                className='links'
+                href='https://www.linkedin.com/in/evestockstill/'
+              >
+                Linkedin
+              </a>
+              <a className='links' href='https://www.github.com/evestockstill'>
+                Github
+              </a>
             </div>
           </article>
           <article className='about'>
             <div className='img__container'>
+            <h3 className='about__name'>Nikki Sato</h3>
               <img className='about__image' src={nikki} alt='nikki picture' />
             </div>
-            <h3 className='about__name'>Nikki Sato</h3>
             <div className='about__info'>
-              Full Stack Developer with a huge lover of Front End
+              Full Stack Developer with a huge love of Front End
               Design/Development! I loved combining my creative side with a dash
               of coding.
               <div className='social-link'>
@@ -61,10 +58,10 @@ const AboutUs = () => {
             </div>
           </article>
           <article className='about'>
+            <h3 className='about__name'>Zak Hyslin</h3>
             <div className='img__container'>
               <img className='about__image' src={zak} alt='zak picture' />
             </div>
-            <h3 className='about__name'>Zak Hyslin</h3>
             <div className='about__info'>
               Zak is a software developer who enjoys the Oregon coast and
               competing on Codesignal in his spare time.
@@ -82,10 +79,17 @@ const AboutUs = () => {
             </div>
           </article>
           <article className='about'>
+<<<<<<< HEAD
             <div className='img__container'>
               <img className='about__image' src={caleb} alt='caleb picture' />
             </div>
             <h3 className='about__name'>Caleb Pendergraft</h3>
+=======
+            <h3 className='about__name'>Caleb Pendergraft</h3>
+            <div className='img__container'>
+              <img className='about__image' src={caleb} alt='caleb picture' />
+            </div>
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
             <div className='about__info'>
               Caleb is from Portland, Oregon. When not learning to code he can
               be found walking his dog around Columbia Park, listening to
@@ -104,10 +108,17 @@ const AboutUs = () => {
             </div>
           </article>
           <article className='about'>
+<<<<<<< HEAD
             <div className='img__container'>
               <img className='about__image' src={sam} alt='sam picture' />
             </div>
             <h3 className='about__name'>Sam Sterns</h3>
+=======
+            <h3 className='about__name'>Sam Sterns</h3>
+            <div className='img__container'>
+              <img className='about__image' src={sam} alt='sam picture' />
+            </div>
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
             <div className='about__info'>
               Full-Stack developer whose growth mindset and expertise in
               restorative conflict resolution inform their passion for solving
@@ -127,10 +138,17 @@ const AboutUs = () => {
             </div>
           </article>
           <article className='about'>
+<<<<<<< HEAD
             <div className='img__container'>
               <img className='about__image' src={isla} alt='dog picture' />
             </div>
             <h3 className='about__name'>Isla</h3>
+=======
+            <h3 className='about__name'>Isla</h3>
+            <div className='img__container'>
+              <img className='about__image' src={isla} alt='dog picture' />
+            </div>
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
             <div className='about__info'>
               I live for treats and being petted! Most of the time I would
               endlessly chase the ball, unless of course I see a squirrel. I

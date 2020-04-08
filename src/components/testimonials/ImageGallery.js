@@ -136,24 +136,22 @@ export default function ImageGallery() {
   });
 
   return (
-    <>
-      <div className='container'>
-        <h1 className='font'>Suggestions on where to meet?</h1>
-        <div className='main'>
-          <img className='main-image img' src={images[activeIndex].image} />
-          <h2 className='font'>{images[activeIndex].name}</h2>
-          <a className='button link-a' href={images[activeIndex].addressLink}>
-            Directions
-          </a>
-          <a className='button link-a' href={images[activeIndex].website}>
-            Website
-          </a>
-          <p className='font'>{images[activeIndex].address}</p>
-        </div>
-        <div className='grid'>
-          <ul className='thumbnails img'>{thumbnails}</ul>
-        </div>
+    <div className='container'>
+      <h1 className='font'>Suggestions on where to meet?</h1>
+      <div className='main'>
+        <img className='main-image' src={images[activeIndex].image} />
+        <h2 className='font'>{images[activeIndex].name}</h2>
+        <a className='button link-a' href={images[activeIndex].addressLink}>
+          Directions
+        </a>
+        <a className='button link-a' href={images[activeIndex].website}>
+          Website
+        </a>
+        <p className='font'>{images[activeIndex].address}</p>
       </div>
-    </>
+      <div className='grid'>
+        <ul className='thumbnails'>{thumbnails}</ul>
+      </div>
+    </div>
   );
 }

@@ -1,37 +1,61 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
 @import '../abstract/mixins.scss';
+<<<<<<< HEAD
 @import '../abstract/animate.scss';
+=======
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 
 .about__container {
 display: flex;
 justify-content: center;
 align-items: center;
+<<<<<<< HEAD
 margin-left: 20rem;
+=======
+margin: 2rem auto;
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 }
 .about {
   background: $color-primary;
   border-radius: 1rem;
   padding: 0.6rem;
-  height: 29rem;
-  width: 23rem;
-  margin: 5rem 0.5;
+  height: 43rem;
+  width: 27rem;
+  margin: 5rem auto;
+  border-top: 1.5rem solid $color-primary;
   text-decoration: none;
   overflow: hidden;
   text-align: center;
+  &__name {
+    color: $color-black;
+    font-size: 2.3rem;
+    padding: 1.5rem;
+  }
 
   &__info {
-    padding: 1rem 2rem .5rem 2rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    font-size: 1.6rem;
+
   }
   .social-link {
     color: $color-black;
     display: flex;
     justify-content: space-around;
+<<<<<<< HEAD
 
     .links {
       margin: 1rem;
       text-decoration: none;
       font-size: 1.2rem;
+=======
+     
+    .links {
+      margin-top: 1rem;
+      text-decoration: none;
+      font-size: 1.7rem;
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
       color: inherit;
     }
   }
@@ -59,6 +83,7 @@ margin-left: 20rem;
   font-size: 4.5rem;
   text-transform: capitalize;
   text-align: center;
+<<<<<<< HEAD
   margin: 2rem 
 }
 .AboutUl {
@@ -74,6 +99,20 @@ margin-left: 20rem;
     text-align: center;
   }
 
+=======
+  margin: 2rem; 
+  @include respond(phone) {
+    margin-top: 13rem;
+    font-size: 3.7rem;
+  }
+}
+.AboutUl {
+  width: 70vw;
+  margin: 1rem auto;
+  padding: 1rem 0;
+}
+
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 @media screen and (min-width: 550px) {
   .AboutUl {
     display: grid;

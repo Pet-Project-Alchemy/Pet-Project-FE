@@ -10,23 +10,26 @@
   margin-bottom: 3rem;
 
   .img {
-    object-fit: contain;
     width: 100%;
+    height: 13rem;
     filter: grayscale(1);
     border-radius: 0.5rem;
   }
   .main-image {
+    filter: grayscale(1);
     overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
     height: 40rem;
     width: 100%;
+    @include respond(phone) {
+      height: 28rem;
+      width: 100%;
+    }
   }
 
   .font {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 1.5rem;
+    margin-top: 2rem;
     color: $color-primary;
   }
 
@@ -42,12 +45,15 @@
   list-style-type: none;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
-  margin: auto;
+  margin: 2rem;
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .image-container {
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   margin: auto;
 }
@@ -62,25 +68,11 @@
   color: $color-primary;
 }
 
-// @media (max-width: 650px) {
-//   .container {
-//     max-width: 100%;
-//     .main-image {
-//       overflow: hidden;
-//       position: relative;
-//       display: flex;
-//       justify-content: center;
-//       height: 20rem;
-//       width: 100%;
-//       border: none;
-//     }
 
-//     .image-container {
-//       overflow: hidden;
-//       position: relative;
-//       background-color: $color-primary-white;
-//       margin: auto;
-//       height: 20%;
-//     }
-//   }
-// }
+    .image-container {
+      overflow: hidden;
+      position: relative;
+      background-color: $color-primary-white;
+      margin: auto;
+      height: 20%;
+}

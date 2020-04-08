@@ -28,6 +28,12 @@
     left: 28%;
     transform: translate(-50%, -50%);
     text-align: left;
+<<<<<<< HEAD
+=======
+    @include respond(phone) {
+      left: 40%;
+    }
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
   }
 }
 
@@ -39,6 +45,13 @@
     font-weight: 600;
     letter-spacing: 0.5rem;
     animation: moveInLeft 1s ease-out;
+<<<<<<< HEAD
+=======
+    @include respond(phone) {
+     font-size: 5.7rem;
+     margin-top: 3rem;
+    }
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
   }
   &__sub {
     display: block;
@@ -46,13 +59,22 @@
     font-size: 4.8rem;
     font-weight: 600;
     animation: moveInRight 1s ease-in;
+<<<<<<< HEAD
+=======
+    @include respond(phone) {
+     font-size: 3.7rem;
+    }
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
   }
 }
 
 .section__title {
   color: $color-darkgrey;
   font-size: 4rem;
+<<<<<<< HEAD
   padding-top: 2rem;
+=======
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
   text-align: center;
 }
 
@@ -67,17 +89,35 @@
     justify-content: center;
     align-items: center;
     color: $color-darkgrey;
+<<<<<<< HEAD
     margin: 1rem auto;
     font-size: 2.5rem;
+=======
+    font-size: 2.5rem;
+    text-align: center;
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
     letter-spacing: 2px;
     height: auto;
     width: 100rem;
     background: $color-black;
+<<<<<<< HEAD
     margin: 2rem;
+=======
+    margin: 2rem 4rem;
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
     padding: 2rem;
     border-width: 1rem;
     border-style: solid;
     border-image: linear-gradient(to bottom, $color-primary, rgba(0, 0, 0, 0)) 1
       100%;
+<<<<<<< HEAD
+=======
+      @include respond(phone) {
+     font-size: 2rem;
+     margin: 3rem;
+     text-align: center;
+    }
+      
+>>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
   }
 }
