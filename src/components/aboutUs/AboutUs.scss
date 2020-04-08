@@ -1,20 +1,13 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
 @import '../abstract/mixins.scss';
-<<<<<<< HEAD
 @import '../abstract/animate.scss';
-=======
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 
 .about__container {
 display: flex;
 justify-content: center;
 align-items: center;
-<<<<<<< HEAD
-margin-left: 20rem;
-=======
 margin: 2rem auto;
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 }
 .about {
   background: $color-primary;
@@ -43,19 +36,11 @@ margin: 2rem auto;
     color: $color-black;
     display: flex;
     justify-content: space-around;
-<<<<<<< HEAD
-
-    .links {
-      margin: 1rem;
-      text-decoration: none;
-      font-size: 1.2rem;
-=======
      
     .links {
       margin-top: 1rem;
       text-decoration: none;
       font-size: 1.7rem;
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
       color: inherit;
     }
   }
@@ -83,23 +68,6 @@ margin: 2rem auto;
   font-size: 4.5rem;
   text-transform: capitalize;
   text-align: center;
-<<<<<<< HEAD
-  margin: 2rem 
-}
-.AboutUl {
-  width: 60vw;
-  margin: 3.4rem auto;
-  padding: 1rem 0;
-}
-
-.about__name {
-    text-transform: uppercase;
-    margin-top: .5rem;
-    color: $color-black;
-    text-align: center;
-  }
-
-=======
   margin: 2rem; 
   @include respond(phone) {
     margin-top: 13rem;
@@ -112,7 +80,6 @@ margin: 2rem auto;
   padding: 1rem 0;
 }
 
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 @media screen and (min-width: 550px) {
   .AboutUl {
     display: grid;

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
 @import '../abstract/mixins.scss';
 @import '../abstract/animate.scss';
-=======
-@import '../abstract/variables.scss';
-@import '../abstract//mixins.scss';
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 
 .navigation {
   &__checkbox {
@@ -24,12 +19,6 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
     text-align: center;
     cursor: pointer;
-<<<<<<< HEAD
-=======
-    @include respond(phone) {
-    right: 2rem;
-    }
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
   }
 
   &__background {
@@ -39,12 +28,9 @@
     position: fixed;
     top: 4.5rem;
     right: 5.5rem;
-<<<<<<< HEAD
-=======
     @include respond(phone) {
     right: 2.5rem;
     }
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
     background-image: radial-gradient(
       $color-primary,
       $color-black,

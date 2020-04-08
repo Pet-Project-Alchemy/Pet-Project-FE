@@ -79,17 +79,10 @@ const AboutUs = () => {
             </div>
           </article>
           <article className='about'>
-<<<<<<< HEAD
-            <div className='img__container'>
-              <img className='about__image' src={caleb} alt='caleb picture' />
-            </div>
-            <h3 className='about__name'>Caleb Pendergraft</h3>
-=======
             <h3 className='about__name'>Caleb Pendergraft</h3>
             <div className='img__container'>
               <img className='about__image' src={caleb} alt='caleb picture' />
             </div>
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
             <div className='about__info'>
               Caleb is from Portland, Oregon. When not learning to code he can
               be found walking his dog around Columbia Park, listening to
@@ -108,17 +101,10 @@ const AboutUs = () => {
             </div>
           </article>
           <article className='about'>
-<<<<<<< HEAD
-            <div className='img__container'>
-              <img className='about__image' src={sam} alt='sam picture' />
-            </div>
-            <h3 className='about__name'>Sam Sterns</h3>
-=======
             <h3 className='about__name'>Sam Sterns</h3>
             <div className='img__container'>
               <img className='about__image' src={sam} alt='sam picture' />
             </div>
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
             <div className='about__info'>
               Full-Stack developer whose growth mindset and expertise in
               restorative conflict resolution inform their passion for solving
@@ -138,17 +124,10 @@ const AboutUs = () => {
             </div>
           </article>
           <article className='about'>
-<<<<<<< HEAD
-            <div className='img__container'>
-              <img className='about__image' src={isla} alt='dog picture' />
-            </div>
-            <h3 className='about__name'>Isla</h3>
-=======
             <h3 className='about__name'>Isla</h3>
             <div className='img__container'>
               <img className='about__image' src={isla} alt='dog picture' />
             </div>
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
             <div className='about__info'>
               I live for treats and being petted! Most of the time I would
               endlessly chase the ball, unless of course I see a squirrel. I

@@ -1,8 +1,5 @@
 @import './variables.scss';
-<<<<<<< HEAD
 @import '../abstract/mixins.scss';
-=======
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
 *,
 *::after,
 *::before {
@@ -30,14 +27,7 @@ body {
   box-sizing: border-box;
   background: black;
   color:$color-grey-med;
-<<<<<<< HEAD
   // padding: 1rem; 
   font-family: 'Comfortaa', sans-serif;
 
 }
-=======
-  padding: 1rem; }
-  @media (max-width: 56.25em) {
-    body {
-      padding: 0; } }
->>>>>>> 4e4317a890539b3938c6c2628ab042204fad3fb7
