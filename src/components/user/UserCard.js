@@ -46,7 +46,7 @@ const UserCard = ({
             </ul>
             <div>
               <Media
-                query='(max-width: 900px)'
+                query='(min-width: 900px)'
                 render={() => (
                   <div className='mediaText'>
                     <p>{bio}</p>
