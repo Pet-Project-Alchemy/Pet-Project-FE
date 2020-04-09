@@ -11,17 +11,7 @@
   text-transform: uppercase;
   display: inline-block;
   font-weight: 700;
-  background-image: linear-gradient(to right, $color-black, $color-black);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 2px;
-  transition: all 0.2s;
-
-  &:hover {
-    transform: skewY(3deg) skewX(15deg) scaleX(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-  }
+  color: black;
 }
 .Logingrid {
   max-width: 100%;
@@ -34,9 +24,9 @@
   height: 100vh;
   background: linear-gradient(
       99deg,
-      rgba($color-primary, 1) 0%,
-      rgba($color-primary, 1) 20%,
-      rgba($color-black-clear, 0.4) 35%,
+      rgba($color-primary, 4) 0%,
+      rgba($color-primary, .2) 20%,
+      rgba($color-primary, 0.1) 35%,
       rgba($color-black-clear, 0.1) 50%,
       transparent 50%
     ),
@@ -46,7 +36,7 @@
   display: flex;
   align-items: flex-end;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-  @include respond(phone) {
+  @include respond(tab-port) {
     background: linear-gradient(
         100deg,
         rgba($color-primary, 1) 0%,
@@ -54,22 +44,22 @@
         rgba($color-black-clear, 0.2) 50%,
         transparent 50%
       ),
-      url("../assets/dogPhoto/login.png") center no-repeat;
+      url("../assets/dogPhoto/login.png") bottom/cover no-repeat;
     padding: 1rem 0rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
   }
-
   &__form {
     width: 50%;
     padding-left: 6rem;
+    padding-bottom: 3rem;
     @include respond(tab-port) {
       width: 40%;
     }
     @include respond(phone) {
       width: 30%;
-      padding-left: 13rem;
-      padding-bottom: 13rem;
+      padding-left: 14rem;
+      padding-bottom: 7rem;
     }
   }
 }
@@ -101,7 +91,7 @@
       width: 27rem;
     }
     @include respond(phone) {
-      width: 25rem;
+      width: 21rem;
     }
 
     &:focus {
@@ -117,7 +107,6 @@
       color: $color-black;
     }
   }
-
   &__label {
     font-size: 1.3rem;
     font-weight: 700;
@@ -159,7 +148,6 @@
   border: none;
   transition: all 1s ease;
   cursor: pointer;
-
   &:hover {
     background: transparent;
     color: $color-red;

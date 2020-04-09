@@ -44,45 +44,34 @@
     -webkit-transform: scale(1);
   }
 }
-
 .profileTitle {
   display: flex;
   text-transform: capitalize;
   justify-content: center;
+  font-size: 4rem;
+  padding: 4rem 0 2rem 0;
+  @include respond(phone) {
+  padding: 13rem 0 2rem 0;
   font-size: 3rem;
-  padding: .2rem;
-  margin-top: 2rem;
-}
-  
-.LinkUserList {
-  color: inherit;
-  text-decoration: inherit;
-  padding: 0.8rem 0.3rem 1rem 0.3rem;
-}
-.ulUserList {
-  width: 60vw;
-  margin: 3.4rem auto;
-  padding: 1rem 0;
-}
-@media screen and (min-width: 550px) {
-  .ulUserList {
-    // display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2.5rem;
   }
 }
 .profilePageDiv {
  display: flex;
  justify-content: center;
+ align-items: center;
 }
 .editBtn {
   font-size: 2.5rem;
+  padding: 2rem;
   color: $color-primary;
   background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
   transition: all 1s ease;
+  @include respond(phone) {
+    margin-top: 5rem;
+  }
 
   &:hover {
     background: transparent;

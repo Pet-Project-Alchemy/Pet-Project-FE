@@ -21,7 +21,7 @@
       object-fit: cover;
     }
     @include respond(phone) {
-      background: url('../assets/dog.png')center/cover;
+      background: url('../assets/dogPhoto/pup.jpg')center/cover no-repeat;
     }
   }
 
@@ -32,21 +32,22 @@
     transform: translate(-50%, -50%);
     text-align: left;
     @include respond(phone) {
-      left: 40%;
+      left: 29%;
+      top: 6.5%;
     }
   }
 }
 
 .heading-primary {
   &__sub--main {
-    color: $color-black;
+    color: $color-primary;
     display: block;
     font-size: 8rem;
     font-weight: 600;
     letter-spacing: 0.5rem;
     animation: moveInLeft 1s ease-out;
     @include respond(phone) {
-     font-size: 5.7rem;
+     font-size: 5rem;
      margin-top: 3rem;
      color: $color-primary;
     }
@@ -58,7 +59,8 @@
     font-weight: 600;
     animation: moveInRight 1s ease-in;
     @include respond(phone) {
-     font-size: 3.7rem;
+     font-size: 3rem;
+     color: $color-primary;
     }
   }
 }

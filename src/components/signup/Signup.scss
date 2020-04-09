@@ -26,10 +26,6 @@
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
 }
-
-// .grid {
-//   max-width: 95%;
-// }
 .section-signup {
   width: 100%;
   margin: 1rem auto;
@@ -49,17 +45,9 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   @include respond(phone) {
-    background: linear-gradient(
-        100deg,
-        rgba($color-primary, 1) 0%,
-        rgba($color-primary, 1) 20%,
-        rgba($color-primary, 1) 30%,
-        rgba($color-black-clear, 0.2) 50%,
-        transparent 50%
-      ),
-      url("../assets/dogPhoto/mainIsla.png");
+    background: 
+      url("../assets/dogPhoto/bearded.jpg")center/cover;
     padding: 1rem 0rem;
-    background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
   }
@@ -70,7 +58,9 @@
       width: 40%;
     }
     @include respond(phone) {
-      width: 30%;
+      width: 26%;
+    padding: 6rem 1rem 2rem 13rem;
+
     }
   }
 }
@@ -105,6 +95,10 @@
     }
     @include respond(phone) {
       width: 25rem;
+      font-weight: bold;
+      font-size: 1.7rem;
+      letter-spacing: .1rem;
+      background: rgba($color-primary, .6);
     }
 
     &:focus {
@@ -168,11 +162,15 @@
     @include respond(tab-port-big) {
       width: 100%;
     }
-    @include respond(phone) {
-      width: 100%;
-    }
      @include respond(tab-port) {
       width: 100%;
+    }
+    @include respond(phone) {
+      width: 100%;
+      letter-spacing: .1rem;
+      font-weight: bold;
+      font-size: 1.7rem;
+      background: rgba($color-primary, .6);
     }
 
     &:-ms-expand {
@@ -209,6 +207,10 @@
   padding: 0.5rem;
   box-shadow: 1px 1px 5px 1px $color-black-med;
   padding: 0.5rem;
+  @include respond(phone) {
+      background: rgba($color-primary, .7);
+
+  }
 }
 .input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
