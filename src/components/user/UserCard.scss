@@ -9,17 +9,17 @@
   position: relative;
   height: 43rem;
   width: 28rem;
+  width: 100%;
   @include respond(tab-port) {
-    height: 44rem;
+    height: 57rem;
       width: 32rem;
   }
-  @include respond(phone) {
-      height: 43rem;
-      width: 30rem;
-    }
+  // @include respond(phone) {
+  //     height: 43rem;
+  //     width: 30rem;
+  //   }
   &__side {
     height: 43rem;
-    width: 28rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -31,13 +31,11 @@
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     @include respond(tab-port) {
-      height: 44rem;
-      width: 32rem;
+      height: 57rem;
     }
-    @include respond(phone) {
-      height: 43rem;
-      width: 30rem;
-    }
+    // @include respond(phone) {
+    //   height: 43rem;
+    // }
     &--front {
       background-color: $color-primary;
     }
@@ -56,12 +54,16 @@
       }
     }
   }
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
+  @media all and (min-width: 900px) {
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
   }
+  @media all and (min-width: 900px) {
   &:hover &__side--back {
     transform: rotateY(0);
   }
+}
   &__picture {
     height: 27rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -111,7 +113,6 @@
     font-size: 1.4rem;
     padding: 0.5rem;
     color: black;
-    
   }
 }
 .userImg,

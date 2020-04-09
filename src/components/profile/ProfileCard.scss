@@ -11,7 +11,7 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 57rem;
-  width: 45rem;
+  width: 40rem;
   @include respond(phone) {
     height: 50rem;
   width: 34rem;
@@ -19,7 +19,6 @@
 
   &__side {
     height: 57rem;
-    width: 45rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -51,18 +50,17 @@
   border-radius: 3px;
       }
     }
-    @include respond(phone) {
-    height: 50rem;
-  width: 34rem;
   }
+ @media all and (min-width: 900px) {
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
   }
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-  }
+  @media all and (min-width: 900px) {
   &:hover &__side--back {
     transform: rotateY(0);
   }
-
+}
   &__picture {
     height: 26rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
