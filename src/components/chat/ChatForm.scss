@@ -2,22 +2,14 @@
 @import '../abstract/variables.scss';
 
 .formDiv {
-  @include respond(phone) {
-    // margin-left: .1rem;
-  }
-
   .messageForm {
     display: flex;
     justify-content: center;
     padding: 5rem;
-    @include respond(phone) {
-    }
   }
   .message__label {
     font-size: 0.1rem;
     color: transparent;
-    @include respond(phone) {
-    }
   }
   .message__button {
     background: transparent;
@@ -49,3 +41,4 @@
     border-bottom: 3px solid $color-primary;
   }
 }
+
