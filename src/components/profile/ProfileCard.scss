@@ -10,12 +10,16 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 42rem;
-  width: 32rem;
+  height: 57rem;
+  width: 45rem;
+  @include respond(phone) {
+    height: 50rem;
+  width: 34rem;
+  }
 
   &__side {
-    height: 42rem;
-    width: 32rem;
+    height: 57rem;
+    width: 45rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -26,6 +30,7 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    
     &--front {
       background-color: $color-primary;
     }
@@ -41,11 +46,15 @@
       transparent 80%, 
       
     ) ,
-    url(../assets/dogPhoto/sidePaw.png) center;
+    url(../assets/dogPhoto/sidePaw.png) center/cover;
   padding: 3rem 0rem;
   border-radius: 3px;
       }
     }
+    @include respond(phone) {
+    height: 50rem;
+  width: 34rem;
+  }
   }
   &:hover &__side--front {
     transform: rotateY(-180deg);

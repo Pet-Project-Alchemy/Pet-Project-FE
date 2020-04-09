@@ -13,8 +13,8 @@ const ProfilePage = () => {
 
   return (
     <>
+      <article key={user._id} className='profileCardWrapper'>
       <p className='profileTitle'>Welcome {user.firstName} and {user.dog[0].name}</p>
-      <article key={user._id}>
         <ProfileCard
           key={user._id}
           firstName={user.firstName}
