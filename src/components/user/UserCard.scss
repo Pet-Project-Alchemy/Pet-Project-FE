@@ -7,20 +7,19 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 40rem;
+  height: 43rem;
   width: 28rem;
   @include respond(tab-port) {
-    // height: 38rem;
-    // width: 33rem;
+    height: 44rem;
+      width: 32rem;
   }
   @include respond(phone) {
-    // height: 38rem;
-    // width: 30rem;
-    // margin-left: 0.7rem;
-  }
+      height: 43rem;
+      width: 30rem;
+    }
   &__side {
-    height: 40rem;
-    width: 25rem;
+    height: 43rem;
+    width: 28rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -31,29 +30,27 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    // @include respond(tab-port) {
-    //   height: 38rem;
-    //   width: 33rem;
-    // }
-    // @include respond(phone) {
-    //   height: 38rem;
-    //   width: 30rem;
-    //   margin-left: 0.7rem;
-    // }
+    @include respond(tab-port) {
+      height: 44rem;
+      width: 32rem;
+    }
+    @include respond(phone) {
+      height: 43rem;
+      width: 30rem;
+    }
     &--front {
       background-color: $color-primary;
     }
     &--back {
       transform: rotateY(180deg);
       &-1 {
-        filter: grayscale(1);
         background: linear-gradient(
             170deg,
             rgba($color-darkgrey, 0.6) 0%,
             rgba($color-darkgrey, 0.4) 100%,
             transparent 80%
           ),
-          url(../assets/dogPhoto/sidePaw.png) center;
+          url(../assets/dogPhoto/sidePaw.png) left/cover;
         padding: 2rem 0rem;
         border-radius: 3px;
       }
