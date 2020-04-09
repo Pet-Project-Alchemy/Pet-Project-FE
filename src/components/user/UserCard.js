@@ -16,50 +16,58 @@ const UserCard = ({
   bio,
   dogBio,
 }) => (
-  <div className='card'>
-    <div className='card__side card__side--front'>
-      <div className='card__picture card__picture--1'>
-        <div className='card__picture card__img'>
-          <img className='userImg' src={userImg ? userImg : defaultUserImg} />
-          <figcaption>
-            <span className='card__heading-span card__heading-span--1'>
-              {firstName}
-            </span>
-          </figcaption>
-          <img className='dogImg' src={dogImg ? dogImg : defaultDogImage} />
-          <figcaption>
-            <span className='card__heading-span card__heading-span--2'>
-              {dogName}&nbsp;
-            </span>
-          </figcaption>
+  <>
+    <div id='profileCard'>
+      <div className='card'>
+        <div className='card__side card__side--front'>
+          <div className='card__picture card__picture--1'>
+            <div className='card__picture card__img'>
+              <img
+                className='userImg'
+                src={userImg ? userImg : defaultUserImg}
+              />
+              <figcaption>
+                <span className='card__heading-span card__heading-span--1'>
+                  {firstName}
+                </span>
+              </figcaption>
+              <img className='dogImg' src={dogImg ? dogImg : defaultDogImage} />
+              <figcaption>
+                <span className='card__heading-span card__heading-span--2'>
+                  {dogName}&nbsp;
+                </span>
+              </figcaption>
+            </div>
+          </div>
+          <div className='card__details'>
+            <ul>
+              <li>I can help {timeAvailable}</li>
+              <li>I need help {timeNeeded}</li>
+            </ul>
+            <div>
+              <Media
+                query='(max-width: 900px)'
+                render={() => (
+                  <div className='mediaText'>
+                    <p>{bio}</p>
+                    <p>{dogBio}</p>
+                  </div>
+                )}
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className='card__details'>
-        <ul>
-          <li>I can help {timeAvailable}</li>
-          <li>I need help {timeNeeded}</li>
-        </ul>
-        <div>
-          <Media
-            query='(max-width: 900px)'
-            render={() => (
-              <div className='mediaText'>
-              About me-{''}  {bio}{' '} About my dog-{' '} {dogBio}
-              </div>
-            )}
-          />
+        <div className='card__side card__side--back card__side--back-1'>
+          <div className='card__cta'>
+            <div className='card__bio-box'>
+              <p className='card__bio-text'>{bio}</p>
+              <p className='card__bio-text'>{dogBio}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div className='card__side card__side--back card__side--back-1'>
-      <div className='card__cta'>
-        <div className='card__bio-box'>
-          <p className='card__bio-text'>{bio}</p>
-          <p className='card__bio-text'>{dogBio}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  </>
 );
 UserCard.propTypes = {
   firstName: PropTypes.string.isRequired,
