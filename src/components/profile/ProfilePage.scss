@@ -54,23 +54,23 @@
   margin-top: 2rem;
 }
   
-.LinkUserList {
-  color: inherit;
-  text-decoration: inherit;
-  padding: 0.8rem 0.3rem 1rem 0.3rem;
-}
-.ulUserList {
-  width: 60vw;
-  margin: 3.4rem auto;
-  padding: 1rem 0;
-}
-@media screen and (min-width: 550px) {
-  .ulUserList {
-    // display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2.5rem;
-  }
-}
+// .LinkUserList {
+//   color: inherit;
+//   text-decoration: inherit;
+//   padding: 0.8rem 0.3rem 1rem 0.3rem;
+// }
+// .ulUserList {
+//   width: 60vw;
+//   margin: 3.4rem auto;
+//   padding: 1rem 0;
+// }
+// @media screen and (min-width: 550px) {
+//   .ulUserList {
+//     // display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-gap: 2.5rem;
+//   }
+// }
 .profilePageDiv {
  display: flex;
  justify-content: center;

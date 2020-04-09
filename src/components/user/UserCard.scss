@@ -31,15 +31,15 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    @include respond(tab-port) {
-      height: 38rem;
-      width: 33rem;
-    }
-    @include respond(phone) {
-      height: 38rem;
-      width: 30rem;
-      margin-left: 0.7rem;
-    }
+    // @include respond(tab-port) {
+    //   height: 38rem;
+    //   width: 33rem;
+    // }
+    // @include respond(phone) {
+    //   height: 38rem;
+    //   width: 30rem;
+    //   margin-left: 0.7rem;
+    // }
     &--front {
       background-color: $color-primary;
     }
@@ -114,9 +114,7 @@
     font-size: 1.4rem;
     padding: 0.5rem;
     color: black;
-    @include respond(phone) {
-      color: transparent;
-    }
+    
   }
 }
 .userImg,

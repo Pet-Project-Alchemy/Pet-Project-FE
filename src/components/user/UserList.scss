@@ -53,64 +53,37 @@
 }
 .otherUsers {
   font-size: 3rem;
-  padding: .5rem;
-  margin-top: 4rem;
+  padding-top: 6rem;
   text-align: center;
+  @include respond(phone) {
+   padding-top: 13rem;
+   font-size: 2.3rem;
+  }
 }
 .messageInfo {
   font-size: 2rem;
-  padding: .5rem;
+  padding: 1rem;
   text-align: center;
 }
   
 .LinkUserList {
   color: inherit;
-  text-decoration: inherit;
-  padding: 0.8rem 0.3rem 1rem 0.3rem;
+  padding: 3rem 1rem;
+  margin: 0 auto;
 }
 .ulUserList {
   display: grid;
-  width: 80vw;
+  width: 100vw;
   grid-template-columns: repeat(4, 1fr);
-  margin: 3.4rem auto;
   padding: 1rem 0;
-  @include respond (big-desktop) {
-    width: 90vw;
-    grid-template-columns: repeat(5, 1fr);
+  @include respond (tab-port-big) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond (tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  @include respond (phone) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-// @media screen and (min-width: 550px) {
-//   .ulUserList {
-//     display: grid;
-//     width: 60vw;
-//     grid-template-columns: 1fr 1fr;
-//     grid-gap: 2.5rem;
-//   }
-// }
-
-// @media screen and (min-width: 680px) {
-//   .ulUserList {
-//     width: 65vw;
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-// }
-// @media screen and (min-width: 780px) {
-//   .ulUserList {
-//     width: 73vw;
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
-// @media screen and (min-width: 980px) {
-//   .ulUserList {
-//     width: 85vw;
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
-// @media screen and (min-width: 1140px) {
-//   .ulUserList {
-//      width: 90vw;
-//     grid-template-columns: repeat(4, 1fr);
-//   }
-// }
-
-
