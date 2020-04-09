@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ProfileCard.scss';
 import UserCard from '../user/UserCard';
 
 const ProfileCard = () => {
