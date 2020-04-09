@@ -27,9 +27,9 @@
   }
 }
 
-.grid {
-  max-width: 95%;
-}
+// .grid {
+//   max-width: 95%;
+// }
 .section-signup {
   width: 100%;
   margin: 1rem auto;
@@ -74,7 +74,6 @@
     }
   }
 }
-// form
 .form {
   display: grid;
   margin-left: 10rem;
@@ -95,7 +94,7 @@
     width: 77%;
     display: block;
     transition: all 0.3s;
-     @include respond(small-lap) {
+     @include respond(big-desktop) {
       width: 39rem;
     }
      @include respond(tab-port-big) {
@@ -142,7 +141,7 @@
     font-size: 1.5rem;
     font-family: sans-serif;
     font-weight: 400;
-    color: $color-primary2;
+    color: black;
     border: 2px solid $color-black-med;
     border-bottom: 3px solid transparent;
     line-height: 1.3;
@@ -163,7 +162,7 @@
     background-repeat: no-repeat, repeat;
     background-position: right 0.7em top 50%, 0 0;
     background-size: 1.5em auto, 100%;
-     @include respond(small-lap) {
+     @include respond(big-desktop) {
       max-width: 100%; 
     }
     @include respond(tab-port-big) {
