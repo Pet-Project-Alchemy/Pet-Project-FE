@@ -9,15 +9,14 @@
   position: relative;
   height: 43rem;
   width: 28rem;
-  width: 100%;
   @include respond(tab-port) {
-    height: 57rem;
+    height: 55rem;
       width: 32rem;
   }
-  // @include respond(phone) {
-  //     height: 43rem;
-  //     width: 30rem;
-  //   }
+  @include respond(phone) {
+      height: 55rem;
+      width: 30rem;
+    }
   &__side {
     height: 43rem;
     font-size: 2rem;
@@ -31,11 +30,11 @@
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     @include respond(tab-port) {
-      height: 57rem;
+      height: 55rem;
     }
-    // @include respond(phone) {
-    //   height: 43rem;
-    // }
+    @include respond(phone) {
+      height: 55rem;
+    }
     &--front {
       background-color: $color-primary;
     }
@@ -89,6 +88,9 @@
   }
   &__details {
     padding: 2rem;
+    @include respond(tab-port) {
+      padding: 0.2rem;
+    }
     ul {
       list-style: none;
       width: 80%;
@@ -125,4 +127,11 @@
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
+}
+.mediaText {
+  font-size: 1.4rem;
+  color:white;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
 }

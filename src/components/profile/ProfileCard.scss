@@ -12,8 +12,11 @@
   position: relative;
   height: 57rem;
   width: 40rem;
+  @include respond(tab-port) {
+    height: 60rem;
+  }
   @include respond(phone) {
-    height: 50rem;
+    height: 57rem;
   width: 34rem;
   }
 
@@ -29,7 +32,12 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    
+    @include respond(tab-port) {
+    height: 60rem;
+  }
+  @include respond(phone) {
+      height: 57rem;
+    }
     &--front {
       background-color: $color-primary;
     }
@@ -93,6 +101,9 @@
   }
   &__details {
     padding: 3rem;
+    @include respond(tab-port) {
+      padding: 1rem;
+    }
     ul {
       list-style: none;
       width: 80%;
@@ -119,14 +130,4 @@
     color: black;
   }
 }
-.userImg {
-  top: 2.5rem;
-  left: 2.5rem;
-  margin: 1rem .5rem 0 1rem;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-}
-
-
 

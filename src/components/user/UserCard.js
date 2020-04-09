@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
+import Media from 'react-media';
+
 import defaultUserImg from '../assets/dogPhoto/profile.png';
 import defaultDogImage from '../assets/dogPhoto/dog.png';
 
@@ -12,7 +14,7 @@ const UserCard = ({
   timeNeeded,
   timeAvailable,
   bio,
-  dogBio
+  dogBio,
 }) => (
   <div className='card'>
     <div className='card__side card__side--front'>
@@ -24,10 +26,7 @@ const UserCard = ({
               {firstName}
             </span>
           </figcaption>
-          <img
-            className='dogImg'
-            src={dogImg ? dogImg : defaultDogImage}
-          />
+          <img className='dogImg' src={dogImg ? dogImg : defaultDogImage} />
           <figcaption>
             <span className='card__heading-span card__heading-span--2'>
               {dogName}&nbsp;
@@ -40,6 +39,16 @@ const UserCard = ({
           <li>I can help {timeAvailable}</li>
           <li>I need help {timeNeeded}</li>
         </ul>
+        <div>
+          <Media
+            query='(max-width: 900px)'
+            render={() => (
+              <div className='mediaText'>
+              About me-{''}  {bio}{' '} About my dog-{' '} {dogBio}
+              </div>
+            )}
+          />
+        </div>
       </div>
     </div>
     <div className='card__side card__side--back card__side--back-1'>
@@ -62,6 +71,6 @@ UserCard.propTypes = {
   timeAvailable: PropTypes.string.isRequired,
   zipcode: PropTypes.string.isRequired,
   bio: PropTypes.string.isRequired,
-  dogBio: PropTypes.string.isRequired
+  dogBio: PropTypes.string.isRequired,
 };
 export default UserCard;
