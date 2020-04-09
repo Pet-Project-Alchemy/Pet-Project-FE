@@ -6,7 +6,7 @@
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 0 auto;
+margin: 2rem auto;
 }
 .about {
   background: $color-primary;
@@ -69,7 +69,7 @@ margin: 0 auto;
   text-align: center;
   margin: 2rem; 
   @include respond(phone) {
-    margin-top: 8.5rem;
+    margin-top: 13rem;
     font-size: 3.7rem;
   }
 }
