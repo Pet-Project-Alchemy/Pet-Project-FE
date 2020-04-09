@@ -24,9 +24,9 @@
   height: 100vh;
   background: linear-gradient(
       99deg,
-      rgba($color-primary, 1) 0%,
-      rgba($color-primary, 1) 20%,
-      rgba($color-black-clear, 0.4) 35%,
+      rgba($color-primary, 4) 0%,
+      rgba($color-primary, .2) 20%,
+      rgba($color-primary, 0.1) 35%,
       rgba($color-black-clear, 0.1) 50%,
       transparent 50%
     ),
@@ -36,7 +36,7 @@
   display: flex;
   align-items: flex-end;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-  @include respond(phone) {
+  @include respond(tab-port) {
     background: linear-gradient(
         100deg,
         rgba($color-primary, 1) 0%,
@@ -53,6 +53,7 @@
   &__form {
     width: 50%;
     padding-left: 6rem;
+    padding-bottom: 3rem;
     @include respond(tab-port) {
       width: 40%;
     }
