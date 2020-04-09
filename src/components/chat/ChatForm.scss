@@ -2,70 +2,50 @@
 @import '../abstract/variables.scss';
 
 .formDiv {
-  display: flex;
-  padding: 2rem;
-  margin: auto;
-  justify-content: center;
-  margin-left: 1rem;
   @include respond(phone) {
-    margin-left: .1rem;
-       }
+    // margin-left: .1rem;
+  }
 
-.messageForm {
+  .messageForm {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
+    padding: 5rem;
     @include respond(phone) {
-    margin-left: .1rem;
-       }
-}
-    .message__label {
-       font-size: 2rem; 
-       padding-right: 1rem;
-       color: transparent;
-       @include respond(phone) {
-    padding: 0em;
-       }
     }
-.message__button {
-  background: transparent;
-  font-size: 2rem;
-  color: $color-primary;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem;
-  box-shadow: 1px 1px 5px 1px $color-black-med;
-  padding: 0.5rem;
-  margin: 1rem 0 0 5rem;
-  cursor: pointer;
-  transition: all 1s ease;
-  @include respond(phone) {
-  margin: 1rem 0 0 1rem;
-  
-}
-  &:hover {
+  }
+  .message__label {
+    font-size: 0.1rem;
+    color: transparent;
+    @include respond(phone) {
+    }
+  }
+  .message__button {
+    background: transparent;
+    font-size: 2rem;
+    color: $color-primary;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    &:hover {
       background: transparent;
       color: $user1;
+    }
   }
-}
-.message__input {
-   
+  .message__input {
     font-size: 1.5em;
-    padding: 0.7rem 1.7rem;
     border-radius: 2px;
     background: $color-primary;
     width: 29rem;
     transition: all 0.3s;
     @include respond(phone) {
-      width: 24rem;
+      width: 20rem;
     }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-      border-bottom: 3px solid $color-primary;
-    }
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+    border-bottom: 3px solid $color-primary;
+  }
 }
-}
-

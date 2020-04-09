@@ -1,12 +1,11 @@
-@import "../abstract/base.scss";
-@import "../abstract/variables.scss";
-@import "../abstract/mixins.scss";
+@import '../abstract/base.scss';
+@import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
 
-.container {
-  max-width: 60%;
-  margin: auto;
+.container-images {
+  max-width: 80%;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 3rem;
 
   .img {
     width: 100%;
@@ -37,38 +36,37 @@
     padding: 1.5rem;
     color: $color-primary-white;
   }
-}
 
-.thumbnails {
-  display: grid;
-  list-style-type: none;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  margin: 2rem;
-  @include respond(phone) {
-    grid-template-columns: repeat(2, 1fr);
+  .thumbnails {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin: 2rem;
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 5rem;
+    }
   }
-}
+  .image-container {
+    width: 100%;
+    margin: 0 auto;
+  }
 
-.image-container {
-  width: 100%;
-  position: relative;
-  margin: auto;
-}
+  .button {
+    text-decoration: none;
+    color: $color-darkgrey;
+    transition: all 0.5s ease-in;
+  }
 
-.button {
-  text-decoration: none;
-  color: $color-darkgrey;
-  transition: all 0.5s ease-in;
-}
-
-.button:hover {
-  color: $color-primary;
-}
-    .image-container {
-      overflow: hidden;
-      position: relative;
-      background-color: $color-primary-white;
-      margin: auto;
-      height: 20%;
+  .button:hover {
+    color: $color-primary;
+  }
+  .image-container {
+    overflow: hidden;
+    position: relative;
+    background-color: $color-primary-white;
+    margin: 0 auto;
+    height: 20%;
+  }
 }
