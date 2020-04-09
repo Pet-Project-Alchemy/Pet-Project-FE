@@ -63,7 +63,7 @@
 
     &--1 {
       background: linear-gradient(to bottom right, $color-primary, $color-black-clear),
-        url(../assets/dogPhoto/dog.png)
+        url(../assets/dogPhoto/dog.png)center/cover no-repeat
     }
   }
   &__heading {

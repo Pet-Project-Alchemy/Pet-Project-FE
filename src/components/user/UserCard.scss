@@ -1,12 +1,26 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
+@import '../abstract/mixins.scss';
+@import '../abstract/animate.scss';
 .card {
+  display: grid;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 45rem;
+  height: 40rem;
+  width: 28rem;
+  @include respond(tab-port) {
+    // height: 38rem;
+    // width: 33rem;
+  }
+  @include respond(phone) {
+    // height: 38rem;
+    // width: 30rem;
+    // margin-left: 0.7rem;
+  }
   &__side {
-    height: 45rem;
+    height: 40rem;
+    width: 25rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -17,6 +31,15 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    @include respond(tab-port) {
+      height: 38rem;
+      width: 33rem;
+    }
+    @include respond(phone) {
+      height: 38rem;
+      width: 30rem;
+      margin-left: 0.7rem;
+    }
     &--front {
       background-color: $color-primary;
     }
@@ -24,16 +47,15 @@
       transform: rotateY(180deg);
       &-1 {
         filter: grayscale(1);
-       background: linear-gradient(
-      170deg,
-      rgba($color-darkgrey, .6) 0%,
-      rgba($color-darkgrey, .4) 100%
-      transparent 80%, 
-    ) ,
-    url(../assets/dogPhoto/sidePaw.png) center;
-
-  padding: 2rem 0rem;
-  border-radius: 3px;
+        background: linear-gradient(
+            170deg,
+            rgba($color-darkgrey, 0.6) 0%,
+            rgba($color-darkgrey, 0.4) 100%,
+            transparent 80%
+          ),
+          url(../assets/dogPhoto/sidePaw.png) center;
+        padding: 2rem 0rem;
+        border-radius: 3px;
       }
     }
   }
@@ -50,8 +72,12 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     &--1 {
-      background: linear-gradient(to bottom right, $color-primary, $color-black-clear),
-        url(../assets/dogPhoto/dog.png)
+      background: linear-gradient(
+          to bottom right,
+          $color-primary,
+          $color-black-clear
+        ),
+        url(../assets/dogPhoto/dog.png) center/cover no-repeat;
     }
   }
   &__heading-span {
@@ -60,7 +86,7 @@
     color: $color-black;
   }
   &__heading-span--2 {
-   text-transform: capitalize;
+    text-transform: capitalize;
   }
   &__details {
     padding: 2rem;
@@ -71,7 +97,7 @@
       li {
         text-align: center;
         font-size: 1.5rem;
-        padding: .4rem;
+        padding: 0.4rem;
         color: $color-black;
         &:not(:last-child) {
           border-bottom: 1px solid $color-grey-med;
@@ -83,24 +109,24 @@
     text-align: center;
     color: $color-black;
     margin: 2rem;
-   
   }
   &__bio-text {
     font-size: 1.4rem;
-    padding: .5rem;
+    padding: 0.5rem;
     color: black;
+    @include respond(phone) {
+      color: transparent;
+    }
   }
 }
-.userImg, .dogImg {
+.userImg,
+.dogImg {
   filter: grayscale(1);
-  opacity: .8;
+  opacity: 0.8;
   top: 2.5rem;
   left: 2.5rem;
-  margin: 1rem .5rem 0 1rem;
+  margin: 1rem 0.5rem 0 1rem;
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
 }
-
-
-
