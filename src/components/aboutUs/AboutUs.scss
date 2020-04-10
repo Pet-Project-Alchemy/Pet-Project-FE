@@ -67,14 +67,12 @@ margin: 2rem auto;
   font-size: 4.5rem;
   text-transform: capitalize;
   text-align: center;
-  margin: 2rem; 
+  padding-top: 4rem;
   @include respond(phone) {
-    margin-top: 13rem;
-    font-size: 3.7rem;
+    font-size: 3.2rem;
   }
 }
 .AboutUl {
-  width: 70vw;
   margin: 1rem auto;
   padding: 1rem 0;
 }

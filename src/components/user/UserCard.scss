@@ -9,14 +9,14 @@
   position: relative;
   height: 43rem;
   width: 28rem;
-  @include respond(tab-port) {
-    height: 55rem;
-      width: 32rem;
-  }
-  @include respond(phone) {
-      height: 55rem;
-      width: 30rem;
-    }
+  // @include respond(tab-port) {
+  //   height: 55rem;
+  //     width: 32rem;
+  // }
+  // @include respond(phone) {
+  //     height: 55rem;
+  //     width: 30rem;
+  //   }
   &__side {
     height: 43rem;
     font-size: 2rem;
@@ -29,12 +29,12 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    @include respond(tab-port) {
-      height: 55rem;
-    }
-    @include respond(phone) {
-      height: 55rem;
-    }
+    // @include respond(tab-port) {
+    //   height: 55rem;
+    // }
+    // @include respond(phone) {
+    //   height: 55rem;
+    // }
     &--front {
       background-color: $color-primary;
     }

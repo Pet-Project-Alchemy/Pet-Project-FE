@@ -44,7 +44,7 @@ const UserCard = ({
               <li>I can help {timeAvailable}</li>
               <li>I need help {timeNeeded}</li>
             </ul>
-            <div>
+            {/* <div>
               <Media
                 query='(max-width: 900px)'
                 render={() => (
@@ -54,7 +54,7 @@ const UserCard = ({
                   </div>
                 )}
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className='card__side card__side--back card__side--back-1'>
