@@ -144,15 +144,7 @@
   position: relative;
   height: 43rem;
   width: 28rem;
-  // @include respond(phone) {
-  //   height: 38rem;
-  //   width: 30rem;
-  //   margin-left: .7rem;
-  // }
-  // @include respond(tab-port) {
-  //   height: 38rem;
-  //   width: 33rem;
-  // }
+  
   &__side {
     height: 43rem;
     width: 28rem;
@@ -166,16 +158,7 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-  //   @include respond(tab-port) {
-  //   height: 38rem;
-  //   width: 33rem;
-  //   }
-  //   @include respond(phone) {
-  //   height: 38rem;
-  //   width: 30rem;
-  //   margin-left: .7rem;
-
-  // }
+  
     &--front {
       background-color: $color-primary;
     }
