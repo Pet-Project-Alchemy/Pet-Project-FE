@@ -1,24 +1,153 @@
+// @import '../abstract/base.scss';
+// @import '../abstract/variables.scss';
+// @import '../abstract/mixins.scss';
+// @import '../abstract/animate.scss';
+// .card {
+//   display: grid;
+//   perspective: 150rem;
+//   -moz-perspective: 150rem;
+//   position: relative;
+//   height: 43rem;
+//   width: 28rem;
+//   // @include respond(tab-port) {
+//   //   height: 55rem;
+//   //     width: 32rem;
+//   // }
+//   // @include respond(phone) {
+//   //     height: 55rem;
+//   //     width: 30rem;
+//   //   }
+//   &__side {
+//     height: 43rem;
+//     font-size: 2rem;
+//     transition: all 0.8s ease;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     backface-visibility: hidden;
+//     border-radius: 3px;
+//     overflow: hidden;
+//     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+//     // @include respond(tab-port) {
+//     //   height: 55rem;
+//     // }
+//     // @include respond(phone) {
+//     //   height: 55rem;
+//     // }
+//     &--front {
+//       background-color: $color-primary;
+//     }
+//     &--back {
+//       transform: rotateY(180deg);
+//       &-1 {
+//         background: linear-gradient(
+//             170deg,
+//             rgba($color-darkgrey, 0.6) 0%,
+//             rgba($color-darkgrey, 0.4) 100%,
+//             transparent 80%
+//           ),
+//           url(../assets/dogPhoto/sidePaw.png) left/cover;
+//         padding: 2rem 0rem;
+//         border-radius: 3px;
+//       }
+//     }
+//   }
+//   // @media all and (min-width: 900px) {
+//     &:hover &__side--front {
+//       transform: rotateY(-180deg);
+//     }
+//   // }
+//   // @media all and (min-width: 900px) {
+//   &:hover &__side--back {
+//     transform: rotateY(0);
+//   }
+// // }
+//   &__picture {
+//     height: 27rem;
+//     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+//     background-clip: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+//     border-top-left-radius: 3px;
+//     border-top-right-radius: 3px;
+//     &--1 {
+//       background: linear-gradient(
+//           to bottom right,
+//           $color-primary,
+//           $color-black-clear
+//         ),
+//         url(../assets/dogPhoto/dog.png) center/cover no-repeat;
+//     }
+//   }
+//   &__heading-span {
+//     padding: 1rem;
+//     text-transform: capitalize;
+//     color: $color-black;
+//   }
+//   &__heading-span--2 {
+//     text-transform: capitalize;
+//   }
+//   &__details {
+//     padding: 2rem;
+//     @include respond(tab-port) {
+//       padding: 0.2rem;
+//     }
+//     ul {
+//       list-style: none;
+//       width: 80%;
+//       margin: 1rem auto;
+//       li {
+//         text-align: center;
+//         font-size: 1.5rem;
+//         padding: 0.4rem;
+//         color: $color-black;
+//         &:not(:last-child) {
+//           border-bottom: 1px solid $color-grey-med;
+//         }
+//       }
+//     }
+//   }
+//   &__bio-box {
+//     text-align: center;
+//     color: $color-black;
+//     margin: 2rem;
+//   }
+//   &__bio-text {
+//     font-size: 1.4rem;
+//     padding: 0.5rem;
+//     color: black;
+//   }
+// }
+// .userImg,
+// .dogImg {
+//   filter: grayscale(1);
+//   opacity: 0.8;
+//   top: 2.5rem;
+//   left: 2.5rem;
+//   margin: 1rem 0.5rem 0 1rem;
+//   height: 8rem;
+//   width: 8rem;
+//   border-radius: 50%;
+// }
+// .mediaText {
+//   font-size: 1.4rem;
+//   color:white;
+//   text-align: center;
+//   margin: 0 auto;
+//   overflow: hidden;
+// }
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
 @import '../abstract/mixins.scss';
-@import '../abstract/animate.scss';
 .card {
-  display: grid;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 43rem;
   width: 28rem;
-  // @include respond(tab-port) {
-  //   height: 55rem;
-  //     width: 32rem;
-  // }
-  // @include respond(phone) {
-  //     height: 55rem;
-  //     width: 30rem;
-  //   }
+  
   &__side {
     height: 43rem;
+    width: 28rem;
     font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -29,23 +158,18 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    // @include respond(tab-port) {
-    //   height: 55rem;
-    // }
-    // @include respond(phone) {
-    //   height: 55rem;
-    // }
+  
     &--front {
       background-color: $color-primary;
     }
     &--back {
       transform: rotateY(180deg);
       &-1 {
+        filter: grayscale(1);
         background: linear-gradient(
             170deg,
             rgba($color-darkgrey, 0.6) 0%,
-            rgba($color-darkgrey, 0.4) 100%,
-            transparent 80%
+            rgba($color-darkgrey, 0.4) 100%, transparent 80%,
           ),
           url(../assets/dogPhoto/sidePaw.png) left/cover;
         padding: 2rem 0rem;
@@ -53,16 +177,12 @@
       }
     }
   }
-  // @media all and (min-width: 900px) {
-    &:hover &__side--front {
-      transform: rotateY(-180deg);
-    }
-  // }
-  // @media all and (min-width: 900px) {
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
   &:hover &__side--back {
     transform: rotateY(0);
   }
-// }
   &__picture {
     height: 27rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -75,7 +195,7 @@
           $color-primary,
           $color-black-clear
         ),
-        url(../assets/dogPhoto/dog.png) center/cover no-repeat;
+        url(../assets/dogPhoto/dog.png)center/cover no-repeat;
     }
   }
   &__heading-span {
@@ -88,9 +208,6 @@
   }
   &__details {
     padding: 2rem;
-    @include respond(tab-port) {
-      padding: 0.2rem;
-    }
     ul {
       list-style: none;
       width: 80%;
@@ -115,6 +232,9 @@
     font-size: 1.4rem;
     padding: 0.5rem;
     color: black;
+    @include respond(phone) {
+      color: transparent;
+    }
   }
 }
 .userImg,
@@ -127,13 +247,6 @@
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
-}
-.mediaText {
-  font-size: 1.4rem;
-  color:white;
-  text-align: center;
-  margin: 0 auto;
-  overflow: hidden;
 }
 #profileCard {
   display: flex;
