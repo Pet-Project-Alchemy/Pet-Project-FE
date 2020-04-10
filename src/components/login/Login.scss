@@ -12,6 +12,12 @@
   display: inline-block;
   font-weight: 700;
   color: black;
+
+@include respond(phone) {
+  font-size: 3.7rem;
+  font-weight: bold;
+  color: $color-primary;
+}
 }
 .Logingrid {
   max-width: 100%;
@@ -58,7 +64,7 @@
     }
     @include respond(phone) {
       width: 30%;
-      padding-left: 14rem;
+      padding-left: 11rem;
       padding-bottom: 7rem;
     }
   }

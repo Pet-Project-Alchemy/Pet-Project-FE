@@ -20,6 +20,10 @@
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+  @include respond(phone) {
+    color: $color-primary;
+    padding-bottom: 1rem;
+  }
 
   &:hover {
     transform: skewY(3deg) skewX(15deg) scaleX(1.1);
@@ -45,8 +49,7 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   @include respond(phone) {
-    background: 
-      url("../assets/dogPhoto/bearded.jpg")center/cover;
+    background: black;
     padding: 1rem 0rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
@@ -59,7 +62,7 @@
     }
     @include respond(phone) {
       width: 26%;
-    padding: 6rem 1rem 2rem 13rem;
+    padding: 6rem 1rem 2rem 8rem;
 
     }
   }
@@ -209,7 +212,6 @@
   padding: 0.5rem;
   @include respond(phone) {
       background: rgba($color-primary, .7);
-
   }
 }
 .input::-webkit-input-placeholder {
