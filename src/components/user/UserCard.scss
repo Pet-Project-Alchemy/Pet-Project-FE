@@ -53,16 +53,16 @@
       }
     }
   }
-  @media all and (min-width: 900px) {
+  // @media all and (min-width: 900px) {
     &:hover &__side--front {
       transform: rotateY(-180deg);
     }
-  }
-  @media all and (min-width: 900px) {
+  // }
+  // @media all and (min-width: 900px) {
   &:hover &__side--back {
     transform: rotateY(0);
   }
-}
+// }
   &__picture {
     height: 27rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
