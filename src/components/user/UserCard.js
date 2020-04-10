@@ -42,8 +42,6 @@ const UserCard = ({
               <li>I can help {timeAvailable}</li>
               <li>I need help {timeNeeded}</li>
             </ul>
-          </div>
-        </div>
         <div className='card__side card__side--back card__side--back-1'>
           <div className='card__cta'>
             <div className='card__bio-box'>
