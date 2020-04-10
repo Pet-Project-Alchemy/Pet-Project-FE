@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './UserCard.scss';
-import Media from 'react-media';
-
 import defaultUserImg from '../assets/dogPhoto/profile.png';
 import defaultDogImage from '../assets/dogPhoto/dog.png';
 
@@ -44,17 +42,6 @@ const UserCard = ({
               <li>I can help {timeAvailable}</li>
               <li>I need help {timeNeeded}</li>
             </ul>
-            {/* <div>
-              <Media
-                query='(max-width: 900px)'
-                render={() => (
-                  <div className='mediaText'>
-                    <p>{bio}</p>
-                    <p>{dogBio}</p>
-                  </div>
-                )}
-              />
-            </div> */}
           </div>
         </div>
         <div className='card__side card__side--back card__side--back-1'>
