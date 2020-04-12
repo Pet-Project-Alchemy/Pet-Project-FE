@@ -41,15 +41,13 @@
       }
     }
   }
- 
-    
-  @media all and (max-width: 699px) and (min-width: 520px), (min-width: 900px) {
+  
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 900px) {
     &:hover &__side--front {
       transform: rotateY(-180deg);
     }
   }
-  
-@media all and (max-width: 699px) and (min-width: 520px), (min-width: 900px) {
+  @media all and (max-width: 699px) and (min-width: 520px), (min-width: 900px) {
   &:hover &__side--back {
     transform: rotateY(0);
   }
