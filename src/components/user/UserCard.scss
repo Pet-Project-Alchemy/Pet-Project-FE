@@ -26,6 +26,7 @@
     &--front {
       background-color: $color-primary;
     }
+    @media all and (max-width: 699px) and (min-width: 520px), (min-width: 900px) {
     &--back {
       transform: rotateY(180deg);
       &-1 {
@@ -40,6 +41,7 @@
         border-radius: 3px;
       }
     }
+  }
   }
  
     
@@ -98,6 +100,7 @@
       }
     }
   }
+  
   &__bio-box {
     text-align: center;
     color: $color-black;
@@ -107,6 +110,9 @@
     font-size: 1.4rem;
     padding: 0.5rem;
     color: black;
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 }
 .userImg,
