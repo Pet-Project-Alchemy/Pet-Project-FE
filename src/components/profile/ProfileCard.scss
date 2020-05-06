@@ -1,8 +1,8 @@
 @import '../abstract/base.scss';
 @import '../abstract/variables.scss';
 @import '../abstract/mixins.scss';
-@import '../abstract/animate.scss';
-.card {
+
+.ProfileCard {
   display: grid;
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -132,5 +132,11 @@
   text-align: center;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.card-wrapper{
+  display: flex;
+  justify-content: center;
+  
 }
 
